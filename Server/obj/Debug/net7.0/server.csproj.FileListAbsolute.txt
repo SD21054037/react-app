@@ -12,3 +12,17 @@ C:\Users\Gebruiker\react-app\server\obj\Debug\net7.0\refint\server.dll
 C:\Users\Gebruiker\react-app\server\obj\Debug\net7.0\server.pdb
 C:\Users\Gebruiker\react-app\server\obj\Debug\net7.0\server.genruntimeconfig.cache
 C:\Users\Gebruiker\react-app\server\obj\Debug\net7.0\ref\server.dll
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\server.exe
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\server.deps.json
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\server.runtimeconfig.json
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\server.dll
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\server.pdb
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.AssemblyInfoInputs.cache
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.AssemblyInfo.cs
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.csproj.CoreCompileInputs.cache
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.dll
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\refint\server.dll
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.pdb
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.genruntimeconfig.cache
+D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\ref\server.dll
