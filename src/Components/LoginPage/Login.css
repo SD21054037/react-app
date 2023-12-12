@@ -1,4 +1,9 @@
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 .log-in,
 .log-in * {
   box-sizing:border-box;
