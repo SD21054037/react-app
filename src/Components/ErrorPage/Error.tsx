@@ -47,11 +47,19 @@ export const Four04Section = ({
           </div>
         </div>
         <div
+          // className="image"
+          // style={{
+          //   background: "url(./public/Error.png) center",
+          //   backgroundSize: "cover",
+          // }}
           className="image"
-          style={{
-            background: "url(Error.png) center",
-            backgroundSize: "cover",
-          }}
+style={{
+  background: `url(./public/Images/Error.png) center center no-repeat`,
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center",
+}}
+
         >
           <svg
             className="hand-drawn-line"
