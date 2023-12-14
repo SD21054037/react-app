@@ -1,18 +1,29 @@
 import { useState } from "react";
 import LoginPage from './Components/LoginPage/LoginPage/Login'
 import ErrorPage from './Components/ErrorPage/Error'
-import { Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route,Link, Routes } from "react-router-dom";
 
 function App() {
   
 
   return (
     
-    <div>
-      
-          <LoginPage />
-
-    </div>
+    <Router>
+      <div>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/login">login</Link>
+        <Link to="/registreer">registreer</Link>
+        <Link to="/error">error</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/registreer" element={<LoginPage />} />
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
+      </div>
+    </Router>
     
   );
 }
