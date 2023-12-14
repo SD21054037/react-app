@@ -1,25 +1,24 @@
 import "./LogIn.css";
-
+import { useState } from "react";
 export interface ILogInProps {
   className?: string;
 }
 
-
-
-
-
 export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
+  const [email, setEmail] = useState<string>("");
+  const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
+  const [password, setPassword] = useState<string>("");
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
   return (
-    <div
-      className={"log-in " + className}
-      
-    >
+    <div className={"log-in " + className}>
       <div className="content">
         <div className="header">
           <div className="text-and-supporting-text">
             <div className="logo">
-              <img className="logo-image" src="/Images/logo-image0.png" /*alt ="Logo"*/ />
-
+              <img className="logo-image" src="/Images/logo-image0.png" />
             </div>
             <div className="text">Inloggen </div>
             <div className="supporting-text">
@@ -33,26 +32,16 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
               <div className="input-field-base">
                 <div className="input-with-label">
                   <div className="label">Email </div>
-                  <div className="input">
+                  <div className="input-base">
                     <div className="content3">
-                      <svg
-                        className="mail"
-                        width="21"
-                        height="20"
-                        viewBox="0 0 21 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M18.8334 5.00004C18.8334 4.08337 18.0834 3.33337 17.1667 3.33337H3.83341C2.91675 3.33337 2.16675 4.08337 2.16675 5.00004M18.8334 5.00004V15C18.8334 15.9167 18.0834 16.6667 17.1667 16.6667H3.83341C2.91675 16.6667 2.16675 15.9167 2.16675 15V5.00004M18.8334 5.00004L10.5001 10.8334L2.16675 5.00004"
-                          stroke="#667085"
-                          strokeWidth="1.66667"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-
-                      <div className="text2">Vul uw email in </div>
+                      <div className="text2">
+                        <input
+                          type="text"
+                          placeholder="Vul uw email in"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                        />{" "}
+                      </div>
                     </div>
                     <div className="help-icon">
                       <svg
@@ -79,31 +68,52 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
             <div className="input-field">
               <div className="input-field-base">
                 <div className="input-with-label">
-                  <div className="label">Wachtwoord </div>
-                  <div className="input">
+                  <div className="label">Wachtwoord</div>
+                  <div className="input-base">
                     <div className="content3">
-                      <div className="text2">Vul uw wachtwoord in </div>
+                      <div className="text2">
+                        <input
+                          type={passwordVisible ? "text" : "password"}
+                          placeholder="vul uw wachtwoord in"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </div>
                     </div>
+                    <button
+                      className="show-password"
+                      onClick={togglePasswordVisibility}
+                    >
+                      {passwordVisible ? (
+                        <img className="password-visibility"
+                        
+                          src="/public/images/hideicon.png"
+                          alt="Hide Password"
+                        />
+                      ) : (
+                        <img className="password-visibility"
+                          src="/public/images/visibleicon.png"
+                          alt="Show Password"
+                        />
+                      )}
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="button">
-              <div className="button-base">
-                <div className="text3">Wachtwoord vergeten? </div>
-              </div>
-            </div>
+            <button className="WwVergeten-button">
+              <div className="text3">Wachtwoord vergeten? </div>
+            </button>
           </div>
           <div className="actions">
-            <div className="button2">
-              <div className="button-base2">
-                <div className="text4">Log in </div>
-              </div>
-            </div>
+            <button className="loginbutton">
+              <div className="text4">Log in </div>
+            </button>
+
             <div className="social-button-groups">
-              <div className="social-button">
+              <button className="Google-login">
                 <svg
                   className="social-icon"
                   width="24"
@@ -138,9 +148,9 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                 </svg>
 
                 <div className="text5">Log in met Google </div>
-              </div>
+              </button>
             </div>
-            <div className="microsoft-login">
+            <button className="microsoft-login">
               <svg
                 className="icon-microsoft"
                 width="21"
@@ -158,23 +168,16 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
               <div className="sign-in-with-microsoft">
                 Log in met Microsoft{" "}
               </div>
-            </div>
+            </button>
           </div>
         </div>
         <div className="row2">
           <div className="text6">
-            <span>
-              <span className="text-6-span">Geen</span>
-              <span className="text-6-span2"> </span>
-              <span className="text-6-span3">account?</span>
-              <span className="text-6-span4"> </span>
-            </span>{" "}
+            <p className="text-6-span">Geen account?</p>
           </div>
-          <div className="button3">
-            <div className="button-base">
-              <div className="text7">Registreer </div>
-            </div>
-          </div>
+          <button className="Registreer-button">
+            <div className="text7">Registreer </div>
+          </button>
         </div>
       </div>
     </div>

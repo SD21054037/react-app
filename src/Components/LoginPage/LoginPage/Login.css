@@ -4,9 +4,10 @@
 
 body,
 html {
+  height: 100%;
   margin: 0;
   padding: 0;
-  
+  overflow: hidden;
 }
 .log-in,
 .log-in * {
@@ -163,7 +164,7 @@ html {
   font-weight: var(--textsm-medium-font-weight, 500);
   position: relative;
 }
-.input {
+.input-base {
   background: var(--white, #ffffff);
   border-radius: 8px;
   border-style: solid;
@@ -184,6 +185,27 @@ html {
   );
   overflow: hidden;
 }
+input {
+  width: 100%;
+  /* border-color: transparent; */
+  border: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+.password-visibility {
+  width: 17px;
+  height: 20px;
+}
+
+.show-password{
+  border: none;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 6px;
+}
+
 .content3 {
   display: flex;
   flex-direction: row;
@@ -236,16 +258,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.button {
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.button-base {
+.WwVergeten-button {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -253,7 +266,10 @@ html {
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  border: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for a smoother effect */
 }
+
 .text3 {
   color: #4453ae;
   text-align: left;
@@ -263,6 +279,16 @@ html {
   font-weight: 600;
   position: relative;
 }
+
+.text3:hover{
+  color: #101b64;
+}
+/* Active/Clicked effect */
+.WwVergeten-button:active {
+  transform: scale(0.95); 
+}
+
+
 .actions {
   display: flex;
   flex-direction: column;
@@ -273,8 +299,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.button2 {
-  border-radius: 8px;
+.loginbutton {
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -283,8 +308,6 @@ html {
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-}
-.button-base2 {
   background: #4453ae;
   border-radius: 8px;
   border-style: solid;
@@ -303,6 +326,15 @@ html {
     0px 1px 2px 0px rgba(16, 24, 40, 0.05)
   );
   overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.loginbutton:hover{
+  background: #7281f4;
+}
+
+.loginbutton:active{
+  transform: scale(0.95); 
 }
 .text4 {
   color: var(--white, #ffffff);
@@ -323,7 +355,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.social-button {
+.Google-login {
   background: var(--white, #ffffff);
   border-radius: 8px;
   border-style: solid;
@@ -343,6 +375,16 @@ html {
     0px 1px 2px 0px rgba(16, 24, 40, 0.05)
   );
   overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Google-login:hover {
+  background-color: #d6d4d4; 
+}
+
+
+.Google-login:active {
+  transform: scale(0.95); 
 }
 .social-icon {
   flex-shrink: 0;
@@ -375,7 +417,17 @@ html {
   flex-shrink: 0;
   align-self: stretch;
   position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.microsoft-login:hover {
+  background-color: #d6d4d4; 
+}
+
+.microsoft-login:active {
+  transform: scale(0.95); 
+}
+
 .icon-microsoft {
   flex-shrink: 0;
   width: 21px;
@@ -403,15 +455,11 @@ html {
   position: relative;
 }
 
-.text6,.text-6-span,.text-6-span2,.text-6-span3,.text-6-span4{
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-
-}
 .text6 {
   text-align: left;
   font-family: "-", sans-serif;
-  
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   font-weight: 400;
   position: relative;
   width: 142px;
@@ -423,25 +471,7 @@ html {
   
   font-weight: 600;
 }
-.text-6-span2 {
-  color: var(--gray-500, #667085);
-  font-family: "Inter-Regular", sans-serif;
-  
-  font-weight: 400;
-}
-.text-6-span3 {
-  color: #4453ae;
-  font-family: "Inter-SemiBold", sans-serif;
-  ;
-  font-weight: 600;
-}
-.text-6-span4 {
-  color: var(--gray-500, #667085);
-  font-family: "Inter-Regular", sans-serif;
-  
-  font-weight: 400;
-}
-.button3 {
+.Registreer-button {
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -451,6 +481,8 @@ html {
   width: 101px;
   height: 38px;
   position: relative;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .text7 {
   color: #4453ae;
@@ -461,6 +493,16 @@ html {
   font-weight: 600;
   position: relative;
 }
+
+.text7:hover{
+  color: #101b64;
+}
+/* Active/Clicked effect */
+.Registreer-button:active {
+  transform: scale(0.95); 
+}
+
+
 
 @media screen and (min-width: 1600px) {
   .log-in {
