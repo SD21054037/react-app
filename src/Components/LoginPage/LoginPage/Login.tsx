@@ -22,7 +22,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
             </div>
             <div className="text">Inloggen </div>
             <div className="supporting-text">
-              Welkom terug, vul uw details in{" "}
+              Welkom terug, vul uw details in
             </div>
           </div>
         </div>
