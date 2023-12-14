@@ -17,7 +17,7 @@ html {
   background: url('/public/Images/log-in.png') center center no-repeat;
   background-size: cover;
   background-size: fill;
-  padding: 19px 32px 19px 32px;
+  padding: 18px 32px 18px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
