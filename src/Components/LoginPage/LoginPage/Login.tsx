@@ -43,24 +43,6 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                         />{" "}
                       </div>
                     </div>
-                    <div className="help-icon">
-                      <svg
-                        className="help-circle"
-                        width="17"
-                        height="16"
-                        viewBox="0 0 17 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.55992 6.00004C6.71665 5.55449 7.02602 5.17878 7.43322 4.93946C7.84042 4.70015 8.31918 4.61267 8.7847 4.69252C9.25022 4.77236 9.67246 5.01439 9.97664 5.37573C10.2808 5.73706 10.4473 6.19439 10.4466 6.66671C10.4466 8.00004 8.44659 8.66671 8.44659 8.66671M8.49992 11.3334H8.50659M15.1666 8.00004C15.1666 11.6819 12.1818 14.6667 8.49992 14.6667C4.81802 14.6667 1.83325 11.6819 1.83325 8.00004C1.83325 4.31814 4.81802 1.33337 8.49992 1.33337C12.1818 1.33337 15.1666 4.31814 15.1666 8.00004Z"
-                          stroke="#98A2B3"
-                          strokeWidth="1.33333"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -85,13 +67,14 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                       onClick={togglePasswordVisibility}
                     >
                       {passwordVisible ? (
-                        <img className="password-visibility"
-                        
+                        <img
+                          className="password-visibility"
                           src="/public/images/hideicon.png"
                           alt="Hide Password"
                         />
                       ) : (
-                        <img className="password-visibility"
+                        <img
+                          className="password-visibility"
                           src="/public/images/visibleicon.png"
                           alt="Show Password"
                         />
