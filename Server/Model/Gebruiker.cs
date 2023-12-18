@@ -1,0 +1,3 @@
+class Gebruker{
+    String voornaam;
+}
