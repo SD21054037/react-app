@@ -281,11 +281,16 @@ input:focus{
 }
 
 .text3:hover{
-  color: #101b64;
+  border-bottom: #4453ae solid 3px;
 }
-/* Active/Clicked effect */
+
+.text3:active{
+  color: #101b64;
+  border-bottom: #101b64 solid 3px;
+}
 .WwVergeten-button:active {
   transform: scale(0.95); 
+
 }
 
 
@@ -495,7 +500,13 @@ input:focus{
 }
 
 .text7:hover{
+  color: #4453ae;
+  border-bottom: #4453ae solid 3px;
+}
+
+.text7:active{
   color: #101b64;
+  border-bottom: #101b64 solid 3px;
 }
 /* Active/Clicked effect */
 .Registreer-button:active {

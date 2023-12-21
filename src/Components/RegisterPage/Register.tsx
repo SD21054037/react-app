@@ -83,6 +83,7 @@ export const Register = ({
         console.log("Form is not valid. Please check errors.");
       }
     }
+     /*hier komen de api stuff btw we moeten ook checken of het wachtwoord en email goed ingevuld is in de backend anders er is niet genoeg security*/
   };
   
 

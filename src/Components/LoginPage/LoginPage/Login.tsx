@@ -17,7 +17,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
     console.log("Login button clicked");
     console.log("Email:", email);
     console.log("Password:", password);
-   
+   /*hier komen de api stuff*/
   };
   return (
     <div className={"log-in " + className}>
@@ -98,7 +98,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
             </button>
           </div>
           <div className="actions">
-            <button className="loginbutton">
+            <button className="loginbutton" onClick={handleLoginClick}>
               <div className="text4">Log in </div>
             </button>
 
@@ -141,7 +141,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
               </button>
             </div>
             <button className="microsoft-login"
-            onClick={handleLoginClick}>
+            >
               <svg
                 className="icon-microsoft"
                 width="21"
@@ -157,7 +157,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
               </svg>
 
               <div className="sign-in-with-microsoft">
-                Log in met Microsoft{" "}
+                Log in met Microsoft
               </div>
             </button>
           </div>
