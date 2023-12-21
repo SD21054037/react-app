@@ -12,6 +12,13 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+
+  const handleLoginClick = () => {
+    console.log("Login button clicked");
+    console.log("Email:", email);
+    console.log("Password:", password);
+   
+  };
   return (
     <div className={"log-in " + className}>
       <div className="content">
@@ -69,13 +76,13 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                       {passwordVisible ? (
                         <img
                           className="password-visibility"
-                          src="/public/images/hideicon.png"
+                          src="/public/images/hide.png"
                           alt="Hide Password"
                         />
                       ) : (
                         <img
                           className="password-visibility"
-                          src="/public/images/visibleicon.png"
+                          src="/public/images/visible.png"
                           alt="Show Password"
                         />
                       )}
@@ -133,7 +140,8 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                 <div className="text5">Log in met Google </div>
               </button>
             </div>
-            <button className="microsoft-login">
+            <button className="microsoft-login"
+            onClick={handleLoginClick}>
               <svg
                 className="icon-microsoft"
                 width="21"

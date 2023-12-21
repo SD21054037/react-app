@@ -1,7 +1,6 @@
 /* Code generated with AutoHTML Plugin for Figma */
 import "./Register.css";
 import { useState } from "react";
-
 export interface IRegisterProps {
   className?: string;
 }
@@ -14,6 +13,36 @@ export const Register = ({
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  
+    
+  const passwordInput = document.querySelector(".Wachtwoord");
+  const confirmPasswordInput = document.querySelector(".Wachtwoord");
+  const EmailInput = document.querySelector(".EmailInvullen");
+
+  if (passwordInput instanceof HTMLInputElement) {
+    const currentValue = passwordInput.value;
+    passwordInput.value = "";
+    passwordInput.value = currentValue;
+    passwordInput.checkValidity(); 
+  }
+
+  if (confirmPasswordInput instanceof HTMLInputElement) {
+    const currentValue = confirmPasswordInput.value;
+    confirmPasswordInput.value = "";
+    confirmPasswordInput.value = currentValue;
+    confirmPasswordInput.checkValidity(); 
+  }
+
+  if  (EmailInput instanceof HTMLInputElement) {
+    const currentValue = EmailInput.value;
+    EmailInput.value = "";
+    EmailInput.value = currentValue;
+    EmailInput.checkValidity();
+  }
+};
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -30,26 +59,35 @@ export const Register = ({
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevents the default form submission behavior
+    e.preventDefault(); 
 
-    // Your registration logic here
+    
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Confirm Password:", confirmPassword);
-    // Add logic to make API calls or perform other actions as needed
+    
   };
 
   const handleRegisterClick = () => {
-    // Your registration logic here
-    console.log("Register button clicked");
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
-    // Add logic to make API calls or perform other actions as needed
+    const form = document.querySelector("form"); 
+    if (form) {
+      if (form.reportValidity()) {
+        
+        console.log("Register button clicked");
+        console.log("Email:", email);
+        console.log("Password:", password);
+        console.log("Confirm Password:", confirmPassword);
+       
+      } else {
+        
+        console.log("Form is not valid. Please check errors.");
+      }
+    }
   };
+  
 
   const handleLoginButtonClick = () => {
-    // Implement your logic to redirect to the login page
+    
     console.log("Login button clicked");
   };
 
@@ -106,6 +144,9 @@ export const Register = ({
                           required
                           aria-label="EmailVeld"
                           onChange={handleEmailChange}
+                          pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+                        }"
+                        title="vul een geldig e-mailadres in"
                         ></input>
                       </div>
                       <div className="help-icon">
@@ -145,14 +186,35 @@ export const Register = ({
                       <div className="content3">
                         <input
                           className="Wachtwoord"
-                          type="password"
+                          type={passwordVisible ? "text" : "password"}
                           placeholder="Vul uw wachtwoord in"
                           minLength={8}
                           aria-label="Wachtwoordveld"
                           required
                           onChange={handlePasswordChange}
+                          pattern=".*(?=.*[0-9])(?=.*[!@#$%^&*()]).*"
+                          title="vul een geldig wachtwoord in"
+                          autoComplete="new-password"
                         ></input>
                       </div>
+                          <button
+                            className="show-password"
+                            onClick={togglePasswordVisibility}
+                          >
+                            {passwordVisible ? (
+                              <img
+                                className="password-visibility"
+                                src="/public/images/hide.png"
+                                alt="Hide Password"
+                              />
+                            ) : (
+                              <img
+                                className="password-visibility"
+                                src="/public/images/visible.png"
+                                alt="Show Password"
+                              />
+                            )}
+                          </button>
                       <div className="help-icon">
                         <svg
                           className="help-circle2"
@@ -176,24 +238,6 @@ export const Register = ({
                               <rect width="16" height="16" fill="white" />
                             </clipPath>
                           </defs>
-                          <button
-                            className="show-password"
-                            onClick={togglePasswordVisibility}
-                          >
-                            {passwordVisible ? (
-                              <img
-                                className="password-visibility"
-                                src="/public/images/hideicon.png"
-                                alt="Hide Password"
-                              />
-                            ) : (
-                              <img
-                                className="password-visibility"
-                                src="/public/images/visibleicon.png"
-                                alt="Show Password"
-                              />
-                            )}
-                          </button>
                         </svg>
                       </div>
                     </div>
@@ -209,10 +253,14 @@ export const Register = ({
                         <input
                           onChange={handleConfirmPasswordChange}
                           className="Wachtwoord"
-                          type="password"
+                          type={passwordVisible ? "text" : "password"}
                           required
                           placeholder="Vul uw wachtwoord opnieuw in"
                           aria-label="Wachtwoord bevestigenveld"
+                          minLength={8}
+                          pattern=".*(?=.*[0-9])(?=.*[!@#$%^&*()]).*"
+                          title="vul een gelding wachtwoord in"
+                          autoComplete="new-password"
                         ></input>
                       </div>
                     </div>

@@ -212,6 +212,16 @@ html {
   border: none;
   outline: none;
 }
+.password-visibility {
+  width: 17px;
+  height: 20px;
+  
+}
+.show-password{
+  border: none;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 6px;
+}
 .help-icon {
   flex-shrink: 0;
   width: 16px;
