@@ -28,18 +28,30 @@ export const Register = ({
     setConfirmPassword(e.target.value);
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevents the default form submission behavior
+
+    // Your registration logic here
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
+    // Add logic to make API calls or perform other actions as needed
+  };
+
   const handleRegisterClick = () => {
-    // Implement your registration logic here
+    // Your registration logic here
     console.log("Register button clicked");
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Confirm Password:", confirmPassword);
+    // Add logic to make API calls or perform other actions as needed
   };
 
   const handleLoginButtonClick = () => {
     // Implement your logic to redirect to the login page
     console.log("Login button clicked");
   };
+  
   return (
     <div className={"register " + className}>
       <div
@@ -62,7 +74,7 @@ export const Register = ({
             </div>
           </div>
           <div className="content2">
-            <div className="form">
+            <form className="form" onSubmit={handleSubmit}>
               <div className="input-field">
                 <div className="input-field-base">
                   <div className="input-with-label">
@@ -91,6 +103,8 @@ export const Register = ({
                           type="email"
                           placeholder="Vul uw email in"
                           required
+                          aria-label="EmailVeld"
+                          onChange={handleEmailChange}
                         ></input>
                       </div>
                       <div className="help-icon">
@@ -130,9 +144,12 @@ export const Register = ({
                       <div className="content3">
                         <input
                           className="Wachtwoord"
-                          type="text"
+                          type="password"
                           placeholder="Vul uw wachtwoord in"
+                          minLength={8}
+                          aria-label="Wachtwoordveld"
                           required
+                          onChange={handlePasswordChange}
                         ></input>
                       </div>
                       <div className="help-icon">
@@ -171,21 +188,23 @@ export const Register = ({
                     <div className="input">
                       <div className="content3">
                         <input
+                          onChange={handleConfirmPasswordChange}
                           className="Wachtwoord"
-                          type="text"
+                          type="password" 
                           required
                           placeholder="Vul uw wachtwoord opnieuw in"
+                          aria-label="Wachtwoord bevestigenveld"
                         ></input>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
             <div className="actions">
               <div className="button">
-                <button className="button-base" onClick={handleRegisterClick}>
-                  Registreer{" "}
+                <button className="button-base" type="submit" onClick={handleRegisterClick}>
+                  Registreer
                 </button>
               </div>
             </div>
@@ -193,8 +212,8 @@ export const Register = ({
           <div className="row">
             <div className="al-een-account">Al een account? </div>
             <div className="button2">
-              <button className="LoginBtn" onClick={handleLoginButtonClick}>
-                Log in{" "}
+              <button className="LoginBtn" aria-label="login" onClick={handleLoginButtonClick}>
+                Log in
               </button>
             </div>
           </div>
