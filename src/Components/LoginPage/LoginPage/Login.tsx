@@ -34,7 +34,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
           </div>
         </div>
         <div className="content2">
-          <div className="form">
+          <form className="form">
             <div className="input-field">
               <div className="input-field-base">
                 <div className="input-with-label">
@@ -91,7 +91,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                 </div>
               </div>
             </div>
-          </div>
+          </form>
           <div className="row">
             <button className="WwVergeten-button">
               <div className="text3">Wachtwoord vergeten? </div>
