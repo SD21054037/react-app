@@ -1,5 +1,6 @@
 /* Code generated with AutoHTML Plugin for Figma */
 import "./Register.css";
+import { useState } from "react";
 
 export interface IRegisterProps {
   className?: string;
@@ -9,6 +10,36 @@ export const Register = ({
   className,
   ...props
 }: IRegisterProps): JSX.Element => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleRegisterClick = () => {
+    // Implement your registration logic here
+    console.log("Register button clicked");
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
+  };
+
+  const handleLoginButtonClick = () => {
+    // Implement your logic to redirect to the login page
+    console.log("Login button clicked");
+  };
   return (
     <div className={"register " + className}>
       <div
@@ -22,7 +53,10 @@ export const Register = ({
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="./public/Images/logo-image0.png" />
+                <img
+                  className="logo-image"
+                  src="./public/Images/logo-image0.png"
+                />
               </div>
               <div className="text">Registreer </div>
             </div>
@@ -52,7 +86,12 @@ export const Register = ({
                           />
                         </svg>
 
-                        <div className="text2">Vul uw email in </div>
+                        <input
+                          className="EmailInvullen"
+                          type="email"
+                          placeholder="Vul uw email in"
+                          required
+                        ></input>
                       </div>
                       <div className="help-icon">
                         <svg
@@ -89,21 +128,12 @@ export const Register = ({
                     <div className="label">Wachtwoord </div>
                     <div className="input">
                       <div className="content3">
-                        <div className="text2">Vul uw wachtwoord in </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <div className="label">Wachtwoord Bevestigen </div>
-                    <div className="input">
-                      <div className="content3">
-                        <div className="text2">
-                          Vul uw wachtwoord opnieuw in{" "}
-                        </div>
+                        <input
+                          className="Wachtwoord"
+                          type="text"
+                          placeholder="Vul uw wachtwoord in"
+                          required
+                        ></input>
                       </div>
                       <div className="help-icon">
                         <svg
@@ -134,21 +164,38 @@ export const Register = ({
                   </div>
                 </div>
               </div>
+              <div className="input-field">
+                <div className="input-field-base">
+                  <div className="input-with-label">
+                    <div className="label">Wachtwoord Bevestigen </div>
+                    <div className="input">
+                      <div className="content3">
+                        <input
+                          className="Wachtwoord"
+                          type="text"
+                          required
+                          placeholder="Vul uw wachtwoord opnieuw in"
+                        ></input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="actions">
               <div className="button">
-                <div className="button-base">
-                  <div className="text3">Registreer </div>
-                </div>
+                <button className="button-base" onClick={handleRegisterClick}>
+                  Registreer{" "}
+                </button>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="al-een-account">Al een account? </div>
             <div className="button2">
-              <div className="button-base2">
-                <div className="text4">Log in </div>
-              </div>
+              <button className="LoginBtn" onClick={handleLoginButtonClick}>
+                Log in{" "}
+              </button>
             </div>
           </div>
         </div>

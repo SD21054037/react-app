@@ -3,7 +3,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden; 
 }
 .register,
 .register * {
@@ -70,7 +70,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 378px;
+  width: fill;
   position: relative;
 }
 .logo-image {
@@ -192,15 +192,25 @@ html {
   position: relative;
   overflow: visible;
 }
-.text2 {
-  color: var(--gray-500, #667085);
-  text-align: left;
-  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--textmd-regular-font-size, 16px);
-  line-height: var(--textmd-regular-line-height, 24px);
-  font-weight: var(--textmd-regular-font-weight, 400);
-  position: relative;
-  flex: 1;
+
+
+.EmailInvullen{
+  width: 100%;
+  border: none;
+}
+
+.EmailInvullen:focus{
+  border: none;
+  outline: none;
+}
+.Wachtwoord {
+  width: 100%;
+  border: none;
+}
+
+.Wachtwoord:focus{
+  border: none;
+  outline: none;
 }
 .help-icon {
   flex-shrink: 0;
@@ -270,8 +280,6 @@ html {
     0px 1px 2px 0px rgba(16, 24, 40, 0.05)
   );
   overflow: hidden;
-}
-.text3 {
   color: var(--white, #ffffff);
   text-align: left;
   font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
@@ -279,6 +287,15 @@ html {
   line-height: var(--textmd-semibold-line-height, 24px);
   font-weight: var(--textmd-semibold-font-weight, 600);
   position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-base:hover{
+  background: #2138ca;
+}
+
+.button-base:active{
+  transform: scale(95%);
 }
 .row {
   display: flex;
@@ -312,16 +329,8 @@ html {
   height: 38px;
   position: relative;
 }
-.button-base2 {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  position: relative;
-}
-.text4 {
+
+.LoginBtn {
   color: #4453ae;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -329,4 +338,50 @@ html {
   line-height: 20px;
   font-weight: 600;
   position: relative;
+  border: none;
+  transition: color 0.5s ease-in-out, border-bottom 0.1 ease;
+}
+
+.LoginBtn:hover{
+  color: #2138ca;
+}
+
+.LoginBtn:active {
+border-bottom: 3px solid #2138ca;
+
+}
+
+
+/* Default styles for larger screens */
+/* Responsive styles for smaller screens (tablets) */
+@media (max-width: 768px) {
+  .register2 {
+    padding: 10px 20px 48px 20px;
+  }
+
+  .content {
+    max-width: 401;
+    border-radius: 25;
+  }
+
+  .content2 {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* Responsive styles for even smaller screens (phones) */
+@media (max-width: 480px) {
+  .register2 {
+    padding: 10px 10px 48px 10px;
+  }
+
+  .content {
+    max-width: 360px;
+    border-radius: 25;
+  }
+
+  .content2 {
+    max-width: 100%;
+  }
 }
