@@ -52,7 +52,7 @@ export const Register = ({
     // Implement your logic to redirect to the login page
     console.log("Login button clicked");
   };
-  
+
   return (
     <div className={"register " + className}>
       <div
@@ -176,6 +176,24 @@ export const Register = ({
                               <rect width="16" height="16" fill="white" />
                             </clipPath>
                           </defs>
+                          <button
+                            className="show-password"
+                            onClick={togglePasswordVisibility}
+                          >
+                            {passwordVisible ? (
+                              <img
+                                className="password-visibility"
+                                src="/public/images/hideicon.png"
+                                alt="Hide Password"
+                              />
+                            ) : (
+                              <img
+                                className="password-visibility"
+                                src="/public/images/visibleicon.png"
+                                alt="Show Password"
+                              />
+                            )}
+                          </button>
                         </svg>
                       </div>
                     </div>
@@ -191,7 +209,7 @@ export const Register = ({
                         <input
                           onChange={handleConfirmPasswordChange}
                           className="Wachtwoord"
-                          type="password" 
+                          type="password"
                           required
                           placeholder="Vul uw wachtwoord opnieuw in"
                           aria-label="Wachtwoord bevestigenveld"
@@ -204,7 +222,11 @@ export const Register = ({
             </form>
             <div className="actions">
               <div className="button">
-                <button className="button-base" type="submit" onClick={handleRegisterClick}>
+                <button
+                  className="button-base"
+                  type="submit"
+                  onClick={handleRegisterClick}
+                >
                   Registreer
                 </button>
               </div>
@@ -213,7 +235,11 @@ export const Register = ({
           <div className="row">
             <div className="al-een-account">Al een account? </div>
             <div className="button2">
-              <button className="LoginBtn" aria-label="login" onClick={handleLoginButtonClick}>
+              <button
+                className="LoginBtn"
+                aria-label="login"
+                onClick={handleLoginButtonClick}
+              >
                 Log in
               </button>
             </div>
