@@ -16,33 +16,32 @@ export const Register = ({
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
-  
-    
-  const passwordInput = document.querySelector(".Wachtwoord");
-  const confirmPasswordInput = document.querySelector(".Wachtwoord");
-  const EmailInput = document.querySelector(".EmailInvullen");
 
-  if (passwordInput instanceof HTMLInputElement) {
-    const currentValue = passwordInput.value;
-    passwordInput.value = "";
-    passwordInput.value = currentValue;
-    passwordInput.checkValidity(); 
-  }
+    const passwordInput = document.querySelector(".Wachtwoord");
+    const confirmPasswordInput = document.querySelector(".Wachtwoord");
+    const EmailInput = document.querySelector(".EmailInvullen");
 
-  if (confirmPasswordInput instanceof HTMLInputElement) {
-    const currentValue = confirmPasswordInput.value;
-    confirmPasswordInput.value = "";
-    confirmPasswordInput.value = currentValue;
-    confirmPasswordInput.checkValidity(); 
-  }
+    if (passwordInput instanceof HTMLInputElement) {
+      const currentValue = passwordInput.value;
+      passwordInput.value = "";
+      passwordInput.value = currentValue;
+      passwordInput.checkValidity();
+    }
 
-  if  (EmailInput instanceof HTMLInputElement) {
-    const currentValue = EmailInput.value;
-    EmailInput.value = "";
-    EmailInput.value = currentValue;
-    EmailInput.checkValidity();
-  }
-};
+    if (confirmPasswordInput instanceof HTMLInputElement) {
+      const currentValue = confirmPasswordInput.value;
+      confirmPasswordInput.value = "";
+      confirmPasswordInput.value = currentValue;
+      confirmPasswordInput.checkValidity();
+    }
+
+    if (EmailInput instanceof HTMLInputElement) {
+      const currentValue = EmailInput.value;
+      EmailInput.value = "";
+      EmailInput.value = currentValue;
+      EmailInput.checkValidity();
+    }
+  };
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -59,36 +58,29 @@ export const Register = ({
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
-    
     console.log("Email:", email);
     console.log("Password:", password);
     console.log("Confirm Password:", confirmPassword);
-    
   };
 
   const handleRegisterClick = () => {
-    const form = document.querySelector("form"); 
+    const form = document.querySelector("form");
     if (form) {
       if (form.reportValidity()) {
-        
         console.log("Register button clicked");
         console.log("Email:", email);
         console.log("Password:", password);
         console.log("Confirm Password:", confirmPassword);
-       
       } else {
-        
         console.log("Form is not valid. Please check errors.");
       }
     }
-     /*hier komen de api stuff btw we moeten ook checken of het wachtwoord en email goed ingevuld is in de backend anders er is niet genoeg security*/
+    /*hier komen de api stuff btw we moeten ook checken of het wachtwoord en email goed ingevuld is in de backend anders er is niet genoeg security*/
   };
-  
 
   const handleLoginButtonClick = () => {
-    
     console.log("Login button clicked");
   };
 
@@ -147,7 +139,7 @@ export const Register = ({
                           onChange={handleEmailChange}
                           pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
                         }"
-                        title="vul een geldig e-mailadres in"
+                          title="vul een geldig e-mailadres in"
                         ></input>
                       </div>
                       <div className="help-icon">
@@ -198,24 +190,24 @@ export const Register = ({
                           autoComplete="new-password"
                         ></input>
                       </div>
-                          <button
-                            className="show-password"
-                            onClick={togglePasswordVisibility}
-                          >
-                            {passwordVisible ? (
-                              <img
-                                className="password-visibility"
-                                src="/public/images/hide.png"
-                                alt="Hide Password"
-                              />
-                            ) : (
-                              <img
-                                className="password-visibility"
-                                src="/public/images/visible.png"
-                                alt="Show Password"
-                              />
-                            )}
-                          </button>
+                      <button
+                        className="show-password"
+                        onClick={togglePasswordVisibility}
+                      >
+                        {passwordVisible ? (
+                          <img
+                            className="password-visibility"
+                            src="/public/images/hide.png"
+                            alt="Hide Password"
+                          />
+                        ) : (
+                          <img
+                            className="password-visibility"
+                            src="/public/images/visible.png"
+                            alt="Show Password"
+                          />
+                        )}
+                      </button>
                       <div className="help-icon">
                         <svg
                           className="help-circle2"

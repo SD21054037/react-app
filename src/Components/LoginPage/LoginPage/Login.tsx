@@ -17,7 +17,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
     console.log("Login button clicked");
     console.log("Email:", email);
     console.log("Password:", password);
-   /*hier komen de api stuff*/
+    /*hier komen de api stuff*/
   };
   return (
     <div className={"log-in " + className}>
@@ -140,8 +140,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                 <div className="text5">Log in met Google </div>
               </button>
             </div>
-            <button className="microsoft-login"
-            >
+            <button className="microsoft-login">
               <svg
                 className="icon-microsoft"
                 width="21"
@@ -156,9 +155,7 @@ export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
                 <path d="M20 11H11V20H20V11Z" fill="#FFB900" />
               </svg>
 
-              <div className="sign-in-with-microsoft">
-                Log in met Microsoft
-              </div>
+              <div className="sign-in-with-microsoft">Log in met Microsoft</div>
             </button>
           </div>
         </div>
