@@ -1,3 +1,4 @@
+/* Code generated with AutoHTML Plugin for Figma */
 import "./GegevensInvullenUser.css";
 
 export interface IGegevensInvullenUserProps {
@@ -10,18 +11,12 @@ export const GegevensInvullenUser = ({
 }: IGegevensInvullenUserProps): JSX.Element => {
   return (
     <div className={"gegevens-invullen-user " + className}>
-      <div
-        className="gevensinvullen"
-        style={{
-          background: "/public/images/GegevensInvullen.png center",
-          backgroundSize: "cover",
-        }}
-      >
+      <div className="gevensinvullen">
         <div className="content">
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="logo-image0.png" />
+                <img className="logo-image" src="/public/Images/logo.png" />
               </div>
             </div>
           </div>
@@ -55,8 +50,8 @@ export const GegevensInvullenUser = ({
                     </div>
                   </div>
                 </div>
-                <div className="input-field">
-                  <div className="input-field-base">
+                <div className="input-field2">
+                  <div className="input-field-base2">
                     <div className="input-with-label">
                       <div className="label">Telefoonnummer </div>
                       <div className="input">
@@ -68,7 +63,7 @@ export const GegevensInvullenUser = ({
                   </div>
                 </div>
                 <div className="input-field">
-                  <div className="input-field-base">
+                  <div className="input-field-base2">
                     <div className="input-with-label">
                       <div className="label">Postcode </div>
                       <div className="input">
@@ -80,7 +75,7 @@ export const GegevensInvullenUser = ({
                   </div>
                 </div>
                 <div className="input-field">
-                  <div className="input-field-base">
+                  <div className="input-field-base2">
                     <div className="input-with-label">
                       <div className="label">Aandoening/Ziekte </div>
                       <div className="input">
@@ -159,16 +154,16 @@ export const GegevensInvullenUser = ({
                         <div className="checkbox-base">
                           <svg
                             className="check"
-                            width="12"
-                            height="13"
-                            viewBox="0 0 12 13"
+                            width="10"
+                            height="10"
+                            viewBox="0 0 10 10"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M10 3.5L4.5 9L2 6.5"
+                              d="M8.29988 2.93994L4.22988 7.00994L2.37988 5.15994"
                               stroke="#7F56D9"
-                              strokeWidth="1.6666"
+                              strokeWidth="1.23328"
                               strokeLinecap="round"
                               strokeLinejoin="round"
                             />
@@ -234,16 +229,16 @@ export const GegevensInvullenUser = ({
                             </div>
                             <svg
                               className="chevron-down"
-                              width="20"
-                              height="21"
-                              viewBox="0 0 20 21"
+                              width="15"
+                              height="16"
+                              viewBox="0 0 15 16"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
                             >
                               <path
-                                d="M5 8L10 13L15 8"
+                                d="M3.75989 5.95007L7.45989 9.65007L11.1599 5.95007"
                                 stroke="#667085"
-                                strokeWidth="1.66667"
+                                strokeWidth="1.23333"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
                               />
@@ -258,18 +253,16 @@ export const GegevensInvullenUser = ({
               </div>
             </div>
           </div>
-          <div className="footer">
-            <div className="button">
-              <div className="button-base">
-                <div className="text6">Terug </div>
-              </div>
+          <footer className="footer">
+            <div className="TerugButton">
+              <p className="text6">Terug </p>
             </div>
             <div className="button">
-              <div className="button-base">
-                <div className="text6">Verder </div>
+              <div className="VerderButton">
+                <p className="text6">Verder </p>
               </div>
             </div>
-          </div>
+          </footer>
         </div>
       </div>
     </div>

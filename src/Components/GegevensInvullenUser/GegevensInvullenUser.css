@@ -1,129 +1,139 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+
 
 .gegevens-invullen-user,
 .gegevens-invullen-user * {
   box-sizing: border-box;
 }
-
 .gegevens-invullen-user {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+}
+.gevensinvullen {
+  background: url(/public/Images/GegevensInvullen.png) no-repeat;
+  background-size: cover;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+}
+.content {
+  background: #eaf1f8;
+  border-radius: 18.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 774px;
+  height: 548px;
   position: relative;
   overflow: hidden;
 }
-
-.gevensinvullen {
-  padding: 96px 32px 48px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-
 .header {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8.88px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
-  height: 100px;
+  height: 74px;
   position: relative;
 }
-
 .text-and-supporting-text {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8.88px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
 }
-
-
 .logo {
-  padding: 0 10px 0 10px;
+  padding: 0px 7.4px 0px 7.4px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 378px;
+  width: 279.72px;
   position: relative;
 }
-
 .logo-image {
   flex-shrink: 0;
-  width: 349px;
-  height: 100px;
+  width: 258.26px;
+  height: 74px;
   position: relative;
 }
-
-
 .content2 {
   background: #4453ae;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 7.4px 0px 7.4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 1024px;
-  height: 603px;
+  width: 749.62px;
+  height: 400.34px;
   position: relative;
 }
 .mainbox {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 7.4px 0px 7.4px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: center;
   justify-content: center;
   align-self: stretch;
   flex-shrink: 0;
-  height: 47px;
   position: relative;
 }
 .gebruiker {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 28px;
-  line-height: 24px;
+  font-size: 20.720001220703125px;
+  line-height: 17.76px;
   font-weight: 600;
   position: relative;
 }
 .gegevens-boxes {
   display: flex;
   flex-direction: row;
+  gap: 7.4px;
   align-items: center;
-  justify-content: space-between;
-  align-self: stretch;
-  flex-shrink: 0;
-  height: 556px;
+  justify-content: flex-start;
+  flex: 1;
+  width: 735.56px;
   position: relative;
 }
 .leftbox {
   background: #4453ae;
-  padding: 10px 0px 10px 10px;
+  height: fit-content;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5.92px;
   align-items: flex-start;
   justify-content: flex-start;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 389px;
-  height: 556px;
+  width: 244.2px;
   position: relative;
 }
 .input-field {
@@ -133,22 +143,23 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
+  width: 236.8px;
   position: relative;
 }
 .input-field-base {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4.44px;
   align-items: flex-start;
   justify-content: flex-start;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 320px;
   position: relative;
 }
 .input-with-label {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4.44px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -159,36 +170,33 @@
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 11.100000381469727px;
+  line-height: 14.8px;
   font-weight: 500;
   position: relative;
 }
 .input {
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 5.92px;
   border-style: solid;
   border-color: #d0d5dd;
-  border-width: 1px;
-  padding: 10px 14px 10px 14px;
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
 .content3 {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex: 1;
@@ -197,19 +205,39 @@
 .text {
   color: rgba(52, 64, 84, 0.7);
   text-align: left;
-  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--textmd-regular-font-size, 16px);
-  line-height: var(--textmd-regular-line-height, 24px);
-  font-weight: var(--textmd-regular-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 400;
   position: relative;
   flex: 1;
+}
+.input-field2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 192.4px;
+  position: relative;
+}
+.input-field-base2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 236.8px;
+  position: relative;
 }
 .text2 {
   color: rgba(16, 24, 40, 0.6);
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 11.84000015258789px;
+  line-height: 14.8px;
   font-weight: 400;
   position: relative;
   flex: 1;
@@ -221,14 +249,14 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 320px;
-  height: 154px;
+  width: 236.8px;
+  height: 85.1px;
   position: relative;
 }
 .textarea-input-field-base {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4.44px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -238,7 +266,7 @@
 .input-with-label2 {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4.44px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -248,40 +276,37 @@
 .label2 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--textsm-medium-font-size, 14px);
-  line-height: var(--textsm-medium-line-height, 20px);
-  font-weight: var(--textsm-medium-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 10.360000610351562px;
+  line-height: 14.8px;
+  font-weight: 500;
   position: relative;
 }
 .input2 {
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 5.92px;
   border-style: solid;
   border-color: #d0d5dd;
-  border-width: 1px;
-  padding: 10px 14px 10px 14px;
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex: 1;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
 .text3 {
   color: #667085;
   text-align: left;
-  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--textmd-regular-font-size, 16px);
-  line-height: var(--textmd-regular-line-height, 24px);
-  font-weight: var(--textmd-regular-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 400;
   position: relative;
   align-self: stretch;
   flex: 1;
@@ -289,29 +314,29 @@
 .rightbox {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
+  align-self: stretch;
   flex-shrink: 0;
-  width: 615px;
-  height: 555px;
+  width: 483.96px;
   position: relative;
 }
 .checkboxes-onderzoek-benadering {
-  padding: 4px 0px 4px 0px;
+  padding: 2.96px 0px 2.96px 0px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
 }
 .onderzoek-checkboxes {
-  padding: 17px 15px 17px 15px;
+  padding: 12.58px 11.1px 12.58px 11.1px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 6.66px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -320,16 +345,16 @@
 .onderzoek-waar-u-aan-wilt-meedoen {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
-  font-size: var(--textmd-semibold-font-size, 16px);
-  line-height: var(--textmd-semibold-line-height, 24px);
-  font-weight: var(--textmd-semibold-font-weight, 600);
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 600;
   position: relative;
 }
 .interview-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -346,29 +371,29 @@
 }
 .checkbox-base {
   background: #f9f5ff;
-  border-radius: 4px;
+  border-radius: 2.96px;
   border-style: solid;
   border-color: #7f56d9;
-  border-width: 1px;
+  border-width: 0.74px;
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
+  width: 11.84px;
+  height: 11.84px;
   position: relative;
   overflow: hidden;
 }
 .text4 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--textsm-medium-font-size, 14px);
-  line-height: var(--textsm-medium-line-height, 20px);
-  font-weight: var(--textsm-medium-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 10.360000610351562px;
+  line-height: 14.8px;
+  font-weight: 500;
   position: relative;
 }
 .groepsgesprekken-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -377,7 +402,7 @@
 .online-onderzoek-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -386,36 +411,36 @@
 .engelstalig-onderzoek-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
 }
 .benadering-checkboxes {
-  padding: 19px 0px 19px 0px;
+  padding: 14.06px 0px 14.06px 0px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 6.66px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  height: 184px;
+  height: 136.16px;
   position: relative;
 }
 .voorkeur-benadering {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 11.84000015258789px;
+  line-height: 14.8px;
   font-weight: 600;
   position: relative;
 }
 .telefonish-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -424,7 +449,7 @@
 .portal-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -433,16 +458,17 @@
 .mogen-commerciele-partijen-u-benaderen {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
-  font-size: var(--textsm-medium-font-size, 14px);
-  line-height: var(--textsm-medium-line-height, 20px);
-  font-weight: var(--textsm-medium-font-weight, 500);
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 10.360000610351562px;
+  line-height: 14.8px;
+  font-weight: 500;
   position: relative;
+  width: 211.64px;
 }
 .checkbox2 {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -462,17 +488,17 @@
 .nee-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
 }
 .leeftijd-verstandelijke-beperking-boxes {
-  padding: 6px 20px 6px 20px;
+  padding: 4.44px 14.8px 4.44px 14.8px;
   display: flex;
   flex-direction: row;
-  gap: 37px;
+  gap: 27.38px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
@@ -482,7 +508,7 @@
 .leeftijd-checkbox {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -492,15 +518,15 @@
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 17px;
-  line-height: 20px;
+  font-size: 12.579999923706055px;
+  line-height: 14.8px;
   font-weight: 600;
   position: relative;
 }
 .boven-18-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -509,7 +535,7 @@
 .onder-18-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -518,7 +544,7 @@
 .verstandelijke-beperking-checkbox {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: center;
   flex-shrink: 0;
@@ -528,16 +554,16 @@
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 11.100000381469727px;
+  line-height: 14.8px;
   font-weight: 600;
   position: relative;
 }
 .beperkinglijstbox {
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 7.4px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -547,7 +573,7 @@
 .beperking-dropdown {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
@@ -557,124 +583,118 @@
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 11.84000015258789px;
+  line-height: 14.8px;
   font-weight: 600;
   position: relative;
 }
 .input-dropdown {
   flex-shrink: 0;
-  width: 288px;
-  height: 70px;
+  width: 213.12px;
+  height: 51.8px;
   position: relative;
 }
 .input-dropdown-base {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4.44px;
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  right: 0px;
+  right: 0.12px;
   left: 0px;
   top: 0px;
 }
 .input3 {
   background: var(--white, #ffffff);
-  border-radius: 8px;
+  border-radius: 5.92px;
   border-style: solid;
   border-color: var(--gray-300, #d0d5dd);
-  border-width: 1px;
-  padding: 10px 14px 10px 14px;
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
 }
 .text5 {
   color: var(--gray-500, #667085);
   text-align: left;
-  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--textmd-regular-font-size, 16px);
-  line-height: var(--textmd-regular-line-height, 24px);
-  font-weight: var(--textmd-regular-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 400;
   position: relative;
 }
 .chevron-down {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 14.8px;
+  height: 14.8px;
   position: relative;
   overflow: visible;
 }
 .geselecteerde-beperkingen {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 7.4px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 307px;
-  height: 251px;
+  width: 227.18px;
+  height: 185.74px;
   position: relative;
 }
 .footer {
-  padding: 0px 40px 0px 40px;
+  padding: 0px 29.6px 0px 29.6px;
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 22.2px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 1022px;
-  height: 141px;
+  width: 756.28px;
+  height: 63.64px;
   position: relative;
 }
-.button {
-  border-radius: 8px;
+.TerugButton {
+  border-radius: 5.92px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 133px;
-  height: 47px;
+  width: 98.42px;
+  height: 34.78px;
   position: relative;
 }
-.button-base {
+.VerderButton {
   background: #2b50ec;
-  border-radius: 8px;
+  border-radius: 5.92px;
   border-style: solid;
   border-color: #d0d5dd;
-  border-width: 1px;
-  padding: 12px 40px 12px 40px;
+  border-width: 0.74px;
+  padding: 8.88px 29.6px 8.88px 29.6px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 5.92px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
 .text6 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
-  font-size: var(--textmd-semibold-font-size, 16px);
-  line-height: var(--textmd-semibold-line-height, 24px);
-  font-weight: var(--textmd-semibold-font-weight, 600);
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 600;
   position: relative;
 }

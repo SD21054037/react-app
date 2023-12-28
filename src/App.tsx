@@ -4,6 +4,7 @@ import RegisterPage, { Register } from "./Components/RegisterPage/Register";
 import ErrorPage from "./Components/ErrorPage/Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GegevensInvullenUser } from "./Components/GegevensInvullenUser/GegevensInvullenUser";
+import { GegevensInvullenVerzorgerOuder } from "./Components/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
     //   </Routes>
 
     // </Router>
-    <RegisterPage></RegisterPage>
+    <GegevensInvullenUser></GegevensInvullenUser>
   );
 }
 
