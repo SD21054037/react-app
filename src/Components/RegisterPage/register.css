@@ -3,18 +3,29 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .register,
 .register * {
   box-sizing: border-box;
 }
+
 .register {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100vh; 
   position: relative;
-  overflow: hidden;
 }
+
+.register2 {
+  background:#173a8c url(/public/Images/log-in.png) center center/cover no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh; 
+}
+
+
 .register2 {
   padding: 10px 32px 48px 32px;
   display: flex;
@@ -37,7 +48,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 401px;
+  max-width: 100%;
   height: 610px;
   position: relative;
   overflow: hidden;
@@ -70,7 +81,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: fill;
+  width: 100%;
   position: relative;
 }
 .logo-image {

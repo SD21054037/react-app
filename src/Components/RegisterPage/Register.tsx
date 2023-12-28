@@ -77,6 +77,7 @@ export const Register = ({
         console.log("Form is not valid. Please check errors.");
       }
     }
+     
     /*hier komen de api stuff btw we moeten ook checken of het wachtwoord en email goed ingevuld is in de backend anders er is niet genoeg security*/
   };
 
@@ -86,13 +87,7 @@ export const Register = ({
 
   return (
     <div className={"register " + className}>
-      <div
-        className="register2"
-        style={{
-          background: "url(./public/Images/log-in.png) center",
-          backgroundSize: "cover",
-        }}
-      >
+      <div className="register2">
         <div className="content">
           <div className="header">
             <div className="text-and-supporting-text">

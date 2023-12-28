@@ -1,7 +1,7 @@
 import "./LogIn.css";
 import { useState } from "react";
 export interface ILogInProps {
-  className?: string;
+  className?: string; 
 }
 
 export const LogIn = ({ className, ...props }: ILogInProps): JSX.Element => {
