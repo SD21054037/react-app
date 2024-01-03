@@ -1,0 +1,132 @@
+.header {
+    background: #eaf1f8;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .logo {
+    padding: 0px 9px 0px 9px;
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 370.8px;
+    height: 76.5px;
+    position: relative;
+  }
+  .rectangle-1 {
+    flex: 1;
+    height: 90px;
+    position: relative;
+  }
+  .HeaderButton {
+    border: none;
+    background: transparent;
+    border-radius: 45px;
+    flex-shrink: 0;
+    width: 171.9px;
+    height: 43.2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .onderzoeken {
+    color: #2b50ec;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 114.97%;
+    font-weight: 700;
+    position: absolute;
+    right: -0.1px;
+    left: 42.29999923706055px;
+    bottom: 12.1px;
+    top: 10.100000381469727px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-groups {
+    width: 30.6px;
+    height: 36.9px;
+    position: absolute;
+    left: 11.7px;
+    top: 5.85px;
+  }
+  .chat {
+    color: #2b50ec;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    right: -0.1px;
+    left: 0px;
+    bottom: 0.2px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chat-messages {
+    width: 41.4px;
+    height: 40.5px;
+    position: absolute;
+    left: 13.95px;
+    top: 4.5px;
+  }
+  .profile-settings-notification {
+    display: flex;
+    flex-direction: row;
+    gap: 20.7px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    width: 225px;
+    position: relative;
+  }
+
+  .NotificationButton{
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .NotificationButton:active{
+    transform: scale(80%);
+  }
+  .notification {
+    flex-shrink: 0;
+    top: 10px;
+    width: 54px;
+    height: 63px;
+    position: relative;
+  }
+  .ProfileButton{
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .ProfileButton:hover{
+    
+  }
+  .ProfileButton:active{
+    transform: scale(80%);
+  }
+
+  .profile {
+    flex-shrink: 0;
+    top: 10px;
+    width: 54px;
+    height: 63px;
+    position: relative;
+  }

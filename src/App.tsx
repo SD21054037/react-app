@@ -5,7 +5,8 @@ import ErrorPage from "./Components/ErrorPage/Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GegevensInvullenUser } from "./Components/GegevensInvullenUser/GegevensInvullenUser";
 import { GegevensInvullenVerzorgerOuder } from "./Components/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
-
+import { ChatpageBedrijven } from "./Components/ChatpageBedrijven/ChatpageBedrijven";
+import { Chatpage } from "./Components/Chatpage/chatpage";
 function App() {
   return (
     // <Router>
@@ -17,8 +18,8 @@ function App() {
     //   </Routes>
 
     // </Router>
-    <GegevensInvullenUser></GegevensInvullenUser>
-  );
+    <ChatpageBedrijven></ChatpageBedrijven>
+      );
 }
 
 export default App;
