@@ -5,26 +5,17 @@ export interface IRegisterBedrijvenProps {
   className?: string;
 }
 
-export const RegisterBedrijven = ({
-  className,
-  ...props
-}: IRegisterBedrijvenProps): JSX.Element => {
+export const RegisterBedrijven = (): JSX.Element => {
   return (
-    <div className={"register-bedrijven " + className}>
-      <div
-        className="register"
-        style={{
-          background: "url(register0.png) center",
-          backgroundSize: "cover",
-        }}
-      >
+    <div className="register-bedrijven">
+      <div className="register">
         <div className="content">
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="logo-image0.png" />
+                <img className="logo-image" src="public/Images/logo.png" />
               </div>
-              <div className="text">Registreer </div>
+              <h1 className="text">Registreer bedrijfportal</h1>
             </div>
           </div>
           <div className="form">

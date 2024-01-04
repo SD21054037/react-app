@@ -1,35 +1,44 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+
 .log-in,
 .log-in * {
   box-sizing: border-box;
 }
+
 .log-in {
-  padding: 96px 32px 48px 32px;
+  background: url('public/Images/log-in.png') center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0px;
   align-items: center;
-  justify-content: flex-start;
-  width: 1440px;
-  height: 1024px;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 .content {
   background: #eaf1f8;
-  border-radius: 25px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 15px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-shrink: 0;
-  width: 380px;
+  width: 348px;
   position: relative;
   overflow: hidden;
 }
 .header {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
@@ -39,7 +48,7 @@
 .text-and-supporting-text {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -47,34 +56,29 @@
   position: relative;
 }
 .logo {
-  padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-shrink: 0;
-  width: 378px;
-  height: 100px;
+  width: 340.4px;
+  height: 80px;
   position: relative;
 }
 .logo-image {
   flex-shrink: 0;
-  width: 349px;
-  height: 100px;
+  width: 279.2px;
+  height: 80px;
   position: relative;
 }
 .text {
   color: #4453ae;
   text-align: center;
-  font-family: var(
-    --displaysm-semibold-font-family,
-    "Inter-SemiBold",
-    sans-serif
-  );
-  font-size: var(--displaysm-semibold-font-size, 30px);
-  line-height: var(--displaysm-semibold-line-height, 38px);
-  font-weight: var(--displaysm-semibold-font-weight, 600);
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 30.4px;
+  font-weight: 600;
   position: relative;
   align-self: stretch;
 }
@@ -82,18 +86,18 @@
   color: #667085;
   text-align: center;
   font-family: "Inter-Medium", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
   font-weight: 500;
   position: relative;
   align-self: stretch;
 }
 .content2 {
-  border-radius: 12px;
-  padding: 0px 10px 0px 10px;
+  border-radius: 9.6px;
+  padding: 0px 8px 0px 8px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 15px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
@@ -103,7 +107,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -116,8 +120,8 @@
   gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  align-self: stretch;
   flex-shrink: 0;
+  width: 100%;
   position: relative;
 }
 .input-field-base {
@@ -143,97 +147,86 @@
 .label {
   color: #344054;
   text-align: left;
-  font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
+  font-family: "Inter-Medium", sans-serif;
   font-size: var(--textsm-medium-font-size, 14px);
-  line-height: var(--textsm-medium-line-height, 20px);
-  font-weight: var(--textsm-medium-font-weight, 500);
+  line-height: 16px;
+  font-weight: 500;
   position: relative;
 }
 .input {
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 6.4px;
   border-style: solid;
   border-color: #d0d5dd;
-  border-width: 1px;
-  padding: 10px 14px 10px 14px;
+  border-width: 0.8px;
+  padding: 8px 11.2px 8px 11.2px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6.4px;
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
 .content3 {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6.4px;
   align-items: center;
   justify-content: flex-start;
   flex: 1;
   position: relative;
 }
 .text2 {
+  border: none;
+  outline: none;
   color: #667085;
   text-align: left;
-  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
-  font-size: var(--textmd-regular-font-size, 16px);
-  line-height: var(--textmd-regular-line-height, 24px);
-  font-weight: var(--textmd-regular-font-weight, 400);
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
+  font-weight: 400;
   position: relative;
   flex: 1;
 }
-.help-icon {
+.mail {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
   position: relative;
-}
-.help-circle {
-  height: auto;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
   overflow: visible;
 }
-.input-field2 {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 360px;
-  position: relative;
-}
-.mail {
-  flex-shrink: 0;
-  width: 20px;
+.password-visibility {
+  width: 17px;
   height: 20px;
-  position: relative;
-  overflow: visible;
+  
 }
-.help-circle2 {
-  height: auto;
-  position: absolute;
-  right: 0%;
-  left: 0%;
-  width: 100%;
-  bottom: 0%;
-  top: 0%;
-  height: 100%;
-  overflow: visible;
+.show-password{
+  border: none;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 6px;
 }
+
+
+.error-message {
+  color: #ff0000; 
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.error-message p {
+  margin: 0;
+}
+
+
+.input-field.error {
+  border: 1px solid #ff0000;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -255,25 +248,38 @@
 .button-base {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6.4px;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   position: relative;
+  border: none;
+  background: #eaf1f8;
 }
+
 .text3 {
   color: #4453ae;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   position: relative;
+  transition: color 0.5 ease-in-out 0.1 ease-in-out;
+}
+
+.text3:hover{
+  color: #2138ca;
+}
+
+.text3:active{
+  border-bottom: 3px solid #2138ca;
+  transform: scale(95%);
 }
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12.8px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
@@ -281,111 +287,96 @@
   position: relative;
 }
 .button2 {
-  border-radius: 8px;
+  border-radius: 6.4px;
   display: flex;
   flex-direction: row;
   gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  align-self: stretch;
   flex-shrink: 0;
+  min-width: 288px;
+  width: 100%;
   position: relative;
 }
-.button-base2 {
+.loginButton {
   background: #4453ae;
-  border-radius: 8px;
+  border-radius: 6.4px;
   border-style: solid;
   border-color: #4453ae;
-  border-width: 1px;
-  padding: 10px 18px 10px 18px;
+  border-width: 0.8px;
+  padding: 8px 14.4px 8px 14.4px;
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 6.4px;
+  align-self: stretch;
   align-items: center;
   justify-content: center;
   flex: 1;
   position: relative;
-  box-shadow: var(
-    --shadow-xs-box-shadow,
-    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
-  );
+  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
+}
+.loginButton:hover{
+  background: #2138ca;
+}
+
+.loginButton:active{
+  transform: scale(95%);
 }
 .text4 {
   color: #ffffff;
   text-align: left;
-  font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
-  font-size: var(--textmd-semibold-font-size, 16px);
-  line-height: var(--textmd-semibold-line-height, 24px);
-  font-weight: var(--textmd-semibold-font-weight, 600);
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
+  font-weight: 600;
   position: relative;
 }
 .row2 {
   display: flex;
   flex-direction: row;
-  gap: 4px;
-  align-items: flex-start;
+  gap: 3.2px;
+  align-items: center;
   justify-content: center;
   align-self: stretch;
   flex-shrink: 0;
-  height: 38px;
+  height: 30.4px;
   position: relative;
+  padding-bottom: 10px;
 }
 .text5 {
+  display: flex;
   text-align: left;
   font-family: "-", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-  position: relative;
-  width: 142px;
-  height: 38px;
-}
-.text-5-span {
-  color: #4453ae;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 600;
-}
-.text-5-span2 {
-  color: #667085;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-}
-.text-5-span3 {
-  color: #4453ae;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 600;
-}
-.text-5-span4 {
-  color: #667085;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-}
-.button3 {
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 101px;
-  height: 38px;
   position: relative;
+  width: 113.6px;
+  height: 30.4px;
+  color: #4453ae;
+  align-items: center;
+  justify-content: center;
 }
+
+
 .text6 {
   color: #4453ae;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: 600;
   position: relative;
+  position: relative;
+  transition: color 0.5 ease-in-out 0.1 ease-in-out;
+}
+
+.text6:hover{
+  color: #2138ca;
+}
+
+.text6:active{
+  border-bottom: 3px solid #2138ca;
+  transform: scale(95%);
 }

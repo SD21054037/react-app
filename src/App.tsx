@@ -7,6 +7,8 @@ import { GegevensInvullenUser } from "./Components/GegevensInvullenUser/Gegevens
 import { GegevensInvullenVerzorgerOuder } from "./Components/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
 import { ChatpageBedrijven } from "./Components/ChatpageBedrijven/ChatpageBedrijven";
 import { Chatpage } from "./Components/Chatpage/chatpage";
+import { Loginbedrijven } from "./Components/LogInBedrijven/LoginBedrijven";
+import { RegisterBedrijven } from "./Components/RegisterBedrijven/RegisterBedrijven";
 function App() {
   return (
     // <Router>
@@ -18,7 +20,7 @@ function App() {
     //   </Routes>
 
     // </Router>
-    <ChatpageBedrijven></ChatpageBedrijven>
+    <RegisterBedrijven></RegisterBedrijven>
       );
 }
 
