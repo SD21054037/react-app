@@ -52,14 +52,14 @@ export const Loginbedrijven = (): JSX.Element => {
         <div className="header">
           <div className="text-and-supporting-text">
             <div className="logo">
-              <img className="logo-image" src="public/Images/logo.png" />
+              <img className="logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
             </div>
             <h1 className="text">Inlog bedrijven portal </h1>
             <p className="supporting-text">Welkom terug, vul uw details in</p>
           </div>
         </div>
         <div className="content2">
-          <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          <form className="form">
             <div className="input-field">
               <div className="input-field-base">
                 <div className="input-with-label">
@@ -173,7 +173,7 @@ export const Loginbedrijven = (): JSX.Element => {
           </div>
           <div className="actions">
             <div className="button2">
-              <button type="submit" className="loginButton">
+              <button type="submit" className="loginButton" onClick={handleSubmit(onSubmit)}>
                 <div className="text4">Log in</div>
               </button>
             </div>

@@ -5,18 +5,15 @@ export interface IGegevensInvullenUserProps {
   className?: string;
 }
 
-export const GegevensInvullenUser = ({
-  className,
-  ...props
-}: IGegevensInvullenUserProps): JSX.Element => {
+export const GegevensInvullenUser = (): JSX.Element => {
   return (
-    <div className={"gegevens-invullen-user " + className}>
+    <div className="gegevens-invullen-user">
       <div className="gevensinvullen">
         <div className="content">
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="/public/Images/logo.png" />
+                <img className="logo-image" src="/public/Images/logo.png" aria-label="logo accessibility" />
               </div>
             </div>
           </div>

@@ -60,13 +60,13 @@ export const Register = (): JSX.Element => {
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="./public/Images/logo.png" />
+                <img className="logo-image" src="./public/Images/logo.png" aria-label="logo accesibility"/>
               </div>
               <h1 className="text">Registreer </h1>
             </div>
           </div>
           <div className="content2">
-            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+            <form className="form">
               <div className="input-field">
                 <div className="input-field-base">
                   <div className="input-with-label">
@@ -180,6 +180,7 @@ export const Register = (): JSX.Element => {
                   
                   className="button-base"
                   type="submit"
+                  onClick={handleSubmit(onSubmit)}
                 >
                   Registreer
                 </button>
