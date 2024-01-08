@@ -205,6 +205,17 @@ input:focus{
   background-color: #ffffff;
   padding: 0px 0px 0px 6px;
 }
+.error-message {
+  color: #ff0000; 
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.error-message p {
+  margin: 0;
+}
+
 
 .content3 {
   display: flex;

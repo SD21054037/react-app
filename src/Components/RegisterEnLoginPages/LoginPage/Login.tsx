@@ -46,6 +46,7 @@ export const LogIn = (): JSX.Element => {
 
     console.log("Login button clicked");
     console.log("User:", user);
+    
   };
 
 
@@ -56,7 +57,7 @@ export const LogIn = (): JSX.Element => {
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="public/Images/logo.png" />
+                <img className="logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
               </div>
               <h1 className="text">Inloggen </h1>
               <p className="supporting-text">
@@ -108,6 +109,7 @@ export const LogIn = (): JSX.Element => {
                       <button
                         className="show-password"
                         onClick={togglePasswordVisibility}
+                        type="button"
                       >
                         {passwordVisible ? (
                           <img

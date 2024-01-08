@@ -210,7 +210,7 @@ export const RegisterBedrijven = (): JSX.Element => {
                 <div className="input-field-base">
                   <div className="input-with-label">
                     <label className="label" htmlFor="bedrijfsnaam">
-                      Bedrijfnaam{" "}
+                      Bedrijfnaam
                     </label>
                     <div className="input">
                       <div className="content2">
@@ -241,6 +241,7 @@ export const RegisterBedrijven = (): JSX.Element => {
                         <input
                           className="InputBase"
                           placeholder="vul uw bedrijfswebsite url in"
+                          type="url"
                           {...register("websiteUrl")}
                         ></input>
                       </div>

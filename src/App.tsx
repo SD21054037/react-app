@@ -1,14 +1,16 @@
 import { useState } from "react";
-import LoginPage, { LogIn } from "./Components/LoginPage/LoginPage/Login";
-import RegisterPage, { Register } from "./Components/RegisterPage/Register";
+import LoginPage, { LogIn } from "./Components/RegisterEnLoginPages/LoginPage/Login";
+import RegisterPage, { Register } from "./Components/RegisterEnLoginPages/RegisterPage/Register";
 import ErrorPage from "./Components/ErrorPage/Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { GegevensInvullenUser } from "./Components/GegevensInvullenUser/GegevensInvullenUser";
-import { GegevensInvullenVerzorgerOuder } from "./Components/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
+import { GegevensInvullenUser } from "./Components/RegisterEnLoginPages/GegevensInvullenUser/GegevensInvullenUser";
+import { GegevensInvullenVerzorgerOuder } from "./Components/RegisterEnLoginPages/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
 import { ChatpageBedrijven } from "./Components/ChatpageBedrijven/ChatpageBedrijven";
 import { Chatpage } from "./Components/Chatpage/chatpage";
-import { Loginbedrijven } from "./Components/LogInBedrijven/LoginBedrijven";
-import { RegisterBedrijven } from "./Components/RegisterBedrijven/RegisterBedrijven";
+import { Loginbedrijven } from "./Components/RegisterEnLoginPages/LogInBedrijven/LoginBedrijven";
+import { RegisterBedrijven } from "./Components/RegisterEnLoginPages/RegisterBedrijven/RegisterBedrijven";
+
+
 function App() {
   return (
     // <Router>
@@ -20,7 +22,7 @@ function App() {
     //   </Routes>
 
     // </Router>
-    <RegisterBedrijven></RegisterBedrijven>
+ <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
       );
 }
 

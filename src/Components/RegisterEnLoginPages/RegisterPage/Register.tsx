@@ -128,6 +128,7 @@ export const Register = (): JSX.Element => {
                       <button
                         className="show-password"
                         onClick={togglePasswordVisibility}
+                        type="button"
                       >
                         {passwordVisible ? (
                           <img
