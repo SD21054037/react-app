@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   email: z.string().email(),
@@ -10,7 +11,7 @@ const schema = z.object({
   // .min(8, 'The password must be at least 8 characters long')
   // .max(32, 'The password must be a maximun 32 characters')
   // .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*-])[A- Za-z\d!@#$%&*-]{8,}$/),
-  confirmPassword: z.string()
+  confirmPassword: z.string(),
 });
 
 type Formdata = z.infer<typeof schema>;
@@ -56,24 +57,28 @@ export const Register = (): JSX.Element => {
   return (
     <div className="register">
       <div className="register2">
-        <div className="content">
+        <div className="registerContent">
           <div className="header">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="./public/Images/logo.png" aria-label="logo accesibility"/>
+                <img
+                  className="logo-image"
+                  src="./public/Images/logo.png"
+                  aria-label="logo accesibility"
+                />
               </div>
               <h1 className="text">Registreer </h1>
             </div>
           </div>
-          <div className="content2">
-            <form className="form">
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label htmlFor="email" className="label">
+          <div className="RegisterContent2">
+            <form className="RegisterForm">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
+                    <label htmlFor="email" className="RegisterLabel">
                       Email
                     </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <svg
                           className="mail"
@@ -108,13 +113,13 @@ export const Register = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label htmlFor="password" className="label">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
+                    <label htmlFor="password" className="RegisterLabel">
                       Wachtwoord{" "}
                     </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <input
                           {...register("password")}
@@ -151,11 +156,11 @@ export const Register = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
                     <label className="label">Wachtwoord Bevestigen </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <input
                           className="Wachtwoord"
@@ -178,7 +183,6 @@ export const Register = (): JSX.Element => {
             <div className="actions">
               <div className="button">
                 <button
-                  
                   className="button-base"
                   type="submit"
                   onClick={handleSubmit(onSubmit)}
@@ -191,13 +195,7 @@ export const Register = (): JSX.Element => {
           <div className="row">
             <h3 className="al-een-account">Al een account? </h3>
             <div className="button2">
-              <button
-                className="LoginBtn"
-                aria-label="login"
-                onClick={handleLoginButtonClick}
-              >
-                Log in
-              </button>
+              <Link to="/login" className="LoginBtn">Login</Link>
             </div>
           </div>
         </div>

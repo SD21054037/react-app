@@ -5,18 +5,18 @@ html, body {
 
 
 
-.gegevens-invullen-user,
-.gegevens-invullen-user * {
+.GUI-gegevens-invullen-user,
+.GUI-gegevens-invullen-user * {
   box-sizing: border-box;
 }
-.gegevens-invullen-user {
+.GUI-gegevens-invullen-user {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
   
 }
-.gevensinvullen {
+.GUI-gevensinvullen {
   background: url(/public/Images/GegevensInvullen.png) center center no-repeat;
   background-size: cover;
   padding: 0px;
@@ -28,7 +28,7 @@ html, body {
   height: 100vh;
   position: relative;
 }
-.content {
+.GUI-content {
   background: #eaf1f8;
   border-radius: 18.5px;
   display: flex;
@@ -42,7 +42,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-.header {
+.GUI-header {
   display: flex;
   flex-direction: column;
   gap: 8.88px;
@@ -53,7 +53,7 @@ html, body {
   height: 74px;
   position: relative;
 }
-.text-and-supporting-text {
+.GUI-text-and-supporting-text {
   display: flex;
   flex-direction: column;
   gap: 8.88px;
@@ -63,7 +63,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.logo {
+.GUI-logo {
   padding: 0px 7.4px 0px 7.4px;
   display: flex;
   flex-direction: column;
@@ -74,13 +74,13 @@ html, body {
   width: 279.72px;
   position: relative;
 }
-.logo-image {
+.GUI-logo-image {
   flex-shrink: 0;
   width: 258.26px;
   height: 74px;
   position: relative;
 }
-.content2 {
+.GUI-content2 {
   background: #4453ae;
   padding: 10px;
   display: flex;
@@ -92,7 +92,7 @@ html, body {
   height: fit-content;
   position: relative;
 }
-.mainbox {
+.GUI-mainbox {
   padding: 0px 7.4px 0px 7.4px;
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ html, body {
   position: relative;
   margin: 0;
 }
-.gebruiker {
+.GUI-gebruiker {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -112,7 +112,7 @@ html, body {
   font-weight: 600;
   position: relative;
 }
-.gegevens-boxes {
+.GUI-gegevens-boxes {
   display: flex;
   flex-direction: row;
   gap: 7.4px;
@@ -122,7 +122,7 @@ html, body {
   width: fit-content;
   position: relative;
 }
-.leftbox {
+.GUI-leftbox {
   background: #4453ae;
   height: fit-content;
   padding: 0;
@@ -137,14 +137,14 @@ html, body {
   position: relative;
 }
 
-.leftboxLEFT{
+.GUI-leftboxLEFT{
   display: flex;
   flex-direction: column;
   width: fit-content;
   gap: 10px;
 }
 
-.leftboxRIGHT{
+.GUI-leftboxRIGHT{
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -153,7 +153,7 @@ html, body {
 
 
 
-.input-field {
+.GUI-input-field {
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -163,7 +163,7 @@ html, body {
   width: 100%;
   position: relative;
 }
-.input-field-base {
+.GUI-input-field-base {
   display: flex;
   flex-direction: column;
   gap: 4.44px;
@@ -173,7 +173,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.input-with-label {
+.GUI-input-with-label {
   display: flex;
   flex-direction: column;
   gap: 4.44px;
@@ -183,7 +183,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.label {
+.GUI-label {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
@@ -192,7 +192,7 @@ html, body {
   font-weight: 500;
   position: relative;
 }
-.input {
+.GUI-input {
   background: #ffffff;
   border-radius: 5.92px;
   border-style: solid;
@@ -210,7 +210,7 @@ html, body {
   box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
-.content3 {
+.GUI-content3 {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -219,7 +219,7 @@ html, body {
   flex: 1;
   position: relative;
 }
-.text {
+.GUI-text {
   color: rgba(0, 0, 0, 0.7);
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -232,7 +232,7 @@ html, body {
   border: none;
 }
 
-.textarea-input-field {
+.GUI-textarea-input-field {
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -247,13 +247,13 @@ html, body {
   outline: none;
 }
 
-.textarea-input-field  textarea{
+.GUI-textarea-input-field  textarea{
   resize: none;
   border: none;
   outline: none;
 }
 
-.textarea-input-field-base {
+.GUI-textarea-input-field-base {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -262,7 +262,7 @@ html, body {
   flex: 1;
   position: relative;
 }
-.input-with-label2 {
+.GUI-input-with-label2 {
   display: flex;
   flex-direction: column;
   gap: 4.44px;
@@ -272,7 +272,7 @@ html, body {
   flex: 1;
   position: relative;
 }
-.label2 {
+.GUI-label2 {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
@@ -281,7 +281,7 @@ html, body {
   font-weight: 500;
   position: relative;
 }
-.input2 {
+.GUI-input2 {
   background: #ffffff;
   border-radius: 5.92px;
   border-style: solid;
@@ -299,7 +299,7 @@ html, body {
   box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
-.text3 {
+.GUI-text3 {
   color: #667085;
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -310,7 +310,7 @@ html, body {
   align-self: stretch;
   flex: 1;
 }
-.rightbox {
+.GUI-rightbox {
   display: flex;
   flex-direction: column;
   gap: 7.4px;
@@ -322,7 +322,7 @@ html, body {
   width: 483.96px;
   position: relative;
 }
-.checkboxes-onderzoek-benadering {
+.GUI-checkboxes-onderzoek-benadering {
   padding: 2.96px 0px 2.96px 0px;
   display: flex;
   flex-direction: row;
@@ -333,7 +333,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.onderzoek-checkboxes {
+.GUI-onderzoek-checkboxes {
   padding: 12.58px 11.1px 12.58px 11.1px;
   display: flex;
   flex-direction: column;
@@ -343,7 +343,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.onderzoek-waar-u-aan-wilt-meedoen {
+.GUI-onderzoek-waar-u-aan-wilt-meedoen {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -352,7 +352,7 @@ html, body {
   font-weight: 600;
   position: relative;
 }
-.interview-checkbox {
+.GUI-interview-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -361,7 +361,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.checkbox {
+.GUI-checkbox {
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -370,7 +370,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.checkbox-base {
+.GUI-checkbox-base {
   background: #f9f5ff;
   border-radius: 2.96px;
   border-style: solid;
@@ -382,7 +382,7 @@ html, body {
   position: relative;
   overflow: hidden;
 }
-.rightbox h5 {
+.GUI-rightbox h5 {
   color: #ffffff;
   margin: 0;
   text-align: left;
@@ -393,11 +393,11 @@ html, body {
   position: relative;
 }
 
-.rightbox h4{
+.GUI-rightbox h4{
   color: #ffffff;
   margin: 0;
 }
-.groepsgesprekken-checkbox {
+.GUI-groepsgesprekken-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -407,7 +407,7 @@ html, body {
   position: relative;
 }
 
-.nvt-checkbox{
+.GUI-nvt-checkbox{
   display: flex;
   gap: 5.92px;
   align-items: center;
@@ -415,16 +415,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.online-onderzoek-checkbox {
-  display: flex;
-  flex-direction: row;
-  gap: 5.92px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.engelstalig-onderzoek-checkbox {
+.GUI-online-onderzoek-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -433,7 +424,16 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.benadering-checkboxes {
+.GUI-engelstalig-onderzoek-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GUI-benadering-checkboxes {
   padding: 14.06px 0px 14.06px 0px;
   display: flex;
   flex-direction: column;
@@ -445,7 +445,7 @@ html, body {
   flex: 1;
   position: relative;
 }
-.voorkeur-benadering {
+.GUI-voorkeur-benadering {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -454,7 +454,7 @@ html, body {
   font-weight: 600;
   position: relative;
 }
-.telefonish-checkbox {
+.GUI-telefonish-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -463,7 +463,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.portal-checkbox {
+.GUI-portal-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -472,7 +472,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.mogen-commerciele-partijen-u-benaderen {
+.GUI-mogen-commerciele-partijen-u-benaderen {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
@@ -482,7 +482,7 @@ html, body {
   position: relative;
   width: 211.64px;
 }
-.checkbox2 {
+.GUI-checkbox2 {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -491,7 +491,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.check {
+.GUI-check {
   height: auto;
   position: absolute;
   right: 12.5%;
@@ -502,7 +502,7 @@ html, body {
   height: 75%;
   overflow: visible;
 }
-.nee-checkbox {
+.GUI-nee-checkbox {
   display: flex;
   flex-direction: row;
   gap: 5.92px;
@@ -511,7 +511,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.leeftijd-verstandelijke-beperking-boxes {
+.GUI-leeftijd-verstandelijke-beperking-boxes {
   padding: 4.44px 14.8px 4.44px 14.8px;
   display: flex;
   flex-direction: row;
@@ -522,7 +522,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.leeftijd-checkbox {
+.GUI-leeftijd-checkbox {
   display: flex;
   flex-direction: column;
   gap: 7.4px;
@@ -531,7 +531,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.leeftijd {
+.GUI-leeftijd {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -541,11 +541,11 @@ html, body {
   position: relative;
 }
 
-.leeftijd-checkbox input {
+.GUI-leeftijd-checkbox input {
   width: 65%;
 }
 
-.verstandelijke-beperking-checkbox {
+.GUI-verstandelijke-beperking-checkbox {
   display: flex;
   flex-direction: column;
   gap: 7.4px;
@@ -555,7 +555,7 @@ html, body {
   flex-shrink: 0;
   position: relative;
 }
-.heeft-uw-kind-client-een-verstandelijke-beperking {
+.GUI-heeft-uw-kind-client-een-verstandelijke-beperking {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -565,14 +565,14 @@ html, body {
   position: relative;
 }
 
-.VerstandelijkeBeperkingCheckbox{
+.GUI-VerstandelijkeBeperkingCheckbox{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 
 }
-.beperkinglijstbox {
+.GUI-beperkinglijstbox {
   padding: 0px 0px 0px 7.4px;
   display: flex;
   flex-direction: row;
@@ -583,7 +583,7 @@ html, body {
   flex: 1;
   position: relative;
 }
-.beperking-dropdown {
+.GUI-beperking-dropdown {
   display: flex;
   flex-direction: column;
   gap: 7.4px;
@@ -593,7 +593,7 @@ html, body {
   position: relative;
   width: 40%;
 }
-.type-beperking-en {
+.GUI-type-beperking-en {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -602,7 +602,7 @@ html, body {
   font-weight: 600;
   position: relative;
 }
-.beperkingDropdown {
+.GUI-beperkingDropdown {
   background: var(--white, #ffffff);
   border-radius: 5.92px;
   border-style: solid;
@@ -618,7 +618,7 @@ html, body {
   position: relative;
   box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
 }
-.text5 {
+.GUI-text5 {
   color: var(--gray-500, #667085);
   text-align: left;
   font-family: "Inter-Regular", sans-serif;
@@ -627,14 +627,14 @@ html, body {
   font-weight: 400;
   position: relative;
 }
-.chevron-down {
+.GUI-chevron-down {
   flex-shrink: 0;
   width: 14.8px;
   height: 14.8px;
   position: relative;
   overflow: visible;
 }
-.geselecteerde-beperkingen {
+.GUI-geselecteerde-beperkingen {
   display: flex;
   flex-direction: row;
   gap: 7.4px;
@@ -645,18 +645,18 @@ html, body {
   height: 100%;
   position: relative;
 }
-.error-message {
+.GUI-error-message {
   color: #ffffff; 
   font-size: 15px;
   font-weight: 500;
 }
 
 
-.error-message p {
+.GUI-error-message p {
   margin: 0;
 }
 
-.footer {
+.GUI-footer {
   padding: 0px 29.6px 0px 29.6px;
   display: flex;
   flex-direction: row;
@@ -669,10 +669,10 @@ html, body {
   position: relative;
 }
 
-.footer button{
+.GUI-footer button{
   border-radius: 10px;
 }
-.TerugButton {
+.GUI-TerugButton {
   background: #2b50ec;
   border: none;
   padding: 8.88px 29.6px 8.88px 29.6px;
@@ -684,7 +684,7 @@ html, body {
   position: relative;
   transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
-.VerderButton {
+.GUI-VerderButton {
   background: #2b50ec; 
   border: none;
   padding: 8.88px 29.6px 8.88px 29.6px;
@@ -699,16 +699,16 @@ html, body {
   transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
-.TerugButton:hover, .VerderButton:hover {
+.GUI-TerugButton:hover, .GUI-VerderButton:hover {
 background:#0d2eb3;
 }
 
-.TerugButton:active, .VerderButton:active {
+.GUI-TerugButton:active, .GUI-VerderButton:active {
   background:#0d2eb3;
   transform: scale(90%);
   }
 
-.text6 {
+.GUI-text6 {
   color: #ffffff;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -721,32 +721,32 @@ background:#0d2eb3;
 
 
 @media only screen and (max-width: 900px) {
-  .leftbox {
+  .GUI-leftbox {
     display: flex;
     flex-direction: column;
   }
 
-  .content {
+  .GUI-content {
     padding: 10px;
   }
 
-  .content2{
+  .GUI-content2{
   border-radius: 20px;
   width: 100%;
   }
 }
 
 @media only screen and (max-width: 800px){
-  .leftbox {
+  .GUI-leftbox {
     display: flex;
     flex-direction: column;
   }
 
-  .footer{
+  .GUI-footer{
     width: fit-content;
   }
 
-  .content {
+  .GUI-content {
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -755,7 +755,7 @@ background:#0d2eb3;
 
   }
 
-  .content2{
+  .GUI-content2{
   border-radius: 20px;
   flex-direction: column;
   width: fit-content;
@@ -764,21 +764,21 @@ background:#0d2eb3;
   justify-content: center;
   }
 
-  .header{
+  .GUI-header{
     align-self: auto;
     width: fit-content;
   }
   
-  .checkboxes-onderzoek-benadering {
+  .GUI-checkboxes-onderzoek-benadering {
     display: flex;
     flex-direction: column;
   }
 
-  .rightbox{
+  .GUI-rightbox{
     width: fit-content;
   }
 
-  .mainbox{
+  .GUI-mainbox{
     width: fit-content;
     display: flex;
     justify-content: center;
@@ -786,45 +786,45 @@ background:#0d2eb3;
     align-self: auto;
   }
 
-  .benadering-checkboxes{
+  .GUI-benadering-checkboxes{
     padding: 12.58px 11.1px 12.58px 11.1px;
   }
 }
 
 @media only screen and (max-width: 530px){
-.gevensinvullen{
+.GUI-gevensinvullen{
   height: auto;
   background: url(public/images/GegevensInvullen.png);
   background-size: cover; 
 }
 
-  .gegevens-boxes{
+  .GUI-gegevens-boxes{
     display: flex;
     flex-direction: column;
   }
-  .leftbox{
+  .GUI-leftbox{
     width: 100%;
   }
 
-  .leftboxLEFT{
+  .GUI-leftboxLEFT{
     width: 100%;
   }
 
-  .leftboxRIGHT{
+  .GUI-leftboxRIGHT{
     width: 100%;
   }
 
-  .leeftijd-checkbox input {
+  .GUI-leeftijd-checkbox input {
     width: fit-content;
   }
-  .gevensinvullen{
+  .GUI-gevensinvullen{
     align-items: flex-start;
   }
-  .gegevens-invullen-user{
+  .GUI-gegevens-invullen-user{
     overflow: scroll;
   }
 
-  .content {
+  .GUI-content {
     margin: 20px;
   }
 }

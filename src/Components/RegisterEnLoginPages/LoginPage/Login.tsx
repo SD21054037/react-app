@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   email: z.string().email({message: "Invalid email adress"}),
@@ -51,29 +52,29 @@ export const LogIn = (): JSX.Element => {
 
 
   return (
-    <div className="log-in">
+    <div className="Login-log-in">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="content">
-          <div className="header">
-            <div className="text-and-supporting-text">
-              <div className="logo">
-                <img className="logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
+        <div className="Login-content">
+          <div className="Login-header">
+            <div className="Login-text-and-supporting-text">
+              <div className="Login-logo">
+                <img className="Login-logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
               </div>
-              <h1 className="text">Inloggen </h1>
-              <p className="supporting-text">
+              <h1 className="Login-text">Inloggen </h1>
+              <p className="Login-supporting-text">
                 Welkom terug, vul uw details in
               </p>
             </div>
           </div>
-          <div className="content2">
-            <form className="form">
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label className="label" htmlFor="Email">Email </label>
-                    <div className="input-base">
-                      <div className="content3">
-                        <div className="text2">
+          <div className="Login-content2">
+            <form className="Login-form">
+              <div className="Login-input-field">
+                <div className="Login-input-field-base">
+                  <div className="Login-input-with-label">
+                    <label className="Login-label" htmlFor="Email">Email </label>
+                    <div className="Login-input-base">
+                      <div className="Login-content3">
+                        <div className="Login-text2">
                           <input
                           id="Email"
                             type="text"
@@ -85,19 +86,19 @@ export const LogIn = (): JSX.Element => {
                     </div>
                   </div>
                   {errors.email && (
-                    <p className="error-message">
+                    <p className="Login-error-message">
                       {errors.email.message}
                     </p>
                   )}
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label className="label" htmlFor="Password">Wachtwoord</label>
-                    <div className="input-base">
-                      <div className="content3">
-                        <div className="text2">
+              <div className="Login-input-field">
+                <div className="Login-input-field-base">
+                  <div className="Login-input-with-label">
+                    <label className="Login-label" htmlFor="Password">Wachtwoord</label>
+                    <div className="Login-input-base">
+                      <div className="Login-content3">
+                        <div className="Login-text2">
                           <input
                           id="Password"
                             type={passwordVisible ? "text" : "password"}
@@ -107,19 +108,19 @@ export const LogIn = (): JSX.Element => {
                         </div>
                       </div>
                       <button
-                        className="show-password"
+                        className="Login-show-password"
                         onClick={togglePasswordVisibility}
                         type="button"
                       >
                         {passwordVisible ? (
                           <img
-                            className="password-visibility"
+                            className="Login-password-visibility"
                             src="/public/images/hide.png"
                             alt="Hide Password"
                           />
                         ) : (
                           <img
-                            className="password-visibility"
+                            className="Login-password-visibility"
                             src="/public/images/visible.png"
                             alt="Show Password"
                           />
@@ -128,26 +129,26 @@ export const LogIn = (): JSX.Element => {
                     </div>
                   </div>
                   {errors.password && (
-                    <p className="error-message">
+                    <p className="Login-error-message">
                       {errors.password.message}
                     </p>
                     )}
                 </div>
               </div>
             </form>
-            <div className="row">
-              <button className="WwVergeten-button">
-                <h3 className="text3">Wachtwoord vergeten? </h3>
+            <div className="Login-row">
+              <button className="Login-WwVergeten-button">
+                <h3 className="Login-text3">Wachtwoord vergeten? </h3>
               </button>
             </div>
-            <div className="actions">
-              <button className="loginbutton" type="submit">
-                <h3 className="text4">Log in </h3>
+            <div className="Login-actions">
+              <button className="Login-loginbutton" type="submit">
+                <h3 className="Login-text4">Log in </h3>
               </button>
-              <div className="social-button-groups">
-                <button className="Google-login">
+              <div className="Login-social-button-groups">
+                <button className="Login-Google-login">
                   <svg
-                    className="social-icon"
+                    className="Login-social-icon"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -178,12 +179,12 @@ export const LogIn = (): JSX.Element => {
                       </clipPath>
                     </defs>
                   </svg>
-                  <h3 className="text5">Log in met Google </h3>
+                  <h3 className="Login-text5">Log in met Google </h3>
                 </button>
               </div>
-              <button className="microsoft-login">
+              <button className="Login-microsoft-login">
                 <svg
-                  className="icon-microsoft"
+                  className="Login-icon-microsoft"
                   width="21"
                   height="21"
                   viewBox="0 0 21 21"
@@ -195,16 +196,16 @@ export const LogIn = (): JSX.Element => {
                   <path d="M20 1H11V10H20V1Z" fill="#7FBA00" />
                   <path d="M20 11H11V20H20V11Z" fill="#FFB900" />
                 </svg>
-                <h3 className="sign-in-with-microsoft">Log in met Microsoft</h3>
+                <h3 className="Login-sign-in-with-microsoft">Log in met Microsoft</h3>
               </button>
             </div>
           </div>
-          <div className="row2">
-            <div className="text6">
-              <h3 className="text-6-span">Geen account?</h3>
+          <div className="Login-row2">
+            <div className="Login-text6">
+              <h3 className="Login-text-6-span">Geen account?</h3>
             </div>
-            <button className="Registreer-button">
-              <h3 className="text7">Registreer </h3>
+            <button className="Login-Registreer-button">
+              <Link to={"/register"} className="Login-text7">Registreer</Link>
             </button>
           </div>
         </div>

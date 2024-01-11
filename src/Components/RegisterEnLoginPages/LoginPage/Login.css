@@ -9,25 +9,23 @@ html {
   padding: 0;
   overflow: hidden;
 }
-.log-in,
-.log-in * {
+.Login-log-in,
+.Login-log-in * {
   box-sizing:border-box;
   margin: 0;
 }
-.log-in{
+.Login-log-in{
   background: url('/public/Images/log-in.png') center center no-repeat;
   background-size: cover;
-  background-size: fill;
-  padding: 18px 32px 18px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
   position: relative;
 }
-.content {
+.Login-content {
   background: #eaf1f8;
   border-radius: 25px;
   display: flex;
@@ -36,12 +34,12 @@ html {
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
-  width: 23.813rem;
+  width: fit-content;
   height: fit-content;
   position: relative;
   overflow: hidden;
 }
-.header {
+.Login-header {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -51,7 +49,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.text-and-supporting-text {
+.Login-text-and-supporting-text {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -61,7 +59,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.logo {
+.Login-logo {
   padding: 0px 10px 0px 10px;
   display: flex;
   flex-direction: column;
@@ -72,13 +70,13 @@ html {
   max-width: 100%;
   position: relative;
 }
-.logo-image {
+.Login-logo-image {
   flex-shrink: 0;
   width: 100%; 
   height: auto;
   position: relative;
 }
-.text {
+.Login-text {
   color: #4453ae;
   text-align: center;
   font-family: var(
@@ -92,7 +90,7 @@ html {
   position: relative;
   align-self: stretch;
 }
-.supporting-text {
+.Login-supporting-text {
   color: var(--gray-500, #667085);
   text-align: center;
   font-family: "Inter-Medium", sans-serif;
@@ -102,7 +100,7 @@ html {
   position: relative;
   align-self: stretch;
 }
-.content2 {
+.Login-content2 {
   border-radius: 12px;
   padding: 0 1rem; 
   display: flex;
@@ -115,7 +113,7 @@ html {
   height: 25rem;
   position: relative;
 }
-.form {
+.Login-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -125,7 +123,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.input-field {
+.Login-input-field {
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -135,7 +133,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.input-field-base {
+.Login-input-field-base {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -145,7 +143,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.input-with-label {
+.Login-input-with-label {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -155,7 +153,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.label {
+.Login-label {
   color: var(--gray-700, #344054);
   text-align: left;
   font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
@@ -164,7 +162,7 @@ html {
   font-weight: var(--textsm-medium-font-weight, 500);
   position: relative;
 }
-.input-base {
+.Login-input-base {
   background: var(--white, #ffffff);
   border-radius: 8px;
   border-style: solid;
@@ -195,29 +193,29 @@ input:focus{
   outline: none;
 }
 
-.password-visibility {
+.Login-password-visibility {
   width: 17px;
   height: 20px;
 }
 
-.show-password{
+.Login-show-password{
   border: none;
   background-color: #ffffff;
   padding: 0px 0px 0px 6px;
 }
-.error-message {
+.Login-error-message {
   color: #ff0000; 
   font-size: 15px;
   font-weight: 500;
 }
 
 
-.error-message p {
+.Login-error-message p {
   margin: 0;
 }
 
 
-.content3 {
+.Login-content3 {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -226,14 +224,14 @@ input:focus{
   flex: 1;
   position: relative;
 }
-.mail {
+.Login-mail {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
   position: relative;
   overflow: visible;
 }
-.text2 {
+.Login-text2 {
   color: var(--gray-500, #667085);
   text-align: left;
   font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
@@ -243,13 +241,13 @@ input:focus{
   position: relative;
   flex: 1;
 }
-.help-icon {
+.Login-help-icon {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
   position: relative;
 }
-.help-circle {
+.Login-help-circle {
   height: auto;
   position: absolute;
   right: 0%;
@@ -260,16 +258,17 @@ input:focus{
   height: 100%;
   overflow: visible;
 }
-.row {
+.Login-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  align-self: stretch;
+  width: 100%;
+  height: fit-content;
   flex-shrink: 0;
   position: relative;
 }
-.WwVergeten-button {
+.Login-WwVergeten-button {
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -281,7 +280,7 @@ input:focus{
   transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for a smoother effect */
 }
 
-.text3 {
+.Login-text3 {
   color: #4453ae;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -291,37 +290,38 @@ input:focus{
   position: relative;
 }
 
-.text3:hover{
+.Login-text3:hover{
   border-bottom: #4453ae solid 3px;
 }
 
-.text3:active{
+.Login-text3:active{
   color: #101b64;
   border-bottom: #101b64 solid 3px;
 }
-.WwVergeten-button:active {
+.Login-WwVergeten-button:active {
   transform: scale(0.95); 
 
 }
 
 
-.actions {
+.Login-actions {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: flex-start;
   justify-content: flex-start;
-  align-self: stretch;
+  width: 100%;
+  height: fit-content;
   flex-shrink: 0;
   position: relative;
 }
-.loginbutton {
+.Login-loginbutton {
   display: flex;
   flex-direction: row;
   gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
-  align-self: stretch;
+  width: 100%;
   flex-shrink: 0;
   position: relative;
   background: #4453ae;
@@ -345,14 +345,14 @@ input:focus{
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.loginbutton:hover{
+.Login-loginbutton:hover{
   background: #7281f4;
 }
 
-.loginbutton:active{
+.Login-loginbutton:active{
   transform: scale(0.95); 
 }
-.text4 {
+.Login-text4 {
   color: var(--white, #ffffff);
   text-align: left;
   font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
@@ -361,7 +361,7 @@ input:focus{
   font-weight: var(--textmd-semibold-font-weight, 600);
   position: relative;
 }
-.social-button-groups {
+.Login-social-button-groups {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -371,7 +371,7 @@ input:focus{
   flex-shrink: 0;
   position: relative;
 }
-.Google-login {
+.Login-Google-login {
   background: var(--white, #ffffff);
   border-radius: 8px;
   border-style: solid;
@@ -394,22 +394,22 @@ input:focus{
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.Google-login:hover {
+.Login-Google-login:hover {
   background-color: #d6d4d4; 
 }
 
 
-.Google-login:active {
+.Login-Google-login:active {
   transform: scale(0.95); 
 }
-.social-icon {
+.Login-social-icon {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
   position: relative;
   overflow: visible;
 }
-.text5 {
+.Login-text5 {
   color: var(--gray-700, #344054);
   text-align: left;
   font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
@@ -418,7 +418,7 @@ input:focus{
   font-weight: var(--textmd-semibold-font-weight, 600);
   position: relative;
 }
-.microsoft-login {
+.Login-microsoft-login {
   background: #ffffff;
   border-radius: 8px;
   border-style: solid;
@@ -436,22 +436,22 @@ input:focus{
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.microsoft-login:hover {
+.Login-microsoft-login:hover {
   background-color: #d6d4d4; 
 }
 
-.microsoft-login:active {
+.Login-microsoft-login:active {
   transform: scale(0.95); 
 }
 
-.icon-microsoft {
+.Login-icon-microsoft {
   flex-shrink: 0;
   width: 21px;
   height: 21px;
   position: relative;
   overflow: visible;
 }
-.sign-in-with-microsoft {
+.Login-sign-in-with-microsoft {
   color: #344054;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -459,7 +459,7 @@ input:focus{
   font-weight: 600;
   position: relative;
 }
-.row2 {
+.Login-row2 {
   display: flex;
   flex-direction: row;
   gap: 4px;
@@ -471,7 +471,7 @@ input:focus{
   position: relative;
 }
 
-.text6 {
+.Login-text6 {
   text-align: left;
   font-family: "-", sans-serif;
   font-size: 1.125rem;
@@ -481,13 +481,13 @@ input:focus{
   width: 142px;
   height: 38px;
 }
-.text-6-span {
+.Login-text-6-span {
   color: #4453ae;
   font-family: "Inter-SemiBold", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
 }
-.Registreer-button {
+.Login-Registreer-button {
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -500,7 +500,7 @@ input:focus{
   border: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.text7 {
+.Login-text7 {
   color: #4453ae;
   text-align: left;
   font-family: "Inter-SemiBold", sans-serif;
@@ -510,28 +510,28 @@ input:focus{
   position: relative;
 }
 
-.text7:hover{
+.Login-text7:hover{
   color: #4453ae;
   border-bottom: #4453ae solid 3px;
 }
 
-.text7:active{
+.Login-text7:active{
   color: #101b64;
   border-bottom: #101b64 solid 3px;
 }
 /* Active/Clicked effect */
-.Registreer-button:active {
+.Login-Registreer-button:active {
   transform: scale(0.95); 
 }
 
 
 
 @media screen and (min-width: 1600px) {
-  .log-in {
+  .Login-log-in {
     padding: 2rem 4rem;
   }
 
-  .content {
+  .Login-content {
     width: 30rem;
     height: auto;
   }
@@ -541,11 +541,11 @@ input:focus{
 
 /* Tablet styles */
 @media screen and (max-width: 767px) {
-  .log-in {
+  .Login-log-in {
     padding: 2rem;
   }
 
-  .content {
+  .Login-content {
     width: 100%;
     height: auto;
   }
@@ -555,11 +555,11 @@ input:focus{
 
 /* Phone styles */
 @media screen and (max-width: 480px) {
-  .log-in {
+  .Login-log-in {
     padding: 1rem;
   }
 
-  .content {
+  .Login-content {
     width: 100%;
     height: auto;
   }
