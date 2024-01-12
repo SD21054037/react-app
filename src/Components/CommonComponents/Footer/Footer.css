@@ -1,0 +1,184 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    
+  }
+  .footer-elements-1 {
+    background: #111329;
+    padding: 0px 20px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .snel-naar {
+    color: #21cea1;
+    text-align: left;
+    position: relative;
+  }
+  .snel-naar-span {
+    color: #21cea1;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 700;
+  }
+  .snel-naar-span2 {
+    color: #21cea1;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+  .actueel {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+    width: fit-content;
+  }
+  .algemene-voorwaarden {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .privacy-policy {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .faq {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .footer-contact {
+    background: #111329;
+    padding: 0px 25px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .contact {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    position: relative;
+    width: 100px;
+    height: 91px;
+  }
+  ._030-239-82-70 {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+  .info-accessibility {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+  .footer-elements-2 {
+    background: #111329;
+    padding: 0px 20px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .hoe-wij-helpen {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    position: relative;
+  }
+  .audits {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+  .gebruikersonderzoek {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+  .trainingen {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+  .advies {
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }

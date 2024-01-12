@@ -1,5 +1,5 @@
 import "./chatpage.css";
-import Header from "../Header/Header";
+import Header from "../CommonComponents/Header/Header";
 
 export interface IChatPage {
   classname?: string;
@@ -11,7 +11,7 @@ export const Chatpage = ({ classname, ...props }: IChatPage): JSX.Element => {
       <Header></Header>
       <div className="Content">
         <div className="ChatWindow">
-        <div className="search-bar">
+          <div className="search-bar">
             <div className="content">
               <div className="cont">
                 <div className="placeholder-label">zoek </div>
@@ -33,4 +33,3 @@ export const Chatpage = ({ classname, ...props }: IChatPage): JSX.Element => {
     </div>
   );
 };
- 

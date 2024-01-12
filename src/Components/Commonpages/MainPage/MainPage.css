@@ -1,0 +1,258 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+.main-page,
+.main-page * {
+  box-sizing: border-box;
+}
+.main-page {
+  background: #3e478b;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+  overflow: scroll;
+}
+.MainpageContent{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 100%;
+}
+
+.Opener { 
+  display: flex; 
+  flex-direction: row; 
+  gap: 10px; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+  background: #4453AE;
+  height: 200px;
+} 
+
+.OpenerText { 
+  color: #ffffff; 
+  text-align: center; 
+  font-family: "Poppins-Bold", sans-serif; 
+  font-size: 20px; 
+  line-height: 180.5%; 
+  font-weight: 700; 
+  position: relative; 
+  width: 50%; 
+  
+} 
+
+.RecenteOnderzoekenContent{
+  background: #4453AE;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  padding: 10px;
+  position: relative;
+}
+
+.ROContentTitel{
+  color: #ffffff; 
+  text-align: start; 
+  font-family: "Poppins-SemiBold", sans-serif; 
+  font-size: 20px; 
+  line-height: 180.5%; 
+  font-weight: 600; 
+  position: relative; 
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.RecenteOnderzoeken{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  justify-content: space-between;
+}
+
+.RecenteOnderzoek1, .RecenteOnderzoek2, .RecenteOnderzoek3{ 
+  background: white; 
+  border-radius: 25px; 
+  margin: 10px;
+  padding: 10px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  width: 25%;
+  justify-content: flex-start; 
+  position: relative;
+  height: 250px;
+} 
+
+.OnderzoekFrame { 
+  display: flex; 
+  flex-direction: column;  
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  position: relative; 
+  gap: 10px;
+} 
+
+.onderzoek-naam { 
+  color: #2b50ec; 
+  text-align: left; 
+  font-family: "Poppins-SemiBold", sans-serif; 
+  font-size: 20px; 
+  font-weight: 600; 
+  position: relative; 
+
+} 
+
+.SoortOnderzoekTag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2b50ec;
+  border-radius: 8px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  text-align: center;
+}
+.onderzoek-soort { 
+  color: white ; 
+  font-family: "Poppins-Regular", sans-serif; 
+  font-size: 14px; 
+  font-weight: 400; 
+  position: relative; 
+  margin: 0;
+  padding: 5px; 
+} 
+
+.onderzoek-beschrijving { 
+  color: #2b50ec; 
+  text-align: left; 
+  font-family: "Poppins-Regular", sans-serif; 
+  font-size: 14px; 
+  line-height: 187.5%; 
+  font-weight: 400; 
+  position: relative; 
+  width: fit-content; 
+  height: 108px; 
+} 
+
+.onderzoek-kopje { 
+
+  background: #2b50ec; 
+
+  border-radius: 8px; 
+
+  display: flex; 
+
+  flex-direction: column; 
+
+  gap: 10px; 
+
+  align-items: center; 
+
+  justify-content: center; 
+
+  flex-shrink: 0; 
+
+  position: relative; 
+
+
+} 
+
+
+
+.GoogeleNieuwsArtikelen{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  
+  padding: 20px;
+  margin-top: 40px;
+}
+.google-new-artikel { 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #4453ae;
+  width: 100%; 
+  height: 400px;
+  display: flex; 
+  flex-direction: row; 
+  gap: 280px; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative; 
+} 
+
+
+
+.GoogleNieuwsTextFrame { 
+  border-radius: 20px; 
+  padding: 5px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 14px; 
+  width: 35%;
+  height: fit-content;
+  align-items: flex-start; 
+  justify-content: center; 
+  position: relative; 
+} 
+
+.NieuwsTextAchtergrond{
+  background: white;
+  border-radius: 20px;
+  padding: 5px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.NieuwsKopje { 
+  color: #2b50ec; 
+  text-align: left; 
+  font-family: "Poppins-SemiBold", sans-serif; 
+  font-size: 20px; 
+  font-weight: 500; 
+  position: relative; 
+  width: 100%; 
+  height: fit-content;
+  margin-bottom: 10px;
+} 
+
+.NieuwsBeschrijving { 
+  color: #2b50ec; 
+  text-align: left; 
+  font-family: "Poppins-Regular", sans-serif; 
+  font-size: 16px; 
+  font-weight: 400; 
+  position: relative; 
+
+
+} 
+
+.news-source { 
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  color: #2b50ec; 
+  text-align: center; 
+  font-family: "Poppins-Medium", sans-serif; 
+  font-size: 16px; 
+  font-weight: 500; 
+  width: fit-content;
+  position: relative; 
+
+} 
+
+.news-picture { 
+  border-radius: 25px;    
+  width: 400px;
+  height: 100%;
+  position: relative; 
+} 

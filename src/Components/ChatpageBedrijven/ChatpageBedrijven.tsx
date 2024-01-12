@@ -1,6 +1,5 @@
-
 import "./ChatpageBedrijven.css";
-import {Header} from "../Header/Header"
+import { Header } from "../CommonComponents/Header/Header";
 export interface IChatpageBedrijvenProps {
   className?: string;
 }
@@ -103,7 +102,13 @@ export const ChatpageBedrijven = ({
               </svg>
             </div>
             <div className="frame-2897">
-              <div className="start-typing"><input className="start-typing" type="text" placeholder="begin met typen"/></div>
+              <div className="start-typing">
+                <input
+                  className="start-typing"
+                  type="text"
+                  placeholder="begin met typen"
+                />
+              </div>
             </div>
             <div className="bericht-buttions">
               <svg

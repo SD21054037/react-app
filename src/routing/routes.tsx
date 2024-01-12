@@ -5,7 +5,7 @@ import { GegevensInvullenUser } from "../Components/RegisterEnLoginPages/Gegeven
 import { GegevensInvullenVerzorgerOuder } from "../Components/RegisterEnLoginPages/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
 import { Loginbedrijven } from "../Components/RegisterEnLoginPages/LogInBedrijven/LoginBedrijven";
 import { RegisterBedrijven } from "../Components/RegisterEnLoginPages/RegisterBedrijven/RegisterBedrijven";
-import HomePage from "../Components/HomePage/HomePage";
+import HomePage from "../Components/HomePage/LandingPage";
 
 const router = createBrowserRouter([
   { path: "/gegevensinvullenuser/:email", element: <GegevensInvullenUser /> },

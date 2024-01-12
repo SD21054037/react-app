@@ -1,14 +1,16 @@
 import "./LogIn.css";
-import { useForm, SubmitHandler} from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const schema = z.object({
-  email: z.string().email({message: "Invalid email adress"}),
-  password: z.string().min(8, {message: "Password is be at least 8 characters"}),
+  email: z.string().email({ message: "Invalid email adress" }),
+  password: z
+    .string()
+    .min(8, { message: "Password is be at least 8 characters" }),
 });
 
 type Formdata = z.infer<typeof schema>;
@@ -24,21 +26,16 @@ export const LogIn = (): JSX.Element => {
 
   const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
-
-
-
-
   const togglePasswordVisibility = useCallback(() => {
     setPasswordVisible((prevVisible) => !prevVisible);
   }, []);
 
 
-
-
-
   const onSubmit: SubmitHandler<Formdata> = (data) => {
-    const {email, password} = data;
+    const { email, password } = data;
     const encryptedPassword = btoa(password);
+
+    const navigate = useNavigate();
 
     const user = {
       email: email,
@@ -47,9 +44,8 @@ export const LogIn = (): JSX.Element => {
 
     console.log("Login button clicked");
     console.log("User:", user);
-    
+    navigate("/mainpage")
   };
-
 
   return (
     <div className="Login-log-in">
@@ -58,7 +54,11 @@ export const LogIn = (): JSX.Element => {
           <div className="Login-header">
             <div className="Login-text-and-supporting-text">
               <div className="Login-logo">
-                <img className="Login-logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
+                <img
+                  className="Login-logo-image"
+                  src="public/Images/logo.png"
+                  aria-label="logo accessibility"
+                />
               </div>
               <h1 className="Login-text">Inloggen </h1>
               <p className="Login-supporting-text">
@@ -71,12 +71,14 @@ export const LogIn = (): JSX.Element => {
               <div className="Login-input-field">
                 <div className="Login-input-field-base">
                   <div className="Login-input-with-label">
-                    <label className="Login-label" htmlFor="Email">Email </label>
+                    <label className="Login-label" htmlFor="Email">
+                      Email{" "}
+                    </label>
                     <div className="Login-input-base">
                       <div className="Login-content3">
                         <div className="Login-text2">
                           <input
-                          id="Email"
+                            id="Email"
                             type="text"
                             placeholder="Vul uw email in"
                             {...register("email")}
@@ -95,15 +97,17 @@ export const LogIn = (): JSX.Element => {
               <div className="Login-input-field">
                 <div className="Login-input-field-base">
                   <div className="Login-input-with-label">
-                    <label className="Login-label" htmlFor="Password">Wachtwoord</label>
+                    <label className="Login-label" htmlFor="Password">
+                      Wachtwoord
+                    </label>
                     <div className="Login-input-base">
                       <div className="Login-content3">
                         <div className="Login-text2">
                           <input
-                          id="Password"
+                            id="Password"
                             type={passwordVisible ? "text" : "password"}
                             placeholder="vul uw wachtwoord in"
-                            { ...register("password")}
+                            {...register("password")}
                           />
                         </div>
                       </div>
@@ -132,7 +136,7 @@ export const LogIn = (): JSX.Element => {
                     <p className="Login-error-message">
                       {errors.password.message}
                     </p>
-                    )}
+                  )}
                 </div>
               </div>
             </form>
@@ -196,7 +200,9 @@ export const LogIn = (): JSX.Element => {
                   <path d="M20 1H11V10H20V1Z" fill="#7FBA00" />
                   <path d="M20 11H11V20H20V11Z" fill="#FFB900" />
                 </svg>
-                <h3 className="Login-sign-in-with-microsoft">Log in met Microsoft</h3>
+                <h3 className="Login-sign-in-with-microsoft">
+                  Log in met Microsoft
+                </h3>
               </button>
             </div>
           </div>
@@ -205,7 +211,9 @@ export const LogIn = (): JSX.Element => {
               <h3 className="Login-text-6-span">Geen account?</h3>
             </div>
             <button className="Login-Registreer-button">
-              <Link to={"/register"} className="Login-text7">Registreer</Link>
+              <Link to={"/register"} className="Login-text7">
+                Registreer
+              </Link>
             </button>
           </div>
         </div>
