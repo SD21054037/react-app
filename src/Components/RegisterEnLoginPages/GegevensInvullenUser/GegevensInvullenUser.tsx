@@ -366,7 +366,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
                   <option value="cognitieve beperking">
                     Cognitieve beperking
                   </option>
-                  <option value=""></option>
+                  <option value="auditieve beperking">Auditieve beperking</option>
                 </select>
               </div>
             </div>
