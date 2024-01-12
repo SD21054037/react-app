@@ -8,19 +8,16 @@ import { RegisterBedrijven } from "../Components/RegisterEnLoginPages/RegisterBe
 import HomePage from "../Components/HomePage/HomePage";
 
 const router = createBrowserRouter([
-
-    {path: '/gegevensinvullenuser', element: <GegevensInvullenUser/>},
-    {path: '/gegevensinvullenverzorger', element: <GegevensInvullenVerzorgerOuder/>},
-    {path: '/loginbedrijven', element: <Loginbedrijven/>},
-    {path: '/registerbedrijven', element: <RegisterBedrijven/>},
-    {path: '/login', element: <LogIn/>},
-    {path: '/register', element: <Register/>},
-    {path: '/', element: <HomePage/>},
-    
-    
-]
-);
-
+  { path: "/gegevensinvullenuser/:email", element: <GegevensInvullenUser /> },
+  {
+    path: "/gegevensinvullenverzorger",
+    element: <GegevensInvullenVerzorgerOuder />,
+  },
+  { path: "/loginbedrijven", element: <Loginbedrijven /> },
+  { path: "/registerbedrijven", element: <RegisterBedrijven /> },
+  { path: "/login", element: <LogIn /> },
+  { path: "/register/", element: <Register /> },
+  { path: "/", element: <HomePage /> },
+]);
 
 export default router;
-

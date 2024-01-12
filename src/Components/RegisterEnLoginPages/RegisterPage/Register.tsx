@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
   email: z.string().email(),
@@ -36,6 +36,8 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
+  const navigate = useNavigate();
+
   const onSubmit: SubmitHandler<Formdata> = (data) => {
     const { email, password } = data;
 
@@ -46,19 +48,16 @@ export const Register = (): JSX.Element => {
       password: encryptedPassword,
     };
 
-    console.log("Registration data:", user);
-    // Add logic to send registration data
-  };
+    navigate(`/gegevensinvullenuser/${user.email}`);
 
-  const handleLoginButtonClick = () => {
-    console.log("Login button clicked");
+    console.log('formdata: ' + JSON.stringify(user));
   };
 
   return (
     <div className="register">
       <div className="register2">
         <div className="registerContent">
-          <div className="header">
+          <div className="registerheader">
             <div className="text-and-supporting-text">
               <div className="logo">
                 <img
@@ -67,7 +66,7 @@ export const Register = (): JSX.Element => {
                   aria-label="logo accesibility"
                 />
               </div>
-              <h1 className="text">Registreer </h1>
+              <h1 className="registertext">Registreer </h1>
             </div>
           </div>
           <div className="RegisterContent2">
@@ -180,10 +179,10 @@ export const Register = (): JSX.Element => {
                 </div>
               </div>
             </form>
-            <div className="actions">
-              <div className="button">
+            <div className="registeractions">
+              <div className="registerbutton">
                 <button
-                  className="button-base"
+                  className="registerbutton-base"
                   type="submit"
                   onClick={handleSubmit(onSubmit)}
                 >
@@ -195,7 +194,9 @@ export const Register = (): JSX.Element => {
           <div className="row">
             <h3 className="al-een-account">Al een account? </h3>
             <div className="button2">
-              <Link to="/login" className="LoginBtn">Login</Link>
+              <Link to="/login" className="LoginBtn">
+                Login
+              </Link>
             </div>
           </div>
         </div>

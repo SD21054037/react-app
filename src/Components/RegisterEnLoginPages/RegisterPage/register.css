@@ -45,7 +45,7 @@ html {
   position: relative;
   overflow: hidden;
 }
-.header {
+.registerheader {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -82,7 +82,7 @@ html {
   height: 100px;
   position: relative;
 }
-.text {
+.registertext {
   color: #4453ae;
   text-align: center;
   font-family: var(
@@ -90,9 +90,9 @@ html {
     "Inter-SemiBold",
     sans-serif
   );
-  font-size: var(--displaysm-semibold-font-size, 30px);
-  line-height: var(--displaysm-semibold-line-height, 38px);
-  font-weight: var(--displaysm-semibold-font-weight, 600);
+  font-size:  30px;
+  line-height: 38px;
+  font-weight:  600;
   position: relative;
   align-self: stretch;
 }
@@ -245,7 +245,7 @@ html {
 }
 
 
-.actions {
+.registeractions {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -255,7 +255,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.button {
+.registerbutton {
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -266,7 +266,7 @@ html {
   flex-shrink: 0;
   position: relative;
 }
-.button-base {
+.registerbutton-base {
   background: #4453ae;
   border-radius: 8px;
   border-style: solid;
@@ -296,11 +296,11 @@ html {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-base:hover{
+.registerbutton-base:hover{
   background: #2138ca;
 }
 
-.button-base:active{
+.registerbutton-base:active{
   transform: scale(95%);
 }
 .row {

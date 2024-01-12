@@ -2,6 +2,7 @@ import "./GegevensInvullenUser.modules.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useParams } from "react-router-dom";
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
@@ -39,19 +40,49 @@ export const GegevensInvullenUser = (): JSX.Element => {
   });
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log("Form data:", data);
+    const {
+      voornaam,
+      achternaam,
+      telefoonnummer,
+      postcode,
+      aandoeningZiekte,
+      hulpmiddelen,
+      onderzoekWensen,
+      benaderingVoorkeur,
+      commercieleBenadering,
+      leeftijd,
+      verstandelijkeBeperking,
+      beperkingen,
+    } = data;
+
+    const user = {
+      voornaam: voornaam,
+      achternaam: achternaam,
+      telefoonnummer: telefoonnummer,
+      postcode: postcode,
+      aandoeningZiekte: aandoeningZiekte,
+      hulpmiddelen: hulpmiddelen,
+      onderzoekWensen: onderzoekWensen,
+      benaderingVoorkeur: benaderingVoorkeur,
+      commercieleBenadering: commercieleBenadering,
+      leeftijd: leeftijd,
+      verstandelijkeBeperking: verstandelijkeBeperking,
+      beperkingen: beperkingen,
+    };
+
+    
   };
 
   return (
     <div className="GIU-gegevens-invullen-user">
       <div className="GIU-gevensinvullen">
-        <div className="GIU-content">
+        <form className="GIU-content">
           <div className="GIU-header">
             <div className="GIU-text-and-supporting-text">
               <div className="GIU-logo">
                 <img
                   className="GIU-logo-image"
-                  src="/public/Images/logo.png"
+                  src="/Images/logo.png"
                   aria-label="logo accessibility"
                 />
               </div>
@@ -61,7 +92,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
             <div className="GIU-mainbox">
               <h1 className="GIU-gebruiker">Gebruiker </h1>
             </div>
-            <form className="GIU-gegevens-boxes">
+            <div className="GIU-gegevens-boxes">
               <div className="GIU-leftbox">
                 <div className="GIU-leftboxLEFT">
                   <div className="GIU-input-field">
@@ -216,7 +247,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           {...register("onderzoekWensen.groepsgesprekken")}
                         ></input>
                       </div>
-                      <h5 className="GIU-Groepsgesprekken">Groepsgesprekken </h5>
+                      <h5 className="GIU-Groepsgesprekken">
+                        Groepsgesprekken{" "}
+                      </h5>
                     </div>
                     <div className="GIU-online-onderzoek-checkbox">
                       <div className="GIU-checkbox">
@@ -265,7 +298,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
                     </div>
                   </div>
                   <div className="GIU-benadering-checkboxes">
-                    <h4 className="GIU-voorkeur-benadering">Voorkeur benadering</h4>
+                    <h4 className="GIU-voorkeur-benadering">
+                      Voorkeur benadering
+                    </h4>
                     <div className="GIU-telefonish-checkbox">
                       <div className="GIU-checkbox">
                         <input
@@ -284,7 +319,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           {...register("benaderingVoorkeur.viaPortalAlleen")}
                         ></input>
                       </div>
-                      <h5 className="GIU-ViaPortalAlleen">Via portal alleen </h5>
+                      <h5 className="GIU-ViaPortalAlleen">
+                        Via portal alleen{" "}
+                      </h5>
                     </div>
                     <div className="GIU-nvt-checkbox">
                       <div className="GIU-checkbox">
@@ -321,9 +358,18 @@ export const GegevensInvullenUser = (): JSX.Element => {
                     </div>
                   </div>
                 </div>
-                <div className="GIU-beperkinglijstbox"></div>
+                <select className="GIU-beperkinglijstbox">
+                  <option value="motorische beperking">
+                    Motorische beperking
+                  </option>
+                  <option value="visuele beperking">Visuele beperking</option>
+                  <option value="cognitieve beperking">
+                    Cognitieve beperking
+                  </option>
+                  <option value=""></option>
+                </select>
               </div>
-            </form>
+            </div>
           </div>
           <footer className="GIU-footer">
             <button className="GIU-TerugButton">
@@ -339,7 +385,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
               </button>
             </div>
           </footer>
-        </div>
+        </form>
       </div>
     </div>
   );
