@@ -69,8 +69,6 @@ export const GegevensInvullenUser = (): JSX.Element => {
       verstandelijkeBeperking: verstandelijkeBeperking,
       beperkingen: beperkingen,
     };
-
-    
   };
 
   return (
@@ -366,7 +364,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
                   <option value="cognitieve beperking">
                     Cognitieve beperking
                   </option>
-                  <option value="auditieve beperking">Auditieve beperking</option>
+                  <option value="auditieve beperking">
+                    Auditieve beperking
+                  </option>
                 </select>
               </div>
             </div>
