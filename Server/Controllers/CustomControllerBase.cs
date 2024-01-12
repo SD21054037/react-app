@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 
-public abstract class ControllerBase
+public abstract class CustomControllerBase
 {
     public HttpContext HttpContext { get; }
 
@@ -10,16 +10,20 @@ public abstract class ControllerBase
 
     public HttpResponse Response { get; }
 
-    public ControllerBase()
+    public CustomControllerBase()
     {
         // Initialize HttpContext, Request, and Response
     }
 
-    // Standardized action results
-    public IActionResult Ok() { 
+    public IActionResult ok() { 
                 return new OkResult();
 
     }
+//     public IActionResult ok(string message) 
+// {
+//     return Ok(new { success = true, message });
+// }
+
 
     public IActionResult BadRequest() {  
         return new BadRequestObjectResult("Invalid input data");
