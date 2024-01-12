@@ -6,12 +6,22 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
-  email: z.string().email(),
-  password: z.string(),
-  // .min(8, 'The password must be at least 8 characters long')
-  // .max(32, 'The password must be a maximun 32 characters')
+  email: z.string().email().min(1),
+  password: z
+    .string({
+      required_error: "moet ingevuld worden",
+    })
+    .min(8)
+    .max(32, {
+      message: "uw wachtwoord moet tenminste 8 characters lang zijn.",
+    }),
   // .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*-])[A- Za-z\d!@#$%&*-]{8,}$/),
-  confirmPassword: z.string(),
+  confirmPassword: z
+    .string()
+    .min(8)
+    .max(32, {
+      message: "uw wachtwoord moet tenminste 8 characters lang zijn.",
+    }),
 });
 
 type Formdata = z.infer<typeof schema>;
@@ -50,7 +60,7 @@ export const Register = (): JSX.Element => {
 
     navigate(`/gegevensinvullenuser/${user.email}`);
 
-    console.log('formdata: ' + JSON.stringify(user));
+    console.log("formdata: " + JSON.stringify(user));
   };
 
   return (

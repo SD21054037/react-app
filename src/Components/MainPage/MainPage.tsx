@@ -1,40 +1,14 @@
-/* Code generated with AutoHTML Plugin for Figma */
+import Header from "../Header/Header";
 import "./MainPage.css";
 
-export interface IMainPageProps {
-  className?: string;
-}
-
-export const MainPage = ({
-  className,
-  ...props
-}: IMainPageProps): JSX.Element => {
+export const MainPage = (): JSX.Element => {
   return (
-    <div className={"main-page " + className}>
-      <div className="footer">
-        <div className="footer-elements-1">
-          <div className="snel-naar">
-            <span>
-              <span className="snel-naar-span">Snel naar..</span>
-              <span className="snel-naar-span2">.</span>
-            </span>{" "}
-          </div>
-          <div className="actueel">Actueel </div>
-          <div className="algemene-voorwaarden">Algemene voorwaarden </div>
-          <div className="privacy-policy">Privacy Policy </div>
-          <div className="faq">FAQ </div>
-        </div>
-        <div className="footer-contact">
-          <div className="contact">Contact </div>
-          <div className="_030-239-82-70">030 - 239 82 70 </div>
-          <div className="info-accessibility">info@accessibility </div>
-        </div>
-        <div className="footer-elements-2">
-          <div className="hoe-wij-helpen">Hoe wij helpen </div>
-          <div className="audits">Audits </div>
-          <div className="gebruikersonderzoek">Gebruikersonderzoek </div>
-          <div className="trainingen">Trainingen </div>
-          <div className="advies">Advies </div>
+    <div className="main-page">
+      <Header></Header>
+      <div className="yaptekst">
+        <div className="samen-met-onze-partners-en-klanten-werken-we-aan-een-inclusieve-samenleving-die-toegankelijk-is-voor-iedereen">
+          Samen met onze partners en klanten werken we aan een inclusieve
+          samenleving die toegankelijk is voor iedereen.
         </div>
       </div>
       <div className="recente-onderzoeken-plek">
@@ -147,29 +121,28 @@ export const MainPage = ({
         </div>
         <img className="news-picture" src="news-picture2.png" />
       </div>
-      <div className="rectangle-22"></div>
-      <div className="yaptekst">
-        <div className="samen-met-onze-partners-en-klanten-werken-we-aan-een-inclusieve-samenleving-die-toegankelijk-is-voor-iedereen">
-          Samen met onze partners en klanten werken we aan een inclusieve
-          samenleving die toegankelijk is voor iedereen.{" "}
+      <div className="footer">
+        <div className="footer-elements-1">
+          <div className="snel-naar">
+            <span className="snel-naar-span">Snel naar..</span>
+            <span className="snel-naar-span2">.</span>
+          </div>
+          <div className="actueel">Actueel </div>
+          <div className="algemene-voorwaarden">Algemene voorwaarden </div>
+          <div className="privacy-policy">Privacy Policy </div>
+          <div className="faq">FAQ </div>
         </div>
-      </div>
-      <div className="header">
-        <div className="logo">
-          <img className="rectangle-1" src="rectangle-10.png" />
+        <div className="footer-contact">
+          <div className="contact">Contact </div>
+          <div className="_030-239-82-70">030 - 239 82 70 </div>
+          <div className="info-accessibility">info@accessibility </div>
         </div>
-        <div className="primary-button">
-          <div className="onderzoeken">Onderzoeken </div>
-          <img className="user-groups" src="user-groups0.png" />
-        </div>
-        <div className="primary-button">
-          <div className="chat">Chat </div>
-          <img className="chat-messages" src="chat-messages0.png" />
-        </div>
-        <div className="profile-settings-notification">
-          <img className="notification" src="notification0.png" />
-          <img className="settings" src="settings0.png" />
-          <img className="male-user" src="male-user0.png" />
+        <div className="footer-elements-2">
+          <div className="hoe-wij-helpen">Hoe wij helpen </div>
+          <div className="audits">Audits </div>
+          <div className="gebruikersonderzoek">Gebruikersonderzoek </div>
+          <div className="trainingen">Trainingen </div>
+          <div className="advies">Advies </div>
         </div>
       </div>
     </div>

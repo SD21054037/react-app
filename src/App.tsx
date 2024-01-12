@@ -15,7 +15,7 @@ import HomePage from "./Components/HomePage/HomePage";
 
 function App() {
   return (
-    LoginPage
+    <MainPage></MainPage>
       );
 }
 

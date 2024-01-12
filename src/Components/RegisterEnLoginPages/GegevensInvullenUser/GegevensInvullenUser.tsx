@@ -2,7 +2,7 @@ import "./GegevensInvullenUser.modules.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
@@ -69,6 +69,10 @@ export const GegevensInvullenUser = (): JSX.Element => {
       verstandelijkeBeperking: verstandelijkeBeperking,
       beperkingen: beperkingen,
     };
+
+    const navigate = useNavigate();
+
+    navigate(`/gegevensinvullenverzorger`)
   };
 
   return (
@@ -246,7 +250,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
                         ></input>
                       </div>
                       <h5 className="GIU-Groepsgesprekken">
-                        Groepsgesprekken{" "}
+                        Groepsgesprekken
                       </h5>
                     </div>
                     <div className="GIU-online-onderzoek-checkbox">

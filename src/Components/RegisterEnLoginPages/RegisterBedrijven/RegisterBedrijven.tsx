@@ -7,13 +7,13 @@ import { Link } from "react-router-dom";
 
 const schema = z.object({
   email: z.string().email(),
-  wachtwoord: z.string(),
-  wachtwoordbevestiging: z.string(),
-  bedrijfsnaam: z.string(),
+  wachtwoord: z.string().min(1).max(255),
+  wachtwoordbevestiging: z.string().min(1).max(255),
+  bedrijfsnaam: z.string().min(1).max(255),
   websiteUrl: z.string().startsWith("https://").url(),
-  bedrijfsplaats: z.string(),
-  bedrijfspostcode: z.string(),
-  bedrijfsadres: z.string(),
+  bedrijfsplaats: z.string().min(1).max(255),
+  bedrijfspostcode: z.string().min(1).max(7),
+  bedrijfsadres: z.string().min(1).max(100),
 });
 
 type Formdata = z.infer<typeof schema>;

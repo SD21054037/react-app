@@ -4,10 +4,10 @@
 }
 .main-page {
   background: #ffffff;
-  width: 1440px;
-  height: 3242px;
+  width: 100vw;
+  height: fit-content;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 .footer {
   display: flex;
@@ -15,11 +15,10 @@
   gap: 0px;
   align-items: center;
   justify-content: flex-start;
-  width: 1440px;
+  width: 100%;
   height: 199px;
-  position: absolute;
-  left: 0px;
-  top: 3043px;
+  position: relative;
+  
 }
 .footer-elements-1 {
   background: #111329;
@@ -61,7 +60,7 @@
   font-weight: 600;
   text-decoration: underline;
   position: relative;
-  width: 134px;
+  width: fit-content;
 }
 .algemene-voorwaarden {
   color: #21cea1;
@@ -203,7 +202,7 @@
   justify-content: center;
   width: 1440px;
   height: 558px;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 685px;
 }
@@ -260,7 +259,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 37px;
   top: 122px;
 }
@@ -293,7 +292,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 37px;
   top: 75px;
 }
@@ -304,7 +303,7 @@
   font-size: 14px;
   line-height: 187.5%;
   font-weight: 400;
-  position: absolute;
+  position: relative;
   left: 23px;
   top: 6px;
   width: 93px;
@@ -340,7 +339,7 @@
   gap: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 1243px;
 }
@@ -361,7 +360,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 701px;
   top: 179.1px;
 }
@@ -397,7 +396,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 701px;
   top: 118px;
 }
@@ -416,7 +415,7 @@
   flex-shrink: 0;
   width: 496px;
   height: 486.57px;
-  position: absolute;
+  position: relative;
   left: 126px;
   top: 68px;
 }
@@ -426,7 +425,7 @@
   gap: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 1843px;
 }
@@ -440,7 +439,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 126px;
   top: 181px;
 }
@@ -457,7 +456,7 @@
   font-size: 16px;
   line-height: 202.5%;
   font-weight: 400;
-  position: absolute;
+  position: relative;
   left: 7px;
   top: 168.18px;
   width: 536px;
@@ -470,7 +469,7 @@
   font-size: 28px;
   line-height: 157.5%;
   font-weight: 600;
-  position: absolute;
+  position: relative;
   left: 7px;
   top: 5px;
   width: 531px;
@@ -486,7 +485,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  position: absolute;
+  position: relative;
   left: 126px;
   top: 102px;
 }
@@ -496,7 +495,7 @@
   flex-shrink: 0;
   width: 496px;
   height: 486.57px;
-  position: absolute;
+  position: relative;
   left: 831px;
   top: 57px;
 }
@@ -506,7 +505,7 @@
   gap: 10px;
   align-items: flex-start;
   justify-content: flex-start;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 2443px;
 }
@@ -522,7 +521,7 @@
   flex-shrink: 0;
   width: 550px;
   height: 331.39px;
-  position: absolute;
+  position: relative;
   left: 701px;
   top: 179.1px;
 }
@@ -538,7 +537,7 @@
   flex-shrink: 0;
   width: 125px;
   height: 52px;
-  position: absolute;
+  position: relative;
   left: 701px;
   top: 112px;
 }
@@ -546,7 +545,7 @@
   background: #4453ae;
   width: 1440px;
   height: 599px;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 86px;
 }
@@ -556,7 +555,7 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   left: calc(50% - 258px);
   top: 278px;
 }
@@ -578,7 +577,7 @@
   justify-content: space-between;
   width: 1440px;
   height: 86px;
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
 }
@@ -614,7 +613,7 @@
   font-size: 20px;
   line-height: 114.97%;
   font-weight: 700;
-  position: absolute;
+  position: relative;
   right: 0px;
   left: 47px;
   bottom: 13px;
@@ -626,7 +625,7 @@
 .user-groups {
   width: 34px;
   height: 41px;
-  position: absolute;
+  position: relative;
   left: 13px;
   top: 6.5px;
 }
@@ -636,7 +635,7 @@
   font-family: "Inter-Bold", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  position: absolute;
+  position: relative;
   right: 0px;
   left: 0px;
   bottom: 0px;
@@ -648,7 +647,7 @@
 .chat-messages {
   width: 46px;
   height: 45px;
-  position: absolute;
+  position: relative;
   left: 15.5px;
   top: 5px;
 }
