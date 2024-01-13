@@ -1,6 +1,7 @@
 // Controllers/AuthController.cs
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using System.Threading.Tasks;
 
 [Route("api/auth")]
@@ -8,14 +9,20 @@ using System.Threading.Tasks;
 public class AuthController : ControllerBase
 {
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] Gebruikers model)
-    {
-        // Validate user credentials (replace this with your authentication logic)
-        if (model.Email == "user@example.com" && model.Password == "password123")
-        {
-            return Ok(new { success = true, message = "Login successful" });
-        }
+    // public async Task<IActionResult> Login([FromBody] Gebruikers model)
+    // {
+    //     // Validate user credentials (replace this with your authentication logic)
+    //     if (model.Email == "user@example.com" && model.Password == "password123")
+    //     {
+    //         return Ok(new { success = true, message = "Login successful" });
+    //     }
 
-        return Unauthorized(new { success = false, message = "Invalid credentials" });
+    //     return Unauthorized(new { success = false, message = "Invalid credentials" });
+    // }
+
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody]Gebruikers model)
+    {
+
     }
 }

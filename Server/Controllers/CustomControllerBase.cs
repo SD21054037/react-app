@@ -12,7 +12,6 @@ public abstract class CustomControllerBase
 
     public CustomControllerBase()
     {
-        // Initialize HttpContext, Request, and Response
     }
 
     public IActionResult ok() { 
@@ -45,5 +44,4 @@ public abstract class CustomControllerBase
     }
 
 
-    // Other methods and properties...
 }

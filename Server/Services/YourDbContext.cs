@@ -12,6 +12,23 @@ public class YourDbContext : DbContext
         // Configure your database connection here
         optionsBuilder.UseSqlServer("YourConnectionString");
     }
+    public void addUser(string username, string password, string email, string telefoonnummer)
+    {
+
+        Gebruikers newuser = new Gebruikers();
+        {
+        newuser.Voornaam = username;
+        newuser.Password = password;
+        newuser.Email = email;
+        newuser.Telefoonnummer = telefoonnummer;
+        };
+
+        SaveChanges();
+
+
+    
+
+    }
 
     public void UpdateProfile(int gebruikerID, string voornaam, string achternaam, string telefoonnummer, UserType type_gebruiker)
     {
@@ -25,8 +42,7 @@ public class YourDbContext : DbContext
             user.Type_Gebruiker = type_gebruiker;
 
             SaveChanges();
-            // You may want to add additional logic here based on your requirements.
         }
-        // Handle the case where the user is not found
+        // Hier if nog zetten wat als je niet user kan vinden
     }
 }
