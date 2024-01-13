@@ -19,6 +19,7 @@ public class AuthController : ControllerBase
     public IActionResult RegisterUser([FromBody] Gebruikers user)
     {
         // Add any additional validation logic
+        Console.WriteLine("well it came this far");
 
         _dbContext.RegisterUser(user);
         return Ok("User registered successfully.");

@@ -12,7 +12,7 @@ public class YourDbContext : DbContext
         Gebruikers.Add(user);
         SaveChanges();
     }
-       public static void SaveToDatabase(Gebruikers user)
+       public  void SaveToDatabase(Gebruikers user)
     {
         using (var dbContext = new YourDbContext())
         {
@@ -33,6 +33,7 @@ public class YourDbContext : DbContext
         // Configure your database connection here
         optionsBuilder.UseSqlServer("YourConnectionString");
     }
+
     // public void addUser(string username, string password, string email, string telefoonnummer)
     // {
 

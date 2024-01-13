@@ -56,8 +56,12 @@ export const Register = (): JSX.Element => {
     const registrationSuccessful = await registerUser(user);
     if (registrationSuccessful) {
       // Handle success, such as redirecting to a login page or showing a success message
+      console.log('register successful!');
+
     } else {
       // Handle error, such as displaying an error message to the user
+      console.log('register unsuccessful');
+
     }
 
   };

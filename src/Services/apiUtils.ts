@@ -1,7 +1,7 @@
 // apiUtils.ts
 export const registerUser = async (user: any): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5173/api/auth/register', {
+      const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const registerUser = async (user: any): Promise<boolean> => {
   // apiUtils.ts
 export const loginUser = async (credentials: { email: string; password: string }): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5173/api/auth/login', {
+      const response = await fetch('http://localhost:5000/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

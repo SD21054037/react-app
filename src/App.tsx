@@ -22,7 +22,8 @@ function App() {
     //   </Routes>
 
     // </Router>
- <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
+//  <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
+ <RegisterPage></RegisterPage>
       );
 }
 
