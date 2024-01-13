@@ -11,6 +11,16 @@ public class Gebruikers
     public string Telefoonnummer { get; set; }
     public UserType Type_Gebruiker { get; set; }
     public DateTime Datum_Registratie { get; set; }
+
+    
+     public static void SaveToDatabase(Gebruikers user)
+    {
+        using (var dbContext = new YourDbContext())
+        {
+            dbContext.Gebruikers.Add(user);
+            dbContext.SaveChanges();
+        }
+    }
 }
 
 public enum UserType
@@ -19,3 +29,4 @@ public enum UserType
     Bedrijf,
     Admin
 }
+
