@@ -6,29 +6,51 @@ public class YourDbContext : DbContext
 {
     public DbSet<Gebruikers> Gebruikers { get; set; }
     public DbSet<Ervaringsdeskundige> Ervaringsdeskundigen { get; set; }
+   public void RegisterUser(Gebruikers user)
+    {
+        // Perform any necessary validation before saving to the database
+        Gebruikers.Add(user);
+        SaveChanges();
+    }
+       public static void SaveToDatabase(Gebruikers user)
+    {
+        using (var dbContext = new YourDbContext())
+        {
+            dbContext.Gebruikers.Add(user);
+            dbContext.SaveChanges();
+        }
+    }
+    // 1 van deze 2 methodes hierboven maar gebruiken dit nog later zien
 
+     public void UpdateUser(Gebruikers user)
+    {
+        // Perform any necessary validation before updating the database
+        Entry(user).State = EntityState.Modified;
+        SaveChanges();
+    }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         // Configure your database connection here
         optionsBuilder.UseSqlServer("YourConnectionString");
     }
-    public void addUser(string username, string password, string email, string telefoonnummer)
-    {
+    // public void addUser(string username, string password, string email, string telefoonnummer)
+    // {
 
-        Gebruikers newuser = new Gebruikers();
-        {
-        newuser.Voornaam = username;
-        newuser.Password = password;
-        newuser.Email = email;
-        newuser.Telefoonnummer = telefoonnummer;
-        };
+    //     Gebruikers newuser = new Gebruikers();
+    //     {
+    //     newuser.Voornaam = username;
+    //     newuser.Password = password;
+    //     newuser.Email = email;
+    //     newuser.Telefoonnummer = telefoonnummer;
+    //     };
 
-        SaveChanges();
+    //     SaveChanges();
 
 
     
 
-    }
+    // }
+    
     public Gebruikers AuthenticateUser(string email, string password)
     {
         return Gebruikers.FirstOrDefault(u => u.Email == email && u.Password == password);
@@ -49,11 +71,6 @@ public class YourDbContext : DbContext
         }
         // Hier if nog zetten wat als je niet user kan vinden
     }
-      public void RegisterUser(Gebruikers user)
-    {
-        // Perform any necessary validation before saving to the database
-        Gebruikers.Add(user);
-        SaveChanges();
-    }
+   
     
 }

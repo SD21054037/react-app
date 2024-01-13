@@ -9,4 +9,13 @@ public class Ervaringsdeskundige
     public string Hulpmiddelen { get; set; }
     public string Aandoening_Ziekte { get; set; }
     public int Leeftijd { get; set; }
+
+    public static void SaveToDatabase(Ervaringsdeskundige user)
+    {
+        using (var dbContext= new ErvaringsdeskundigeRepository())
+        {
+            dbContext.Ervaringsdeskundigen.Add(user);
+            dbContext.SaveChanges();
+        }
+    }
 }
