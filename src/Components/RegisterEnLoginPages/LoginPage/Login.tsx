@@ -4,6 +4,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
+import { loginUser } from '../../../Services/apiUtils';
+
+
 
 const schema = z.object({
   email: z.string().email({message: "Invalid email adress"}),
@@ -35,7 +38,7 @@ export const LogIn = (): JSX.Element => {
 
 
 
-  const onSubmit: SubmitHandler<Formdata> = (data) => {
+  const onSubmit: SubmitHandler<Formdata> = async (data) => {
     const {email, password} = data;
     const encryptedPassword = btoa(password);
 
@@ -43,9 +46,18 @@ export const LogIn = (): JSX.Element => {
       email: email,
       password: encryptedPassword,
     };
+    const loginSuccessful = await loginUser(user);
+
 
     console.log("Login button clicked");
     console.log("User:", user);
+    if (loginSuccessful) {
+      // Handle successful login, e.g., redirecting to a dashboard or showing a success message
+      console.log('Login successful!');
+    } else {
+      // Handle failed login, e.g., displaying an error message to the user
+      console.error('Login failed!');
+    }
     
   };
 

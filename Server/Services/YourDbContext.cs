@@ -29,6 +29,10 @@ public class YourDbContext : DbContext
     
 
     }
+    public Gebruikers AuthenticateUser(string email, string password)
+    {
+        return Gebruikers.FirstOrDefault(u => u.Email == email && u.Password == password);
+    }
 
     public void UpdateProfile(int gebruikerID, string voornaam, string achternaam, string telefoonnummer, UserType type_gebruiker)
     {
@@ -45,4 +49,11 @@ public class YourDbContext : DbContext
         }
         // Hier if nog zetten wat als je niet user kan vinden
     }
+      public void RegisterUser(Gebruikers user)
+    {
+        // Perform any necessary validation before saving to the database
+        Gebruikers.Add(user);
+        SaveChanges();
+    }
+    
 }

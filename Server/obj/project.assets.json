@@ -9938,11 +9938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "c:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+      "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
       "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
-      "outputPath": "c:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
+      "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config"

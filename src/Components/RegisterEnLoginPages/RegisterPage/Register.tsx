@@ -3,6 +3,12 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
+import { registerUser } from '../../../Services/apiUtils';
+
+
+
+
+
 
 const schema = z.object({
   email: z.string().email(),
@@ -35,7 +41,7 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const onSubmit: SubmitHandler<Formdata> = (data) => {
+  const onSubmit: SubmitHandler<Formdata> =async (data) => {
     const { email, password } = data;
 
     const encryptedPassword = encrypt(password);
@@ -47,6 +53,13 @@ export const Register = (): JSX.Element => {
 
     console.log("Registration data:", user);
     // Add logic to send registration data
+    const registrationSuccessful = await registerUser(user);
+    if (registrationSuccessful) {
+      // Handle success, such as redirecting to a login page or showing a success message
+    } else {
+      // Handle error, such as displaying an error message to the user
+    }
+
   };
 
   const handleLoginButtonClick = () => {
