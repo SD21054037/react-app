@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {}
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {}
   },
   "projects": {
-    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
+        "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
-        "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
-        "outputPath": "D:\\Wdpr2023\\react-app\\Server\\obj\\",
+        "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+        "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
+        "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\troy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
