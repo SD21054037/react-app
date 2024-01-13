@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
@@ -23,7 +24,7 @@ const schema = z.object({
     nvt: z.boolean(),
   }),
   commercieleBenadering: z.boolean(),
-  leeftijd: z.date(),
+  geboortedatum: z.date(),
   verstandelijkeBeperking: z.boolean(),
   beperkingen: z.array(z.string()),
 });
@@ -38,6 +39,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
+  
+
+
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     const {
@@ -50,10 +54,34 @@ export const GegevensInvullenUser = (): JSX.Element => {
       onderzoekWensen,
       benaderingVoorkeur,
       commercieleBenadering,
-      leeftijd,
+      geboortedatum,
       verstandelijkeBeperking,
       beperkingen,
     } = data;
+
+  
+
+    function calculateAge(geboortedatum: Date, currentDate: Date): number {
+      const birthYear = geboortedatum.getFullYear();
+      const currentYear = currentDate.getFullYear();
+    
+      const age = currentYear - birthYear;
+    
+      
+      const birthdateThisYear = new Date(currentDate);
+      birthdateThisYear.setFullYear(birthYear);
+    
+      if (birthdateThisYear > currentDate) {
+        return age - 1;
+      } else {
+        return age;
+      }
+    }
+
+    const currentdate = new Date();
+
+    const leeftijd = calculateAge(geboortedatum, currentdate);
+  
 
     const user = {
       voornaam: voornaam,
@@ -70,9 +98,12 @@ export const GegevensInvullenUser = (): JSX.Element => {
       beperkingen: beperkingen,
     };
 
+    
     const navigate = useNavigate();
 
-    navigate(`/gegevensinvullenverzorger`)
+   if (leeftijd < 18 || verstandelijkeBeperking == true )
+    navigate(`/gegevensinvullenverzorgerouder`)
+    else navigate(`/mainpage`)
   };
 
   return (
@@ -220,8 +251,8 @@ export const GegevensInvullenUser = (): JSX.Element => {
                     </div>
                   </div>
                   <div className="GIU-leeftijd-checkbox">
-                    <label className="GIU-leeftijd">Leeftijd </label>
-                    <input type="date" {...register("leeftijd")} />
+                    <label className="GIU-leeftijd">Geboortedatum </label>
+                    <input type="date" {...register("geboortedatum")} />
                   </div>
                 </div>
               </div>

@@ -5,26 +5,25 @@ const Footer = () => {
   return (
     <footer className="footer">
         <div className="footer-elements-1">
-          <div className="snel-naar">
-            <span className="snel-naar-span">Snel naar..</span>
-            <span className="snel-naar-span2">.</span>
-          </div>
-          <div className="actueel">Actueel </div>
-          <div className="algemene-voorwaarden">Algemene voorwaarden </div>
-          <div className="privacy-policy">Privacy Policy </div>
-          <div className="faq">FAQ </div>
+          <h2 className="snel-naar">
+            Snel naar...
+          </h2>
+          <a href='https://www.accessibility.nl/actueel' className="actueel">Actueel </a> 
+          <a href='' className="algemene-voorwaarden">Algemene voorwaarden </a>
+          <a href='' className="privacy-policy">Privacy Policy </a>
+          <a href='' className="faq">FAQ </a> 
         </div>
         <div className="footer-contact">
-          <div className="contact">Contact </div>
-          <div className="_030-239-82-70">030 - 239 82 70 </div>
-          <div className="info-accessibility">info@accessibility </div>
+          <h2 className="contact">Contact </h2>
+          <p  className="_030-239-82-70">030 - 239 82 70</p>
+          <p  className="info-accessibility">info@accessibility</p>
         </div>
         <div className="footer-elements-2">
-          <div className="hoe-wij-helpen">Hoe wij helpen </div>
-          <div className="audits">Audits </div>
-          <div className="gebruikersonderzoek">Gebruikersonderzoek </div>
-          <div className="trainingen">Trainingen </div>
-          <div className="advies">Advies </div>
+          <a href='' className="hoe-wij-helpen">Hoe wij helpen </a>
+          <a href='https://www.accessibility.nl/audits' className="audits">Audits </a> 
+          <a href='https://www.accessibility.nl/gebruikersonderzoek' className="gebruikersonderzoek">Gebruikersonderzoek </a> 
+          <a href='https://www.accessibility.nl/hoe-wij-helpen/trainingen' className="trainingen">Trainingen </a> 
+          <a href='https://www.accessibility.nl/advies' className="advies">Advies </a> 
         </div>
       </footer>
   )

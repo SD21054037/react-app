@@ -23,7 +23,7 @@ import HomePage from "./Components/HomePage/LandingPage";
 import Footer from "./Components/CommonComponents/Footer/Footer";
 
 function App() {
-  return <Footer></Footer>;
+  return <MainPage></MainPage>;
 }
 
 export default App;

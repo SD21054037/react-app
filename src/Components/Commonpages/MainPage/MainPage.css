@@ -9,18 +9,18 @@ html,body{
 }
 .main-page {
   background: #3e478b;
+  background-size: cover;
   padding-left: 20px;
   padding-right: 20px;
-  width: 100vw;
   height: fit-content;
   position: relative;
-  overflow: scroll;
+ 
 }
 .MainpageContent{
   display: flex;
   flex-direction: column;
   height: fit-content;
-  width: 100%;
+  align-self: stretch;
 }
 
 .Opener { 
@@ -73,7 +73,7 @@ html,body{
   width: 100%;
   height: fit-content;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .RecenteOnderzoek1, .RecenteOnderzoek2, .RecenteOnderzoek3{ 
@@ -167,14 +167,13 @@ html,body{
 
 
 
-.GoogeleNieuwsArtikelen{
+.GoogleNieuwsArtikelen{
+  background: #4453AE;
   width: 100%;
   display: flex;
   flex-direction: column;
   height: fit-content;
   
-  padding: 20px;
-  margin-top: 40px;
 }
 .google-new-artikel { 
   margin-top: 20px;
@@ -184,9 +183,8 @@ html,body{
   height: 400px;
   display: flex; 
   flex-direction: row; 
-  gap: 280px; 
   align-items: center; 
-  justify-content: center; 
+  justify-content: space-evenly; 
   position: relative; 
 } 
 
@@ -231,9 +229,7 @@ html,body{
   font-family: "Poppins-Regular", sans-serif; 
   font-size: 16px; 
   font-weight: 400; 
-  position: relative; 
-
-
+  position: relative;
 } 
 
 .news-source { 
@@ -256,3 +252,23 @@ html,body{
   height: 100%;
   position: relative; 
 } 
+
+
+
+@media only screen and (max-width: 650px) {
+ .RecenteOnderzoeken {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .RecenteOnderzoek1,.RecenteOnderzoek2,.RecenteOnderzoek3{
+  width: 90%;
+ }
+
+ .google-new-artikel{
+  display: flex;
+  flex-direction: column;
+ }
+  
+}

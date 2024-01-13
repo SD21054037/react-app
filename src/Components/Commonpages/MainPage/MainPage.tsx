@@ -1,5 +1,6 @@
 import Header from "../../CommonComponents/Header/Header";
 import "./MainPage.css";
+import Footer from "../../CommonComponents/Footer/Footer";
 
 export const MainPage = (): JSX.Element => {
   return (
@@ -116,6 +117,7 @@ export const MainPage = (): JSX.Element => {
           </div>
         </div>
       </main>
+      <Footer></Footer>
     </div>
   );
 };

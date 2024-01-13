@@ -1,34 +1,31 @@
 import "./header.css";
 
 export const Header = (): JSX.Element => {
-
-
-
   
   return (
-    <div className="header">
-      <div className="logo">
+    <nav className="header">
+      <a href="/mainpage" className="logo">
         <img
           className="rectangle-1"
-          src="/public/Images/rectangle-10.png"
+          src="/public/Images/logo.png"
           aria-label="logo accesssibility"
         />
-      </div>
+      </a>
       <button className="HeaderButton">
-        <div className="onderzoeken">Onderzoeken </div>
         <img
           className="user-groups"
           src="/public/Images/user-groups0.png"
           aria-label="Onderzoeken"
         />
+        <div className="onderzoeken">Onderzoeken </div>
       </button>
       <button className="HeaderButton">
-        <div className="chat">Chat </div>
         <img
           className="chat-messages"
           src="/public/Images/chat-messages0.png"
           aria-label="berichten"
         />
+        <div className="chat">Chat </div>
       </button>
       <div className="profile-settings-notification">
         <button className="NotificationButton">
@@ -46,7 +43,7 @@ export const Header = (): JSX.Element => {
           />
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
