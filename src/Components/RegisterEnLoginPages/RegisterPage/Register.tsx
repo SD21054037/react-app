@@ -58,9 +58,21 @@ export const Register = (): JSX.Element => {
       password: encryptedPassword,
     };
 
+    const registrationSuccessful = await registerUser(user);
+    if (registrationSuccessful) {
+      
+      console.log('register successful!');
+
+    } else {
+      
+      console.log('register unsuccessful');
+
+    }
+
     navigate(`/gegevensinvullenuser/${user.email}`);
 
     console.log("formdata: " + JSON.stringify(user));
+
   };
 
   return (
