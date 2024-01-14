@@ -8,7 +8,7 @@ import { RegisterBedrijven } from "../Components/RegisterEnLoginPages/RegisterBe
 import HomePage from "../Components/HomePage/LandingPage";
 import ErrorPage from "../Components/Commonpages/ErrorPage/Error";
 import { MainPage } from "../Components/Commonpages/MainPage/MainPage";
-import { Onderzoekpagina } from "../Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
+import { Onderzoekenpagina } from "../Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,8 @@ const router = createBrowserRouter([
     ],
   },
   { path: "mainpage", element: <MainPage /> },
-  { path: "onderzoekenpage", element: <Onderzoekpagina /> },
+  { path: "onderzoekenpage", element: <Onderzoekenpagina /> },
+  
 ]);
 
 export default router;

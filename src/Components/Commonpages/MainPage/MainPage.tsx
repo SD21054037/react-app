@@ -1,6 +1,26 @@
 import Header from "../../CommonComponents/Header/Header";
 import "./MainPage.css";
 import Footer from "../../CommonComponents/Footer/Footer";
+import { useState } from "react"
+import {Button} from "@chakra-ui/react"
+
+
+interface Onderzoeken {
+  id: number;
+  naam: string;
+  soort: string;
+  beschrijving: string;
+  typebeperking?:string;
+  uitvoerder?:string;
+  adres?:string
+  postcode?:string
+  link?:string
+  beloning?:string
+  uitnodiging?:string
+}
+
+
+
 
 export const MainPage = (): JSX.Element => {
   return (
@@ -16,45 +36,21 @@ export const MainPage = (): JSX.Element => {
         <div className="RecenteOnderzoekenContent">
           <h2 className="ROContentTitel">Recente Onderzoeken</h2>
           <div className="RecenteOnderzoeken">
-            <article className="RecenteOnderzoek1">
+          {onderzoeken.slice(0,3).map((onderzoek) => (
+            <article key={onderzoek.id} className="RecenteOnderzoek1" >
               <div className="OnderzoekFrame">
-                <h3 className="onderzoek-naam">Onderzoek u get me </h3>
+                <h3 className="onderzoek-naam">{onderzoek.naam}</h3>
                 <div className="SoortOnderzoekTag">
-                  <h4 className="onderzoek-soort">interview</h4>
+                  <h4 className="onderzoek-soort">{onderzoek.soort}</h4>
                 </div>
                 <div className="onderzoek-beschrijving">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&#039;s
-                  standard dummy text ever since the 1500s,waefsgxrdhctfnhjihbgvjfchdexsgdrctfgyuhygtfcrthvgyhuygjrdhunjyxdsfcgvyhuykgjhuygjcfgvbhj,nk
+                  {onderzoek.beschrijving}
                 </div>
+                <Button onClick={navigateOnderzoek(onderzoek.id)}>View here</Button>
               </div>
             </article>
-            <article className="RecenteOnderzoek2">
-              <div className="OnderzoekFrame">
-                <h3 className="onderzoek-naam">Onderzoek u get me </h3>
-                <div className="SoortOnderzoekTag">
-                  <h4 className="onderzoek-soort">interview</h4>
-                </div>
-                <div className="onderzoek-beschrijving">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&#039;s
-                  standard dummy text ever since the 1500s,
-                </div>
-              </div>
-            </article>
-            <article className="RecenteOnderzoek3">
-              <div className="OnderzoekFrame">
-                <h3 className="onderzoek-naam">Onderzoek u get me </h3>
-                <div className="SoortOnderzoekTag">
-                  <h4 className="onderzoek-soort">interview</h4>
-                </div>
-                <div className="onderzoek-beschrijving">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry&#039;s
-                  standard dummy text ever since the 1500s,
-                </div>
-              </div>
-            </article>
+          ) )}
+            
           </div>
         </div>
         <div className="GoogleNieuwsArtikelen">

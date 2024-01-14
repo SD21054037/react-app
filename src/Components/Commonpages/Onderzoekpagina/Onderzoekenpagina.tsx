@@ -1,4 +1,3 @@
-import { Button, ButtonGroup } from "@chakra-ui/react";
 import "./Onderzoekpagina.css";
 import Header from "../../CommonComponents/Header/Header";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
@@ -15,17 +14,34 @@ import {
 } from "@chakra-ui/react";
 import Footer from "../../CommonComponents/Footer/Footer";
 import {useEffect} from "react"
+import onderzoekenServices from "../../../Services/onderzoeken-services";
+import {useState} from "react"
 
 
+export interface Onderzoeken {
+  id: number;
+  naam: string;
+  soort: string;
+  beschrijving: string;
+  typebeperking:string;
+  uitvoerder:string;
+  adres?:string
+  postcode?:string
+  link?:string
+  beloning:string
+  uitnodiging?:string
+}
 
-useEffect(() => {
-  document.title = "Onderzoekpagina"
-})
-
+const [onderzoeken, setOnderzoeken] = useState<Onderzoeken[]>([]);
 
 
 
 export const Onderzoekenpagina = (): JSX.Element => {
+
+useEffect(()=> {
+  document.title = "Onderzoekenpagina"
+})
+
   return (
     <div className="onderzoekpagina">
       <Header></Header>
@@ -73,11 +89,13 @@ export const Onderzoekenpagina = (): JSX.Element => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  <Tr>
-                    <Td>Onderzoeknaam</Td>
-                    <Td>Onderzoeksoort</Td>
-                    <Td>Onderzoekdiscreption</Td>
-                  </Tr>
+                {onderzoeken.map((onderzoek) => (
+                    <Tr key={onderzoek.id}>
+                      <Td>{onderzoek.naam}</Td>
+                      <Td>{onderzoek.soort}</Td>
+                      <Td>{onderzoek.beschrijving}</Td>
+                    </Tr>
+                  ))}
                 </Tbody>
               </Table>
             </TableContainer>

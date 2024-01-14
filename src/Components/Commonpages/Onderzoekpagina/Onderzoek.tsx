@@ -7,7 +7,7 @@ const Onderzoek = () => {
   return (
     <div className='OnderzoekBody'>
         <Header/>
-        main.
+        
 
     </div>
   )
