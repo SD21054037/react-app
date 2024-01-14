@@ -11,14 +11,14 @@ export const Header = (): JSX.Element => {
           aria-label="logo accesssibility"
         />
       </a>
-      <button className="HeaderButton">
+      <a href="/onderzoekenpage" className="HeaderButton">
         <img
           className="user-groups"
           src="/public/Images/user-groups0.png"
           aria-label="Onderzoeken"
         />
         <div className="onderzoeken">Onderzoeken </div>
-      </button>
+      </a>
       <button className="HeaderButton">
         <img
           className="chat-messages"

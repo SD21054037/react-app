@@ -36,6 +36,7 @@
     width: fit-content;
     height: fit-content;
     position: relative;
+    text-decoration: none;
   }
 
   .HeaderButton:hover{

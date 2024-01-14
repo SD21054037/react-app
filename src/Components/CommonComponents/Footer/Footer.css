@@ -1,4 +1,6 @@
 .footer {
+    background: #111329;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     gap: 0px;

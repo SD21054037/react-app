@@ -21,9 +21,11 @@ import { RegisterBedrijven } from "./Components/RegisterEnLoginPages/RegisterBed
 import { MainPage } from "./Components/Commonpages/MainPage/MainPage";
 import HomePage from "./Components/HomePage/LandingPage";
 import Footer from "./Components/CommonComponents/Footer/Footer";
+import { Onderzoekenpagina } from "./Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
+
 
 function App() {
-  return <MainPage></MainPage>;
+  return <Onderzoekenpagina></Onderzoekenpagina>;
 }
 
 export default App;

@@ -6,20 +6,25 @@ import { GegevensInvullenVerzorgerOuder } from "../Components/RegisterEnLoginPag
 import { Loginbedrijven } from "../Components/RegisterEnLoginPages/LogInBedrijven/LoginBedrijven";
 import { RegisterBedrijven } from "../Components/RegisterEnLoginPages/RegisterBedrijven/RegisterBedrijven";
 import HomePage from "../Components/HomePage/LandingPage";
-import  ErrorPage  from "../Components/Commonpages/ErrorPage/Error";
+import ErrorPage from "../Components/Commonpages/ErrorPage/Error";
+import { MainPage } from "../Components/Commonpages/MainPage/MainPage";
+import { Onderzoekpagina } from "../Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
 
 const router = createBrowserRouter([
   {
     path: "/",
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage/>},
+      { index: true, element: <HomePage /> },
       { path: "login", element: <LogIn /> },
-      { path: "register", element: <Register/>},
-      { path: "registerBedrijven", element: <RegisterBedrijven/>},
-      { path: "loginBedrijven", element: <Loginbedrijven/>}
-  ],
+      { path: "register", element: <Register /> },
+      { path: "registerBedrijven", element: <RegisterBedrijven /> },
+      { path: "loginBedrijven", element: <Loginbedrijven /> },
+      { path: "gegevensinvullenuser", element: <GegevensInvullenUser /> },
+    ],
   },
+  { path: "mainpage", element: <MainPage /> },
+  { path: "onderzoekenpage", element: <Onderzoekpagina /> },
 ]);
 
 export default router;

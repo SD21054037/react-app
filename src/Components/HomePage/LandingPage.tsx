@@ -4,8 +4,8 @@ import "./HomePage.css";
 
 const HomePage: React.FC = () => {
   return (
-    <div>
-      <nav>
+    <div className="Landingpage">
+      <nav className="Landingpagenav">
         <Link to="/register">registreer</Link>
         <Link to="/login">login</Link>
         <Link to="/registerbedrijven">registerbedrijven</Link>
