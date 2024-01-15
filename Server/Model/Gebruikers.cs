@@ -23,17 +23,26 @@ public class Gebruikers
 
     private const string ConnectionString = "Server=your_mysql_server;Database=your_database;User Id=your_username;Password=your_password;";
 
-         public void InsertData()
-        {
-            using MySqlConnection connection = new MySqlConnection(ConnectionString);
-            connection.Open();
+    public void InsertData()
+{
+    using MySqlConnection connection = new MySqlConnection(ConnectionString);
+    connection.Open();
 
-            // Execute your SQL command here, e.g., using MySqlCommand
-            using MySqlCommand cmd = new MySqlCommand("INSERT INTO your_table (Name) VALUES (@Name)", connection);
-            cmd.Parameters.AddWithValue("@Name", Name);
+    // Execute your SQL command here, e.g., using MySqlCommand
+    using MySqlCommand cmd = new MySqlCommand("INSERT INTO your_table (Voornaam, Achternaam, Password, Email, Telefoonnummer, Type_Gebruiker, Datum_Registratie) VALUES (@Voornaam, @Achternaam, @Password, @Email, @Telefoonnummer, @Type_Gebruiker, @Datum_Registratie)", connection);
 
-            cmd.ExecuteNonQuery();
-        }
+    // Set parameter values
+    cmd.Parameters.AddWithValue("@Voornaam", Voornaam);
+    cmd.Parameters.AddWithValue("@Achternaam", Achternaam);
+    cmd.Parameters.AddWithValue("@Password", Password);
+    cmd.Parameters.AddWithValue("@Email", Email);
+    cmd.Parameters.AddWithValue("@Telefoonnummer", Telefoonnummer);
+    cmd.Parameters.AddWithValue("@Type_Gebruiker", Type_Gebruiker);
+    cmd.Parameters.AddWithValue("@Datum_Registratie", Datum_Registratie);
+
+    cmd.ExecuteNonQuery();
+}
+
  
 }
 
