@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MySql.Data.MySqlClient;
 
 
 public class Gebruikers
@@ -20,8 +21,19 @@ public class Gebruikers
     public DateTime Datum_Registratie { get; set; }
         public Admin Admin { get; set; }
 
+    private const string ConnectionString = "Server=your_mysql_server;Database=your_database;User Id=your_username;Password=your_password;";
 
-    
+         public void InsertData()
+        {
+            using MySqlConnection connection = new MySqlConnection(ConnectionString);
+            connection.Open();
+
+            // Execute your SQL command here, e.g., using MySqlCommand
+            using MySqlCommand cmd = new MySqlCommand("INSERT INTO your_table (Name) VALUES (@Name)", connection);
+            cmd.Parameters.AddWithValue("@Name", Name);
+
+            cmd.ExecuteNonQuery();
+        }
  
 }
 
