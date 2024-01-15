@@ -1,0 +1,382 @@
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.LoginBedrijven-log-in,
+.LoginBedrijven-log-in * {
+  box-sizing: border-box;
+}
+
+.LoginBedrijven-log-in {
+  background: url('public/Images/log-in.png') center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.LoginBedrijven-content {
+  background: #eaf1f8;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 348px;
+  position: relative;
+  overflow: hidden;
+}
+.LoginBedrijven-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-text-and-supporting-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 340.4px;
+  height: 80px;
+  position: relative;
+}
+.LoginBedrijven-logo-image {
+  flex-shrink: 0;
+  width: 279.2px;
+  height: 80px;
+  position: relative;
+}
+.LoginBedrijven-text {
+  color: #4453ae;
+  text-align: center;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 30.4px;
+  font-weight: 600;
+  position: relative;
+  align-self: stretch;
+}
+.LoginBedrijven-supporting-text {
+  color: #667085;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.LoginBedrijven-content2 {
+  border-radius: 9.6px;
+  padding: 0px 8px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+.LoginBedrijven-input-field-base {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-input-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-label {
+  color: #344054;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: var(--textsm-medium-font-size, 14px);
+  line-height: 16px;
+  font-weight: 500;
+  position: relative;
+}
+.LoginBedrijven-input {
+  background: #ffffff;
+  border-radius: 6.4px;
+  border-style: solid;
+  border-color: #d0d5dd;
+  border-width: 0.8px;
+  padding: 8px 11.2px 8px 11.2px;
+  display: flex;
+  flex-direction: row;
+  gap: 6.4px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
+  overflow: hidden;
+}
+.LoginBedrijven-content3 {
+  display: flex;
+  flex-direction: row;
+  gap: 6.4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.LoginBedrijven-text2 {
+  border: none;
+  outline: none;
+  color: #667085;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+}
+.LoginBedrijven-mail {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: visible;
+}
+.LoginBedrijven-password-visibility {
+  width: 17px;
+  height: 20px;
+  
+}
+.LoginBedrijven-show-password{
+  border: none;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 6px;
+}
+
+
+.LoginBedrijven-error-message {
+  color: #ff0000; 
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.LoginBedrijven-error-message p {
+  margin: 0;
+}
+
+
+.LoginBedrijven-input-field.error {
+  border: 1px solid #ff0000;
+}
+
+.LoginBedrijven-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-button-base {
+  display: flex;
+  flex-direction: row;
+  gap: 6.4px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  border: none;
+  background: #eaf1f8;
+}
+
+.LoginBedrijven-text3 {
+  color: #4453ae;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.5 ease-in-out 0.1 ease-in-out;
+}
+
+.LoginBedrijven-text3:hover{
+  color: #2138ca;
+}
+
+.LoginBedrijven-text3:active{
+  border-bottom: 3px solid #2138ca;
+  transform: scale(95%);
+}
+.LoginBedrijven-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12.8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.LoginBedrijven-button2 {
+  border-radius: 6.4px;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  min-width: 288px;
+  width: 100%;
+  position: relative;
+}
+.LoginBedrijven-loginButton {
+  background: #4453ae;
+  border-radius: 6.4px;
+  border-style: solid;
+  border-color: #4453ae;
+  border-width: 0.8px;
+  padding: 8px 14.4px 8px 14.4px;
+  display: flex;
+  flex-direction: row;
+  gap: 6.4px;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
+  overflow: hidden;
+}
+.LoginBedrijven-loginButton:hover{
+  background: #2138ca;
+}
+
+.LoginBedrijven-loginButton:active{
+  transform: scale(95%);
+}
+.LoginBedrijven-text4 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 12.800000190734863px;
+  line-height: 19.2px;
+  font-weight: 600;
+  position: relative;
+}
+.LoginBedrijven-row2 {
+  display: flex;
+  flex-direction: row;
+  gap: 3.2px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 30.4px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.LoginBedrijven-text5 {
+  display: flex;
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  position: relative;
+  width: 113.6px;
+  height: 30.4px;
+  color: #4453ae;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.LoginBedrijven-text6 {
+  color: #4453ae;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  position: relative;
+  position: relative;
+  transition: color 0.5 ease-in-out 0.1 ease-in-out;
+}
+
+.LoginBedrijven-text6:hover{
+  color: #2138ca;
+}
+
+.LoginBedrijven-text6:active{
+  border-bottom: 3px solid #2138ca;
+  transform: scale(95%);
+}

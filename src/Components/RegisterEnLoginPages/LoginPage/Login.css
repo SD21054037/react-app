@@ -1,0 +1,568 @@
+:root {
+  --base-font-size: 16px; /* Define a base font size for rem units */
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.Login-log-in,
+.Login-log-in * {
+  box-sizing:border-box;
+  margin: 0;
+}
+.Login-log-in{
+  background: url('/public/Images/log-in.png') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.Login-content {
+  background: #eaf1f8;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.Login-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-text-and-supporting-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-logo {
+  padding: 0px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  max-width: 100%;
+  position: relative;
+}
+.Login-logo-image {
+  flex-shrink: 0;
+  width: 100%; 
+  height: auto;
+  position: relative;
+}
+.Login-text {
+  color: #4453ae;
+  text-align: center;
+  font-family: var(
+    --displaysm-semibold-font-family,
+    "Inter-SemiBold",
+    sans-serif
+  );
+  font-size: var(--displaysm-semibold-font-size, 1.875rem);
+  line-height: var(--displaysm-semibold-line-height, 2.375rem);
+  font-weight: var(--displaysm-semibold-font-weight, 600);
+  position: relative;
+  align-self: stretch;
+}
+.Login-supporting-text {
+  color: var(--gray-500, #667085);
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  position: relative;
+  align-self: stretch;
+}
+.Login-content2 {
+  border-radius: 12px;
+  padding: 0 1rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 25rem;
+  position: relative;
+}
+.Login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-input-field-base {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-input-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-label {
+  color: var(--gray-700, #344054);
+  text-align: left;
+  font-family: var(--textsm-medium-font-family, "Inter-Medium", sans-serif);
+  font-size: var(--textsm-medium-font-size, 0.875rem);
+  line-height: var(--textsm-medium-line-height, 1.25rem);
+  font-weight: var(--textsm-medium-font-weight, 500);
+  position: relative;
+}
+.Login-input-base {
+  background: var(--white, #ffffff);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--gray-300, #d0d5dd);
+  border-width: 1px;
+  padding: 10px 14px 10px 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: var(
+    --shadow-xs-box-shadow,
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
+  );
+  overflow: hidden;
+}
+input {
+  width: 100%;
+  /* border-color: transparent; */
+  border: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+.Login-password-visibility {
+  width: 17px;
+  height: 20px;
+}
+
+.Login-show-password{
+  border: none;
+  background-color: #ffffff;
+  padding: 0px 0px 0px 6px;
+}
+.Login-error-message {
+  color: #ff0000; 
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.Login-error-message p {
+  margin: 0;
+}
+
+
+.Login-content3 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.Login-mail {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: visible;
+}
+.Login-text2 {
+  color: var(--gray-500, #667085);
+  text-align: left;
+  font-family: var(--textmd-regular-font-family, "Inter-Regular", sans-serif);
+  font-size: var(--textmd-regular-font-size, 1rem);
+  line-height: var(--textmd-regular-line-height, 1.5rem);
+  font-weight: var(--textmd-regular-font-weight, 400);
+  position: relative;
+  flex: 1;
+}
+.Login-help-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.Login-help-circle {
+  height: auto;
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 100%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+  overflow: visible;
+}
+.Login-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-WwVergeten-button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  border: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for a smoother effect */
+}
+
+.Login-text3 {
+  color: #4453ae;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 0.938rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.Login-text3:hover{
+  border-bottom: #4453ae solid 3px;
+}
+
+.Login-text3:active{
+  color: #101b64;
+  border-bottom: #101b64 solid 3px;
+}
+.Login-WwVergeten-button:active {
+  transform: scale(0.95); 
+
+}
+
+
+.Login-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: fit-content;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-loginbutton {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  background: #4453ae;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #4453ae;
+  border-width: 1px;
+  padding: 10px 18px 10px 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  box-shadow: var(
+    --shadow-xs-box-shadow,
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
+  );
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Login-loginbutton:hover{
+  background: #7281f4;
+}
+
+.Login-loginbutton:active{
+  transform: scale(0.95); 
+}
+.Login-text4 {
+  color: var(--white, #ffffff);
+  text-align: left;
+  font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--textmd-semibold-font-size, 1rem);
+  line-height: var(--textmd-semibold-line-height, 1.5rem);
+  font-weight: var(--textmd-semibold-font-weight, 600);
+  position: relative;
+}
+.Login-social-button-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.Login-Google-login {
+  background: var(--white, #ffffff);
+  border-radius: 8px;
+  border-style: solid;
+  border-color: var(--gray-300, #d0d5dd);
+  border-width: 1px;
+  padding: 10px 16px 10px 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: var(
+    --shadow-xs-box-shadow,
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05)
+  );
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Login-Google-login:hover {
+  background-color: #d6d4d4; 
+}
+
+
+.Login-Google-login:active {
+  transform: scale(0.95); 
+}
+.Login-social-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  overflow: visible;
+}
+.Login-text5 {
+  color: var(--gray-700, #344054);
+  text-align: left;
+  font-family: var(--textmd-semibold-font-family, "Inter-SemiBold", sans-serif);
+  font-size: var(--textmd-semibold-font-size, 1rem);
+  line-height: var(--textmd-semibold-line-height, 1.5rem);
+  font-weight: var(--textmd-semibold-font-weight, 600);
+  position: relative;
+}
+.Login-microsoft-login {
+  background: #ffffff;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: #8c8c8c;
+  border-width: 1px;
+  padding: 10px 12px 10px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.Login-microsoft-login:hover {
+  background-color: #d6d4d4; 
+}
+
+.Login-microsoft-login:active {
+  transform: scale(0.95); 
+}
+
+.Login-icon-microsoft {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  position: relative;
+  overflow: visible;
+}
+.Login-sign-in-with-microsoft {
+  color: #344054;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  position: relative;
+}
+.Login-row2 {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 55px;
+  position: relative;
+}
+
+.Login-text6 {
+  text-align: left;
+  font-family: "-", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  position: relative;
+  width: 142px;
+  height: 38px;
+}
+.Login-text-6-span {
+  color: #4453ae;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.Login-Registreer-button {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 101px;
+  height: 38px;
+  position: relative;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.Login-text7 {
+  color: #4453ae;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.Login-text7:hover{
+  color: #4453ae;
+  border-bottom: #4453ae solid 3px;
+}
+
+.Login-text7:active{
+  color: #101b64;
+  border-bottom: #101b64 solid 3px;
+}
+/* Active/Clicked effect */
+.Login-Registreer-button:active {
+  transform: scale(0.95); 
+}
+
+
+
+@media screen and (min-width: 1600px) {
+  .Login-log-in {
+    padding: 2rem 4rem;
+  }
+
+  .Login-content {
+    width: 30rem;
+    height: auto;
+  }
+
+  
+}
+
+/* Tablet styles */
+@media screen and (max-width: 767px) {
+  .Login-log-in {
+    padding: 2rem;
+  }
+
+  .Login-content {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust other styles for tablet layout */
+}
+
+/* Phone styles */
+@media screen and (max-width: 480px) {
+  .Login-log-in {
+    padding: 1rem;
+  }
+
+  .Login-content {
+    width: 100%;
+    height: auto;
+  }
+
+ 
+}

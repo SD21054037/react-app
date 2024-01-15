@@ -1,0 +1,10 @@
+.Landingpage{
+    display: flex;
+
+}
+
+.Landingpagenav {
+    display: flex;
+    gap: 10px;
+}
+

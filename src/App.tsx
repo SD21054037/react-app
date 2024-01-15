@@ -1,74 +1,33 @@
-// import { useState } from "react";
-// import LoginPage from './Components/LoginPage/LoginPage/Login'
-// import RegisterPage from './Components/RegisterPage/Register'
-// import ErrorPage from './Components/ErrorPage/Error'
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import Switch from "react-switch";
+import LoginPage, {
+  LogIn,
+} from "./Components/RegisterEnLoginPages/LoginPage/Login";
+import RegisterPage, {
+  Register,
+} from "./Components/RegisterEnLoginPages/RegisterPage/Register";
+import ErrorPage from "./Components/Commonpages/ErrorPage/Error";
+import {
+  BrowserRouter as BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import { GegevensInvullenUser } from "./Components/RegisterEnLoginPages/GegevensInvullenUser/GegevensInvullenUser";
+import { GegevensInvullenVerzorgerOuder } from "./Components/RegisterEnLoginPages/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder";
+import { ChatpageBedrijven } from "./Components/ChatpageBedrijven/ChatpageBedrijven";
+import { Chatpage } from "./Components/Chatpage/chatpage";
+import { Loginbedrijven } from "./Components/RegisterEnLoginPages/LogInBedrijven/LoginBedrijven";
+import { RegisterBedrijven } from "./Components/RegisterEnLoginPages/RegisterBedrijven/RegisterBedrijven";
+import { MainPage } from "./Components/Commonpages/MainPage/MainPage";
+import HomePage from "./Components/HomePage/LandingPage";
+import Footer from "./Components/CommonComponents/Footer/Footer";
+import { Onderzoekenpagina } from "./Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
+import Onderzoek from "./Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 
-// function App() {
-//   return ( 
-//     <Router>
-//       <div>
-//       <Routes>
-//         {/* <Route path="/login" element={<LoginPage />} /> */}
-//         {/* <Route path="/error" element={<ErrorPage />} /> */}
-//         <Route path="/register" element={<RegisterPage/>}/>
-//       </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
 
-
-// export default App;
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-interface Todo {
-  title: string;
-  completed: boolean;
+function App() {
+  return <Onderzoek></Onderzoek>;
 }
 
-const RegisterPage: React.FC = () => {
-  const [todoData, setTodoData] = useState<Todo[]>([]);
-  const [clicked, setClicked] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch data from the API using Axios
-    axios.get<Todo[]>('https://jsonplaceholder.typicode.com/todos')
-      .then(response => {
-        setTodoData(response.data);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        setLoading(false);
-      });
-  }, [clicked]);
-
-  return (
-    <div>
-      <h1>Register Page</h1>
-      <button onClick={() => setClicked(!clicked)}>easy money</button>
-
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        clicked && (
-          <div>
-            <h2>API DATA</h2>
-            <ul>
-              {todoData.map(todo => (
-                <li key={todo.title}>{todo.title}</li>
-              ))}
-            </ul>
-          </div>
-        )
-      )}
-    </div>
-  );
-};
-
-export default RegisterPage;
-
+export default App;
