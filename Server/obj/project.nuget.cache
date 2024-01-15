@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PAxMBJC0h7hLkQFnuZBWAtVSSk589zxxwCbJkcXxxWp6eVj2UQ6PyRU8qZTtN7Cn1b0HVny5htl67XSTTMCeKA==",
+  "dgSpecHash": "u5NFUHKQQorKxaZv4Se56mfwfbwelcrQTa7OtpuponY5zJks+eMEpzQNTiKtwquuogmPDewxXlGjZuAX9RVIjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\xav\\Desktop\\REACT\\websiteproject\\Server\\server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\xav\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\xav\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\xav\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\xav\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
