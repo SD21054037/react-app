@@ -3,7 +3,16 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
+=======
+import { registerUser } from '../../../Services/apiUtils';
+
+
+
+
+
+>>>>>>> origin/t.k
 
 const schema = z.object({
   email: z.string().email().min(1),
@@ -46,9 +55,13 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
+<<<<<<< HEAD
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<Formdata> = (data) => {
+=======
+  const onSubmit: SubmitHandler<Formdata> =async (data) => {
+>>>>>>> origin/t.k
     const { email, password } = data;
 
     const encryptedPassword = encrypt(password);
@@ -58,6 +71,7 @@ export const Register = (): JSX.Element => {
       password: encryptedPassword,
     };
 
+<<<<<<< HEAD
     // const registrationSuccessful = await registerUser(user);
     // if (registrationSuccessful) {
       
@@ -72,6 +86,22 @@ export const Register = (): JSX.Element => {
     navigate(`/gegevensinvullenuser/${user.id}`);
 
     console.log("formdata: " + JSON.stringify(user));
+=======
+    console.log("Registration data:", user);
+    // Add logic to send registration data
+    const registrationSuccessful = await registerUser(user);
+    if (registrationSuccessful) {
+      // Handle success, such as redirecting to a login page or showing a success message
+      console.log('register successful!');
+
+    } else {
+      // Handle error, such as displaying an error message to the user
+      console.log('register unsuccessful');
+
+    }
+
+  };
+>>>>>>> origin/t.k
 
   };
 

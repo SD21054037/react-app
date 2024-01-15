@@ -4,7 +4,13 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
 import { useCallback } from "react";
+<<<<<<< HEAD
 import { Link, Navigate, useNavigate } from "react-router-dom";
+=======
+import { loginUser } from '../../../Services/apiUtils';
+
+
+>>>>>>> origin/t.k
 
 const schema = z.object({
   email: z.string().email({ message: "Invalid email adress" }),
@@ -31,8 +37,16 @@ export const LogIn = (): JSX.Element => {
   }, []);
 
 
+<<<<<<< HEAD
   const onSubmit: SubmitHandler<Formdata> = (data) => {
     const { email, password } = data;
+=======
+
+
+
+  const onSubmit: SubmitHandler<Formdata> = async (data) => {
+    const {email, password} = data;
+>>>>>>> origin/t.k
     const encryptedPassword = btoa(password);
 
     const navigate = useNavigate();
@@ -41,10 +55,23 @@ export const LogIn = (): JSX.Element => {
       email: email,
       password: encryptedPassword,
     };
+    const loginSuccessful = await loginUser(user);
+
 
     console.log("Login button clicked");
     console.log("User:", user);
+<<<<<<< HEAD
     navigate("/mainpage")
+=======
+    if (loginSuccessful) {
+      // Handle successful login, e.g., redirecting to a dashboard or showing a success message
+      console.log('Login successful!');
+    } else {
+      // Handle failed login, e.g., displaying an error message to the user
+      console.error('Login failed!');
+    }
+    
+>>>>>>> origin/t.k
   };
 
   return (

@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\xav\\Desktop\\REACT\\websiteproject\\Server\\server.csproj": {}
   },
   "projects": {
@@ -12,20 +13,36 @@
         "projectPath": "C:\\Users\\xav\\Desktop\\REACT\\websiteproject\\Server\\server.csproj",
         "packagesPath": "C:\\Users\\xav\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\xav\\Desktop\\REACT\\websiteproject\\Server\\obj\\",
+=======
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {}
+  },
+  "projects": {
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+        "projectName": "server",
+        "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+        "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
+        "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
+>>>>>>> origin/t.k
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\xav\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+          "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> origin/t.k
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +60,28 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[*, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -73,6 +112,9 @@
             }
           ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -27,7 +27,23 @@ import Onderzoek from "./Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 
 function App() {
+<<<<<<< HEAD
   return <Onderzoek></Onderzoek>;
+=======
+  return (
+    // <Router>
+
+    //   <Routes>
+    //     {/* <Route path="/login" element={<LoginPage />} /> */}
+    //     {/* <Route path="/error" element={<ErrorPage />} /> */}
+    //     <Route path="/register" element={<RegisterPage/>}/>
+    //   </Routes>
+
+    // </Router>
+//  <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
+ <RegisterPage></RegisterPage>
+      );
+>>>>>>> origin/t.k
 }
 
 export default App;
