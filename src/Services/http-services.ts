@@ -18,7 +18,7 @@ class HttpService {
         const request = ApiClient.get<T[]>(this.endpoint, {
                 signal: controller.signal,
             });
-            return { request, cancel: () => controller.abort() }
+            return { request,  cancel: () => controller.abort() }
     }
 
     delete(id: number){

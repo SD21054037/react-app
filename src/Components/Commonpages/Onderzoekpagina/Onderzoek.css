@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;  
+}
+
+.Onderzoek{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: #3e478b;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+
+.GeselecteerdeOnderzoekFrame{
+    display: flex;
+    align-self: stretch;
+    align-items: flex-start;
+    background: #4453AE;
+    position: relative;
+}

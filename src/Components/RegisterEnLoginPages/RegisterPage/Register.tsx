@@ -69,7 +69,7 @@ export const Register = (): JSX.Element => {
 
     // }
 
-    navigate(`/gegevensinvullenuser/${user.email}`);
+    navigate(`/gegevensinvullenuser/${user.id}`);
 
     console.log("formdata: " + JSON.stringify(user));
 

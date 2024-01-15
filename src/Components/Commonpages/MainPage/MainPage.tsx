@@ -19,10 +19,13 @@ interface Onderzoeken {
   uitnodiging?:string
 }
 
+interface Props{
+  onderzoeken: Onderzoeken[]
+  navigate: (id: number) => void;
+}
 
 
-
-export const MainPage = (): JSX.Element => {
+export const MainPage = ({onderzoeken}: Props): JSX.Element => {
   return (
     <div className="main-page">
       <Header></Header>
@@ -46,7 +49,7 @@ export const MainPage = (): JSX.Element => {
                 <div className="onderzoek-beschrijving">
                   {onderzoek.beschrijving}
                 </div>
-                <Button onClick={navigateOnderzoek(onderzoek.id)}>View here</Button>
+                <Button>View here</Button>
               </div>
             </article>
           ) )}

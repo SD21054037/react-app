@@ -22,42 +22,12 @@ import { MainPage } from "./Components/Commonpages/MainPage/MainPage";
 import HomePage from "./Components/HomePage/LandingPage";
 import Footer from "./Components/CommonComponents/Footer/Footer";
 import { Onderzoekenpagina } from "./Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
-export interface Onderzoeken {
-  id: number;
-  naam: string;
-  soort: string;
-  beschrijving: string;
-  typebeperking:string;
-  uitvoerder:string;
-  adres?:string
-  postcode?:string
-  link?:string
-  beloning:string
-  uitnodiging?:string
-}
+import Onderzoek from "./Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 
-const onderzoekenlijst= [
-  {id: 20, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 21, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 22, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 23, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 24, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 25, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 26, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"},
-  {id: 27, naam: "interview bij ah", soort: "interview", beschrijving:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, unde beatae repudiandae sit tempore quo est sunt, ab vitae sed voluptatum quod deserunt laboriosam magni suscipit aspernatur eius quis possimus?"}
-
-]
-
-const navigateOnderzoek = () => {
-  const navigate = new Navigator()
- 
- 
-  navigate(`/onderzoek/${onderzoek.onderzoeken}`)
- }
 
 function App() {
-  return <MainPage  onderzoeken={onderzoekenlijst}></MainPage>;
+  return <Onderzoek></Onderzoek>;
 }
 
 export default App;
