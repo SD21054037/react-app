@@ -33,7 +33,6 @@ public abstract class CustomControllerBase
 
      }
 
-    // Methods for common scenarios
     public IActionResult Redirect(string url) {  
           return new RedirectResult(url);
  }
