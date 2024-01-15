@@ -1,0 +1,131 @@
+.header {
+    background: #eaf1f8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    height: fit-content;
+    position: relative;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .rectangle-1 {
+    flex: 1;
+    height: 90px;
+    position: relative;
+  }
+  .HeaderButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 45px;
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .HeaderButton:hover{
+    border:#2b50ec solid 3px ;
+  }
+  
+  .HeaderButton:active{
+    background: #2b50ec;
+  }
+
+  
+  .onderzoeken {
+    color: #2b50ec;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 114.97%;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-groups {
+    width:fit-content;
+    height: fit-content;
+    position: relative;
+    
+  }
+  .chat {
+    color: #2b50ec;
+    text-align: center;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .chat-messages {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    
+  }
+  .profile-settings-notification {
+    display: flex;
+    flex-direction: row;
+    gap: 20.7px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    width: fit-content;
+    position: relative;
+  }
+
+  .NotificationButton{
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  .NotificationButton:active{
+    transform: scale(80%);
+  }
+  .notification {
+    flex-shrink: 0;
+    
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .ProfileButton{
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  
+  .ProfileButton:active{
+    transform: scale(80%);
+  }
+
+  .profile {
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }

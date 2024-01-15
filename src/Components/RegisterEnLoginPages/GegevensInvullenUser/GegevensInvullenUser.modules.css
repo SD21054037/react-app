@@ -1,0 +1,833 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.GIU-gegevens-invullen-user,
+.GIU-gegevens-invullen-user * {
+  box-sizing: border-box;
+}
+.GIU-gegevens-invullen-user {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+}
+.GIU-gevensinvullen {
+  background: url("/Images/GegevensInvullen.png") center center no-repeat;
+  background-size: cover;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.GIU-content {
+  background: #eaf1f8;
+  border-radius: 18.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+.GIU-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8.88px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 74px;
+  position: relative;
+}
+.GIU-text-and-supporting-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8.88px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-logo {
+  padding: 0px 7.4px 0px 7.4px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 279.72px;
+  position: relative;
+}
+.GIU-logo-image {
+  flex-shrink: 0;
+  width: 258.26px;
+  height: 74px;
+  position: relative;
+}
+.GIU-content2 {
+  background: #4453ae;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.GIU-mainbox {
+  padding: 0px 7.4px 0px 7.4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  margin: 0;
+}
+.GIU-gebruiker {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 20.720001220703125px;
+  line-height: 17.76px;
+  font-weight: 600;
+  position: relative;
+}
+.GIU-gegevens-boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 7.4px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  width: fit-content;
+  position: relative;
+}
+.GIU-leftbox {
+  background: #4453ae;
+  height: fit-content;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: fit-content;
+  position: relative;
+}
+
+.GIU-leftboxLEFT{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 10px;
+}
+
+.GIU-leftboxRIGHT{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 10px;
+}
+
+
+
+.GIU-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+}
+.GIU-input-field-base {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-input-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-label {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 11.100000381469727px;
+  line-height: 14.8px;
+  font-weight: 500;
+  position: relative;
+}
+.GIU-input {
+  background: #ffffff;
+  border-radius: 5.92px;
+  border-style: solid;
+  border-color: #d0d5dd;
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
+  overflow: hidden;
+}
+.GIU-content3 {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.GIU-text {
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 17.76px;
+  font-weight: 400;
+  position: relative;
+  flex: 1;
+  outline: none;
+  border: none;
+}
+
+.GIU-textarea-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  align-self: stretch;
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.GIU-textarea-input-field  textarea{
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.GIU-textarea-input-field-base {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.GIU-input-with-label2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4.44px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.GIU-label2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 10.360000610351562px;
+  line-height: 14.8px;
+  font-weight: 500;
+  position: relative;
+}
+.GIU-input2 {
+  background: #ffffff;
+  border-radius: 5.92px;
+  border-style: solid;
+  border-color: #d0d5dd;
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
+  overflow: hidden;
+}
+.GIU-text3 {
+  color: #667085;
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 400;
+  position: relative;
+  align-self: stretch;
+  flex: 1;
+}
+.GIU-rightbox {
+  display: flex;
+  flex-direction: column;
+  gap: 7.4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: fit-content;
+  width: 483.96px;
+  position: relative;
+}
+.GIU-checkboxes-onderzoek-benadering {
+  padding: 2.96px 0px 2.96px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.4px;
+  height: fit-content;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-onderzoek-checkboxes {
+  padding: 12.58px 11.1px 12.58px 11.1px;
+  display: flex;
+  flex-direction: column;
+  gap: 6.66px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-onderzoek-waar-u-aan-wilt-meedoen {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 600;
+  position: relative;
+}
+.GIU-interview-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-checkbox-base {
+  background: #f9f5ff;
+  border-radius: 2.96px;
+  border-style: solid;
+  border-color: #7f56d9;
+  border-width: 1px;
+  flex-shrink: 0;
+  width: 11.84px;
+  height: 11.84px;
+  position: relative;
+  overflow: hidden;
+}
+.GIU-rightbox h5 {
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 10.360000610351562px;
+  line-height: 14.8px;
+  font-weight: 500;
+  position: relative;
+}
+
+.GIU-rightbox h4{
+  color: #ffffff;
+  margin: 0;
+}
+.GIU-groepsgesprekken-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.GIU-nvt-checkbox{
+  display: flex;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-online-onderzoek-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-engelstalig-onderzoek-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-benadering-checkboxes {
+  padding: 14.06px 0px 14.06px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 6.66px;
+  height: fit-content;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  flex: 1;
+  position: relative;
+}
+.GIU-voorkeur-benadering {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 14.8px;
+  font-weight: 600;
+  position: relative;
+}
+.GIU-telefonish-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-portal-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-mogen-commerciele-partijen-u-benaderen {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 11.84px;
+  line-height: 14.8px;
+  font-weight: 600;
+  position: relative;
+  width: 211.64px;
+}
+.GIU-checkbox2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-check {
+  height: auto;
+  position: absolute;
+  right: 12.5%;
+  left: 12.5%;
+  width: 75%;
+  bottom: 12.5%;
+  top: 12.5%;
+  height: 75%;
+  overflow: visible;
+}
+.GIU-nee-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-leeftijd-verstandelijke-beperking-boxes {
+  padding: 4.44px 14.8px 4.44px 14.8px;
+  display: flex;
+  flex-direction: row;
+  gap: 27.38px;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-leeftijd-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 7.4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-leeftijd {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 12.579999923706055px;
+  line-height: 14.8px;
+  font-weight: 500;
+  position: relative;
+}
+
+.GIU-leeftijd-checkbox input {
+  width: 65%;
+}
+
+.GIU-verstandelijke-beperking-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 7.4px;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.GIU-heeft-uw-kind-client-een-verstandelijke-beperking {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.100000381469727px;
+  line-height: 14.8px;
+  font-weight: 600;
+  position: relative;
+}
+
+.GIU-VerstandelijkeBeperkingCheckbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+}
+.GIU-beperkinglijstbox {
+  padding: 0px 0px 0px 7.4px;
+  display: flex;
+  flex-direction: row;
+  gap: 7.4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.GIU-beperking-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 7.4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  width: 40%;
+}
+.GIU-type-beperking-en {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 14.8px;
+  font-weight: 600;
+  position: relative;
+}
+.GIU-beperkingDropdown {
+  background: var(--white, #ffffff);
+  border-radius: 5.92px;
+  border-style: solid;
+  border-color: var(--gray-300, #d0d5dd);
+  border-width: 0.74px;
+  padding: 7.4px 10.36px 7.4px 10.36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 0.74px 1.48px 0px rgba(16, 24, 40, 0.05);
+}
+.GIU-text5 {
+  color: var(--gray-500, #667085);
+  text-align: left;
+  font-family: "Inter-Regular", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 400;
+  position: relative;
+}
+.GIU-chevron-down {
+  flex-shrink: 0;
+  width: 14.8px;
+  height: 14.8px;
+  position: relative;
+  overflow: visible;
+}
+.GIU-geselecteerde-beperkingen {
+  display: flex;
+  flex-direction: row;
+  gap: 7.4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 227.18px;
+  height: 100%;
+  position: relative;
+}
+.GIU-error-message {
+  color: #ff0000; 
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+.GIU-error-message p {
+  margin: 0;
+}
+
+.GIU-footer {
+  padding: 0px 29.6px 0px 29.6px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 756.28px;
+  height: 63.64px;
+  position: relative;
+}
+
+.GIU-footer button{
+  border-radius: 10px;
+}
+.GIU-TerugButton {
+  background: #2b50ec;
+  border: none;
+  padding: 8.88px 29.6px 8.88px 29.6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+.GIU-VerderButton {
+  background: #2b50ec; 
+  border: none;
+  padding: 8.88px 29.6px 8.88px 29.6px;
+  display: flex;
+  flex-direction: row;
+  gap: 5.92px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.GIU-TerugButton:hover, .GIU-VerderButton:hover {
+background:#0d2eb3;
+}
+
+.GIU-TerugButton:active, .GIU-VerderButton:active {
+  background:#0d2eb3;
+  transform: scale(90%);
+  }
+
+.GIU-text6 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 11.84000015258789px;
+  line-height: 17.76px;
+  font-weight: 600;
+  position: relative;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .GIU-leftbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .GIU-content {
+    padding: 10px;
+  }
+
+  .GIU-content2{
+  border-radius: 20px;
+  width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .GIU-leftbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .GIU-footer{
+    width: fit-content;
+  }
+
+  .GIU-content {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+  }
+
+  .GIU-content2{
+  border-radius: 20px;
+  flex-direction: column;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .GIU-header{
+    align-self: auto;
+    width: fit-content;
+  }
+  
+  .GIU-checkboxes-onderzoek-benadering {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .GIU-rightbox{
+    width: fit-content;
+  }
+
+  .GIU-mainbox{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: auto;
+  }
+
+  .GIU-benadering-checkboxes{
+    padding: 12.58px 11.1px 12.58px 11.1px;
+  }
+}
+
+@media only screen and (max-width: 530px){
+.GIU-gevensinvullen{
+  height: 100%;
+  background: url(/Images/GegevensInvullen.png);
+  background-size: cover; 
+}
+
+  .GIU-gegevens-boxes{
+    display: flex;
+    flex-direction: column;
+  }
+  .GIU-leftbox{
+    width: 100%;
+  }
+
+  .GIU-leftboxLEFT{
+    width: 100%;
+  }
+
+  .GIU-leftboxRIGHT{
+    width: 100%;
+  }
+
+  .GIU-leeftijd-checkbox input {
+    width: fit-content;
+  }
+  .GIU-gevensinvullen{
+    align-items: flex-start;
+  }
+  .GIU-gegevens-invullen-user{
+    overflow: scroll;
+  }
+
+  .GIU-content {
+    margin: 20px;
+  }
+}
+
+
+

@@ -1,0 +1,51 @@
+version: '3.4'
+
+networks:
+  dev:
+    driver: bridge
+
+services:
+  demo-app:
+    depends_on:
+      
+app_db
+  container_name: demoapp-services
+  ports:
+"8088:80"
+build:
+  context: ./webapi
+  dockerfile: Dockerfile
+environment:
+ConnectionStrings__DefaultConnection=User ID=postgres;Password=postgres;Server=app_db;Port=5432;Database=SampleDbDriver;IntegratedSecurity=true;Pooling=true;
+ASPNETCORE_URLS=http://+/
+networks:
+dev
+
+  app_db:
+    image: postgres:latest
+    container_name: app_db
+    environment:
+      
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=SampleDbDriver
+ports:
+"5433:5432"
+restart: always
+volumes:
+app_data:/var/lib/postgresql/data
+networks:
+dev
+
+  web-app:
+    build:
+      context: .
+      dockerfile: web/Dockerfile-web
+    ports:
+      
+"3000:80"
+  networks:
+dev
+
+volumes:
+  app_data:
