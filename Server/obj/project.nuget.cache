@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PAxMBJC0h7hLkQFnuZBWAtVSSk589zxxwCbJkcXxxWp6eVj2UQ6PyRU8qZTtN7Cn1b0HVny5htl67XSTTMCeKA==",
+  "dgSpecHash": "egZ3NA2eBBm3VaF0FRENxSfMsJ8ICn8mn/GPmFTWvXDBm6FfVNr7I6izP6jVoZIuzWnQN2Bpsi5Q3hhsJ7z/sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+  "projectFilePath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

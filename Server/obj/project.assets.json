@@ -8,26 +8,24 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
+    "C:\\Users\\troyk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
-      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
+      "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+      "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
+      "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
