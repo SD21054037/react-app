@@ -1,5 +1,4 @@
 import { useState } from "react";
-<<<<<<< HEAD
 import LoginPage, { LogIn } from './Components/LoginPage/LoginPage/Login'
 import ErrorPage from './Components/ErrorPage/Error'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -13,7 +12,7 @@ function App() {
       </Routes>
   </Router>
   );
-=======
+
 import Switch from "react-switch";
 import LoginPage, {
   LogIn,
@@ -41,9 +40,13 @@ import Onderzoek from "./Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 
 
+<!--     // </Router>
+//  <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
+ <RegisterPage></RegisterPage>
+      ); -->
 function App() {
   return <Onderzoek></Onderzoek>;
->>>>>>> DioneReal
+
 }
 
 export default App;
