@@ -1,0 +1,213 @@
+.footer {
+    background: #111329;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    height: 200px;
+    position: relative;
+    
+  }
+  .footer-elements-1 {
+    margin: 0;
+    padding: 0;
+    background: #111329;
+    padding: 0px 20px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .snel-naar {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    position: relative;
+    color: #21cea1;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+  }
+  .snel-naar-span2 {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+  .actueel {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+    width: fit-content;
+  }
+  .algemene-voorwaarden {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .privacy-policy {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .faq {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .footer-contact {
+    margin: 0;
+    padding: 0;
+    background: #111329;
+    padding: 0px 25px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .contact {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-Bold", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+  }
+  ._030-239-82-70 {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .info-accessibility {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .footer-elements-2 {
+    margin: 0;
+    padding: 0;
+    background: #111329;
+    padding: 0px 20px 0px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+  }
+  .hoe-wij-helpen {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 700;
+    position: relative;
+  }
+  .audits {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .gebruikersonderzoek {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .trainingen {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }
+  .advies {
+    margin: 0;
+    padding: 0;
+    color: #21cea1;
+    text-align: left;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    position: relative;
+  }

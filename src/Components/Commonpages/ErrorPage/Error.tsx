@@ -1,15 +1,9 @@
 import "./error.css";
 
-export interface IFour04SectionProps {
-  className?: string;
-}
 
-export const Four04Section = ({
-  className,
-  ...props
-}: IFour04SectionProps): JSX.Element => {
+export const Four04Section = (): JSX.Element => {
   return (
-    <div className={"_404-section " + className}>
+    <div className="_404-section">
       <div className="container">
         <div className="content">
           <div className="heading-and-supporting-text">

@@ -1,13 +1,12 @@
-html,body{
+html, body {
   margin: 0;
   padding: 0;
 }
 
-.register,
-.register * {
+.RegisterBedrijven, .RegisterBedrijven * {
   box-sizing: border-box;
 }
-.register {
+.RegisterBedrijven{
   background: url(public/images/log-in.png) center center no-repeat;
   background-size: cover;
   display: flex;
@@ -21,21 +20,21 @@ html,body{
   height: 100vh;
   position: relative;
 }
-.content {
+.RegisterBedrijven-content {
   background: #eaf1f8;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 25.6px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-shrink: 0;
-  width: 640px;
+  width: fit-content;
   height: fit-content;
   position: relative;
   overflow: hidden;
 }
-.header {
+.RegisterBedrijven-header {
   display: flex;
   flex-direction: column;
   gap: 9.6px;
@@ -45,7 +44,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.text-and-supporting-text {
+.RegisterBedrijven-text-and-supporting-text {
   display: flex;
   flex-direction: column;
   gap: 9.6px;
@@ -55,7 +54,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.logo {
+.RegisterBedrijven-logo {
   padding: 0px 8px 0px 8px;
   display: flex;
   flex-direction: column;
@@ -66,13 +65,13 @@ html,body{
   width: 302.4px;
   position: relative;
 }
-.logo-image {
+.RegisterBedrijven-logo-image {
   flex-shrink: 0;
   width: 279.2px;
   height: 80px;
   position: relative;
 }
-.text {
+.RegisterBedrijven-text {
   color: #4453ae;
   text-align: center;
   font-family: "Inter-SemiBold", sans-serif;
@@ -82,7 +81,7 @@ html,body{
   position: relative;
   align-self: stretch;
 }
-.form {
+.RegisterBedrijven-form {
   background: #eaf1f8;
   padding: 0px 16px 0px 16px;
   display: flex;
@@ -93,8 +92,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.input-base-1 {
-  padding: 0px 4px 0px 0px;
+.RegisterBedrijven-input-base-1 {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -104,7 +102,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.input-field {
+.RegisterBedrijven-input-field {
   display: flex;
   flex-direction: column;
   gap: 0px;
@@ -114,7 +112,7 @@ html,body{
   width: 286.4px;
   position: relative;
 }
-.input-field-base {
+.RegisterBedrijven-input-field-base {
   display: flex;
   flex-direction: column;
   gap: 4.8px;
@@ -124,7 +122,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.input-with-label {
+.RegisterBedrijven-input-with-label {
   display: flex;
   flex-direction: column;
   gap: 4.8px;
@@ -134,7 +132,7 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.label {
+.RegisterBedrijven-label {
   color: var(--gray-700, #344054);
   text-align: left;
   font-family: "Inter-Medium", sans-serif;
@@ -143,7 +141,7 @@ html,body{
   font-weight: 500;
   position: relative;
 }
-.input {
+.RegisterBedrijven-input {
   background: var(--white, #ffffff);
   border-radius: 6.4px;
   border-style: solid;
@@ -161,7 +159,7 @@ html,body{
   box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
   overflow: hidden;
 }
-.content2 {
+.RegisterBedrijven-content2 {
   display: flex;
   flex-direction: row;
   gap: 6.4px;
@@ -170,51 +168,46 @@ html,body{
   flex: 1;
   position: relative;
 }
-.mail {
+.RegisterBedrijven-mail {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
   position: relative;
   overflow: visible;
 }
-.InputBase {
+.RegisterBedrijven-InputBase {
   position: relative;
   flex: 1;
   outline: none;
   border: none;
   height: 20px;
 }
-.password-visibility {
+.RegisterBedrijven-password-visibility {
   width: 17px;
   height: 20px;
-  
 }
-.show-password{
+.RegisterBedrijven-show-password {
   border: none;
   background-color: #ffffff;
   padding: 0;
   margin-left: 6px;
   height: 20px;
 }
-
-
-.error-message {
-  color: #ffffff; 
+.RegisterBedrijven-error-message {
+  color: #ff0000; 
   font-size: 15px;
   font-weight: 500;
 }
-
-
-.error-message p {
+.RegisterBedrijven-error-message p {
   margin: 0;
 }
-.help-icon {
+.RegisterBedrijven-help-icon {
   flex-shrink: 0;
   width: 12.8px;
   height: 12.8px;
   position: relative;
 }
-.input-base-2 {
+.RegisterBedrijven-input-base-2 {
   padding: 0px 0px 0px 4px;
   display: flex;
   flex-direction: column;
@@ -225,55 +218,48 @@ html,body{
   flex-shrink: 0;
   position: relative;
 }
-.input-field-base2 {
+.RegisterBedrijven-input-field-base2 {
   display: flex;
   flex-direction: column;
   gap: 4.8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.RegisterBedrijven-input-field2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
   width: 286.4px;
   position: relative;
 }
-.input2 {
-  background: var(--white, #ffffff);
-  border-radius: 6.4px;
-  border-style: solid;
-  border-color: var(--gray-300, #d0d5dd);
-  border-width: 0.8px;
+.RegisterBedrijven-input-with-label2 {
   display: flex;
-  flex-direction: row;
-  gap: 0px;
+  flex-direction: column;
+  gap: 4.8px;
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
 }
-.add-on {
-  border-radius: 6.4px 0px 0px 6.4px;
-  padding: 8px 9.6px 8px 11.2px;
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.text3 {
-  color: white;
+.RegisterBedrijven-label2 {
+  color: var(--gray-700, #344054);
   text-align: left;
-  font-family: "Inter-Regular", sans-serif;
-  font-size: 12.800000190734863px;
-  line-height: 19.2px;
-  font-weight: 400;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 11.199999809265137px;
+  line-height: 16px;
+  font-weight: 500;
   position: relative;
 }
-.text-input {
+.RegisterBedrijven-input2 {
   background: var(--white, #ffffff);
-  border-radius: 0px 6.4px 6.4px 0px;
+  border-radius: 6.4px;
   border-style: solid;
   border-color: var(--gray-300, #d0d5dd);
   border-width: 0.8px;
@@ -284,138 +270,157 @@ html,body{
   align-items: center;
   justify-content: flex-start;
   align-self: stretch;
-  flex: 1;
+  flex-shrink: 0;
   position: relative;
   overflow: hidden;
 }
-.content3 {
-  border-radius: 9.6px;
-  padding: 0px 8px 0px 8px;
-  display: flex;
-  flex-direction: row;
-  gap: 19.2px;
-  align-items: center;
-  justify-content: center;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-}
-.actions {
+.RegisterBedrijven-content3 {
   display: flex;
   flex-direction: column;
-  gap: 12.8px;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 267.2px;
-  position: relative;
-}
-.button {
-  border-radius: 6.4px;
-  display: flex;
-  flex-direction: row;
   gap: 0px;
   align-items: center;
   justify-content: center;
+  width: 100%;
   flex-shrink: 0;
-  width: 267.2px;
   position: relative;
 }
-.button-base {
-  background: #4453ae;
+.RegisterBedrijven-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  flex-shrink: 0;
+  position: relative;
+}
+.RegisterBedrijven-button {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+}
+.RegisterBedrijven-button-base {
+  background:#4453ae;
   border-radius: 6.4px;
-  border-style: solid;
-  border-color: #4453ae;
-  border-width: 0.8px;
-  padding: 8px 14.4px 8px 14.4px;
+  padding: 11.2px 32px 11.2px 32px;
   display: flex;
   flex-direction: row;
   gap: 6.4px;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  align-self: stretch;
+  flex-shrink: 0;
   position: relative;
-  box-shadow: 0px 0.8px 1.6px 0px rgba(16, 24, 40, 0.05);
-  overflow: hidden;
-  transition: background 0.3s ease;
-  transition: transform 0.1s ease;;
+  border: none;
+  transition: background 0.3 ease-in-out, transform 0.1 ease-in-out;
+}
+.RegisterBedrijven-button-base:hover{
+  background: #1f31a9;
 }
 
-.button-base:hover { 
-  background: #2138ca;
+.RegisterBedrijven-button-base:active{
+  background: #1f31a9;
+  transform: scale(90%);
 }
-.button-base:active{
-  transform: scale(80%);
-}
-.text4 {
-  color: #4453ae ;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 14px;
-  line-height: 19.2px;
-  font-weight: 600;
+
+.RegisterBedrijven-text3 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
   position: relative;
-  transition: color 0.5s ease-in-out, border-bottom 0.1 ease;
-  transition: transform 0.1s ease-in-out;
 }
-
-.text4:hover { 
-  color: #2138ca;
-
-}
-.text4:active{
-  transform: scale(80%);
-  border-bottom: #2138ca 2px solid;
-}
-.row {
+.RegisterBedrijven-row {
   display: flex;
   flex-direction: row;
-  gap: 13.6px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  padding-bottom: 5px;
+}
+.RegisterBedrijven-al-een-account {
+  color:#4453ae;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 17.6px;
+  font-weight: 600;
+  position: relative;
+}
+.RegisterBedrijven-button2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
   align-items: center;
   justify-content: center;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
 }
-.al-een-account {
-  color: #4453ae;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 600;
-  position: relative;
-  width: 113.6px;
-  height: 30.4px;
-  margin: 0;
-  padding: 0;
-}
-.button2 {
+.RegisterBedrijven-button-base2 {
+  background: none;
+  padding: 0px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: fit-content;
-  height: 30.4px;
-  position: relative;
-}
-.button-base2 {
-  display: flex;
-  flex-direction: row;
-  gap: 6.4px;
   align-items: center;
   justify-content: center;
+  align-self: stretch;
   flex-shrink: 0;
   position: relative;
 }
-.text5 {
+.RegisterBedrijven-text4 {
   color: #4453ae;
-  text-align: left;
-  font-family: "Inter-SemiBold", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
+  text-align: center;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 17.6px;
   font-weight: 600;
   position: relative;
+  transition: color 0.3 ease-in-out, transform 0.1 ease-in-out;
+}
+
+.RegisterBedrijven-text4:hover {
+  color: #4453ae; 
+}
+
+.RegisterBedrijven-text4:active {
+  transform: scale(90%);
+}
+
+
+@media only screen and (max-height: 630px) and (max-width: 1300px) {
+  .RegisterBedrijven-content {
+    gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .RegisterBedrijven-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .RegisterBedrijven {
+    overflow: scroll;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .RegisterBedrijven-content {
+    gap: 10px;
+  }
+
 }

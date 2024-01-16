@@ -4,6 +4,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   BedrijfsNaam: z.string().min(1).max(255),
@@ -47,29 +48,29 @@ export const Loginbedrijven = (): JSX.Element => {
   };
 
   return (
-    <div className="log-in">
-      <div className="content">
-        <div className="header">
-          <div className="text-and-supporting-text">
-            <div className="logo">
-              <img className="logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
+    <div className="LoginBedrijven-log-in">
+      <div className="LoginBedrijven-content">
+        <div className="LoginBedrijven-header">
+          <div className="LoginBedrijven-text-and-supporting-text">
+            <div className="LoginBedrijven-logo">
+              <img className="LoginBedrijven-logo-image" src="public/Images/logo.png" aria-label="logo accessibility"/>
             </div>
-            <h1 className="text">Inlog bedrijven portal </h1>
-            <p className="supporting-text">Welkom terug, vul uw details in</p>
+            <h1 className="LoginBedrijven-text">Inlog bedrijven portal </h1>
+            <p className="LoginBedrijven-supporting-text">Welkom terug, vul uw details in</p>
           </div>
         </div>
-        <div className="content2">
-          <form className="form">
-            <div className="input-field">
-              <div className="input-field-base">
-                <div className="input-with-label">
-                  <label className="label" htmlFor="BedrijfsNaam">
+        <div className="LoginBedrijven-content2">
+          <form className="LoginBedrijven-form">
+            <div className="LoginBedrijven-input-field">
+              <div className="LoginBedrijven-input-field-base">
+                <div className="LoginBedrijven-input-with-label">
+                  <label className="LoginBedrijven-label" htmlFor="BedrijfsNaam">
                     Uw Bedrijfsnaam
                   </label>
-                  <div className="input">
-                    <div className="content3">
+                  <div className="LoginBedrijven-input">
+                    <div className="LoginBedrijven-content3">
                       <input
-                        className="text2"
+                        className="LoginBedrijven-text2"
                         id="BedrijfsNaam"
                         type="text"
                         placeholder="Vul uw bedrijfsnaam in"
@@ -77,7 +78,7 @@ export const Loginbedrijven = (): JSX.Element => {
                       ></input>
                     </div>
                   </div>
-                  <div className="error-message">
+                  <div className="LoginBedrijven-error-message">
                     {errors.BedrijfsNaam && (
                       <p>{errors.BedrijfsNaam.message}</p>
                     )}
@@ -85,16 +86,16 @@ export const Loginbedrijven = (): JSX.Element => {
                 </div>
               </div>
             </div>
-            <div className="input-field">
-              <div className="input-field-base">
-                <div className="input-with-label">
-                  <label className="label" htmlFor="WerkEmail">
+            <div className="LoginBedrijven-input-field">
+              <div className="LoginBedrijven-input-field-base">
+                <div className="LoginBedrijven-input-with-label">
+                  <label className="LoginBedrijven-label" htmlFor="WerkEmail">
                     Email
                   </label>
-                  <div className="input">
-                    <div className="content3">
+                  <div className="LoginBedrijven-input">
+                    <div className="LoginBedrijven-content3">
                       <svg
-                        className="mail"
+                        className="LoginBedrijven-mail"
                         width="20"
                         height="20"
                         viewBox="0 0 20 20"
@@ -112,78 +113,78 @@ export const Loginbedrijven = (): JSX.Element => {
 
                       <input
                         id="WerkEmail"
-                        className="text2"
+                        className="LoginBedrijven-text2"
                         placeholder="Vul uw email in"
                         type="text"
                         {...register("werkemail")}
                       ></input>
                     </div>
                   </div>
-                  <div className="error-message">
+                  <div className="LoginBedrijven-error-message">
                     {errors.werkemail && <p>{errors.werkemail.message}</p>}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="input-field">
-              <div className="input-field-base">
-                <div className="input-with-label">
-                  <div className="label">Wachtwoord </div>
-                  <div className="input">
-                    <div className="content3">
+            <div className="LoginBedrijven-input-field">
+              <div className="LoginBedrijven-input-field-base">
+                <div className="LoginBedrijven-input-with-label">
+                  <div className="LoginBedrijven-label">Wachtwoord </div>
+                  <div className="LoginBedrijven-input">
+                    <div className="LoginBedrijven-content3">
                       <input
                         placeholder="vul uw wachtwoord in"
-                        className="text2"
+                        className="LoginBedrijven-text2"
                         type={passwordVisible ? "text" : "password"}
                         {...register("wachtwoord")}
                       ></input>
                     </div>
                     <button
-                      className="show-password"
+                      className="LoginBedrijven-show-password"
                       onClick={togglePasswordVisibility}
                     >
                       {passwordVisible ? (
                         <img
-                          className="password-visibility"
+                          className="LoginBedrijven-password-visibility"
                           src="/public/images/hide.png"
                           alt="Hide Password"
                         />
                       ) : (
                         <img
-                          className="password-visibility"
+                          className="LoginBedrijven-password-visibility"
                           src="/public/images/visible.png"
                           alt="Show Password"
                         />
                       )}
                     </button>
                   </div>
-                  <div className="error-message">
+                  <div className="LoginBedrijven-error-message">
                     {errors.wachtwoord && <p>{errors.wachtwoord.message}</p>}
                   </div>
                 </div>
               </div>
             </div>
           </form>
-          <div className="row">
-            <div className="button">
-              <button className="button-base">
-                <div className="text3">Wachtwoord vergeten? </div>
+          <div className="LoginBedrijven-row">
+            <div className="LoginBedrijven-button">
+              <button className="LoginBedrijven-button-base">
+                <div className="LoginBedrijven-text3">Wachtwoord vergeten? </div>
               </button>
             </div>
           </div>
-          <div className="actions">
-            <div className="button2">
-              <button type="submit" className="loginButton" onClick={handleSubmit(onSubmit)}>
-                <div className="text4">Log in</div>
+          <div className="LoginBedrijven-actions">
+            <div className="LoginBedrijven-button2">
+              <button type="submit" className="LoginBedrijven-loginButton" onClick={handleSubmit(onSubmit)}>
+                <div className="LoginBedrijven-text4">Log in</div>
               </button>
             </div>
           </div>
         </div>
-        <div className="row2">
-          <div className="text5">Geen account?</div>
+        <div className="LoginBedrijven-row2">
+          <div className="LoginBedrijven-text5">Geen account?</div>
 
-          <button className="button-base">
-            <div className="text6">Registreer </div>
+          <button className="LoginBedrijven-button-base">
+            <Link to={"/registerbedrijven"} className="LoginBedrijven-text6">Registreer </Link>
           </button>
         </div>
       </div>

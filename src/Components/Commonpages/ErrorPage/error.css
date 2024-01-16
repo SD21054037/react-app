@@ -2,6 +2,7 @@
 ._404-section * {
   box-sizing: border-box;
 }
+
 ._404-section {
   background: var(--white, #ffffff);
   padding: 64px 0px 96px 0px;

@@ -32,77 +32,77 @@ export const GegevensInvullenVerzorgerOuder = (): JSX.Element => {
     console.log("Form data:", VerzorgerOuder);
   };
   return (
-    <div className="gegevens-invullen-verzorger-ouder">
-      <div className="gevensinvullen">
-        <div className="content">
-          <div className="header">
-            <div className="text-and-supporting-text">
-              <div className="logo">
+    <div className="GIVO-gegevens-invullen-verzorger-ouder">
+      <div className="GIVO-gevensinvullen">
+        <div className="GIVO-content">
+          <div className="GIVO-header">
+            <div className="GIVO-text-and-supporting-text">
+              <div className="GIVO-logo">
                 <img
-                  className="logo-image"
+                  className="GIVO-logo-image"
                   src="public/Images/logo.png"
                   aria-label="logo accessibility"
                 />
               </div>
             </div>
           </div>
-          <div className="content2">
-            <form className="box">
-              <header className="verzorger-ouder">
-                <h1 className="HeaderText">Verzorger/Ouder</h1>
+          <div className="GIVO-content2">
+            <form className="GIVO-box">
+              <header className="GIVO-verzorger-ouder">
+                <h1 className="GIVO-HeaderText">Verzorger/Ouder</h1>
               </header>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label className="label">Voornaam </label>
-                    <div className="input">
-                      <div className="content3">
+              <div className="GIVO-input-field">
+                <div className="GIVO-input-field-base">
+                  <div className="GIVO-input-with-label">
+                    <label className="GIVO-label">Voornaam </label>
+                    <div className="GIVO-input">
+                      <div className="GIVO-content3">
                         <input
                           placeholder="Vul uw voornaam in"
-                          className="text"
+                          className="GIVO-text"
                           {...register("voornaam")}
                         ></input>
                       </div>
                     </div>
-                    <div className="error-message">
+                    <div className="GIVO-error-message">
                       {errors.voornaam && <p>{errors.voornaam.message}</p>}
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label className="label">Achternaam </label>
-                    <div className="input">
-                      <div className="content3">
+              <div className="GIVO-input-field">
+                <div className="GIVO-input-field-base">
+                  <div className="GIVO-input-with-label">
+                    <label className="GIVO-label">Achternaam </label>
+                    <div className="GIVO-input">
+                      <div className="GIVO-content3">
                         <input
                           placeholder="Vul uw achternaam in"
-                          className="text"
+                          className="GIVO-text"
                           {...register("achternaam")}
                         ></input>
                       </div>
                     </div>
-                    <div className="error-message">
+                    <div className="GIVO-error-message">
                       {errors.achternaam && <p>{errors.achternaam.message}</p>}
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label className="label">Telefoonnummer </label>
-                    <div className="input">
-                      <div className="content3">
+              <div className="GIVO-input-field">
+                <div className="GIVO-input-field-base">
+                  <div className="GIVO-input-with-label">
+                    <label className="GIVO-label">Telefoonnummer </label>
+                    <div className="GIVO-input">
+                      <div className="GIVO-content3">
                         <input
                           placeholder="+310620456"
-                          className="text"
+                          className="GIVO-text"
                           {...register("telefoonnummer")}
                         ></input>
                       </div>
                     </div>
-                    <div className="error-message">
+                    <div className="GIVO-error-message">
                       {errors.telefoonnummer && (
                         <p>{errors.telefoonnummer.message}</p>
                       )}
@@ -112,17 +112,17 @@ export const GegevensInvullenVerzorgerOuder = (): JSX.Element => {
               </div>
             </form>
           </div>
-          <div className="footer">
-            <button className="button-base">
-              <div className="text3">Terug </div>
+          <div className="GIVO-footer">
+            <button className="GIVO-button-base">
+              <div className="GIVO-text3">Terug </div>
             </button>
 
             <button
-              className="button-base"
+              className="GIVO-button-base"
               type="submit"
               onClick={handleSubmit(onSubmit)}
             >
-              <div className="text3">Verder </div>
+              <div className="GIVO-text3">Verder </div>
             </button>
           </div>
         </div>

@@ -2,6 +2,8 @@ import "./GegevensInvullenUser.modules.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
@@ -22,7 +24,7 @@ const schema = z.object({
     nvt: z.boolean(),
   }),
   commercieleBenadering: z.boolean(),
-  leeftijd: z.date(),
+  geboortedatum: z.date(),
   verstandelijkeBeperking: z.boolean(),
   beperkingen: z.array(z.string()),
 });
@@ -37,68 +39,130 @@ export const GegevensInvullenUser = (): JSX.Element => {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
+  
+
+
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
-    console.log("Form data:", data);
+    const {
+      voornaam,
+      achternaam,
+      telefoonnummer,
+      postcode,
+      aandoeningZiekte,
+      hulpmiddelen,
+      onderzoekWensen,
+      benaderingVoorkeur,
+      commercieleBenadering,
+      geboortedatum,
+      verstandelijkeBeperking,
+      beperkingen,
+    } = data;
+
+  
+
+    function calculateAge(geboortedatum: Date, currentDate: Date): number {
+      const birthYear = geboortedatum.getFullYear();
+      const currentYear = currentDate.getFullYear();
+    
+      const age = currentYear - birthYear;
+    
+      
+      const birthdateThisYear = new Date(currentDate);
+      birthdateThisYear.setFullYear(birthYear);
+    
+      if (birthdateThisYear > currentDate) {
+        return age - 1;
+      } else {
+        return age;
+      }
+    }
+
+    const currentdate = new Date();
+
+    const leeftijd = calculateAge(geboortedatum, currentdate);
+  
+
+    const user = {
+      voornaam: voornaam,
+      achternaam: achternaam,
+      telefoonnummer: telefoonnummer,
+      postcode: postcode,
+      aandoeningZiekte: aandoeningZiekte,
+      hulpmiddelen: hulpmiddelen,
+      onderzoekWensen: onderzoekWensen,
+      benaderingVoorkeur: benaderingVoorkeur,
+      commercieleBenadering: commercieleBenadering,
+      leeftijd: leeftijd,
+      verstandelijkeBeperking: verstandelijkeBeperking,
+      beperkingen: beperkingen,
+    };
+
+    
+    const navigate = useNavigate();
+
+   if (leeftijd < 18 || verstandelijkeBeperking == true )
+    navigate(`/gegevensinvullenverzorgerouder`)
+    else navigate(`/mainpage`)
   };
 
   return (
-    <div className="gegevens-invullen-user">
-      <div className="gevensinvullen">
-        <div className="content">
-          <div className="header">
-            <div className="text-and-supporting-text">
-              <div className="logo">
+    <div className="GIU-gegevens-invullen-user">
+      <div className="GIU-gevensinvullen">
+        <form className="GIU-content">
+          <div className="GIU-header">
+            <div className="GIU-text-and-supporting-text">
+              <div className="GIU-logo">
                 <img
-                  className="logo-image"
-                  src="/public/Images/logo.png"
+                  className="GIU-logo-image"
+                  src="/Images/logo.png"
                   aria-label="logo accessibility"
                 />
               </div>
             </div>
           </div>
-          <div className="content2">
-            <div className="mainbox">
-              <h1 className="gebruiker">Gebruiker </h1>
+          <div className="GIU-content2">
+            <div className="GIU-mainbox">
+              <h1 className="GIU-gebruiker">Gebruiker </h1>
             </div>
-            <form className="gegevens-boxes">
-              <div className="leftbox">
-                <div className="leftboxLEFT">
-                  <div className="input-field">
-                    <div className="input-field-base">
-                      <div className="input-with-label">
-                        <label className="label">Voornaam </label>
-                        <div className="input">
-                          <div className="content3">
+            <div className="GIU-gegevens-boxes">
+              <div className="GIU-leftbox">
+                <div className="GIU-leftboxLEFT">
+                  <div className="GIU-input-field">
+                    <div className="GIU-input-field-base">
+                      <div className="GIU-input-with-label">
+                        <label className="GIU-label">Voornaam </label>
+                        <div className="GIU-input">
+                          <div className="GIU-content3">
                             <input
                               type="text"
                               placeholder="Vul uw voornaam in"
-                              className="text"
+                              className="GIU-text"
                               {...register("voornaam")}
                             ></input>
                           </div>
                         </div>
-                        <div className="error-message">
+                        <div className="GIU-error-message">
                           {errors.voornaam && <p>{errors.voornaam.message}</p>}
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="input-field">
-                    <div className="input-field-base">
-                      <div className="input-with-label">
-                        <label className="label">Achternaam </label>
-                        <div className="input">
-                          <div className="content3">
+                  <div className="GIU-input-field">
+                    <div className="GIU-input-field-base">
+                      <div className="GIU-input-with-label">
+                        <label className="GIU-label">Achternaam </label>
+                        <div className="GIU-input">
+                          <div className="GIU-content3">
                             <input
                               type="text"
                               placeholder="Vul uw achternaam in"
-                              className="text"
+                              className="GIU-text"
                               {...register("achternaam")}
                             ></input>
                           </div>
                         </div>
-                        <div className="error-message">
+                        <div className="GIU-error-message">
                           {errors.achternaam && (
                             <p>{errors.achternaam.message}</p>
                           )}
@@ -106,21 +170,21 @@ export const GegevensInvullenUser = (): JSX.Element => {
                       </div>
                     </div>
                   </div>
-                  <div className="input-field">
-                    <div className="input-field-base">
-                      <div className="input-with-label">
-                        <label className="label">Telefoonnummer </label>
-                        <div className="input">
-                          <div className="content3">
+                  <div className="GIU-input-field">
+                    <div className="GIU-input-field-base">
+                      <div className="GIU-input-with-label">
+                        <label className="GIU-label">Telefoonnummer </label>
+                        <div className="GIU-input">
+                          <div className="GIU-content3">
                             <input
                               type="tel"
                               placeholder="+316123456"
-                              className="text"
+                              className="GIU-text"
                               {...register("telefoonnummer")}
                             ></input>
                           </div>
                         </div>
-                        <div className="error-message">
+                        <div className="GIU-error-message">
                           {errors.telefoonnummer && (
                             <p>{errors.telefoonnummer.message}</p>
                           )}
@@ -128,43 +192,43 @@ export const GegevensInvullenUser = (): JSX.Element => {
                       </div>
                     </div>
                   </div>
-                  <div className="input-field">
-                    <div className="input-field-base">
-                      <div className="input-with-label">
-                        <label className="label">Postcode </label>
-                        <div className="input">
-                          <div className="content3">
+                  <div className="GIU-input-field">
+                    <div className="GIU-input-field-base">
+                      <div className="GIU-input-with-label">
+                        <label className="GIU-label">Postcode </label>
+                        <div className="GIU-input">
+                          <div className="GIU-content3">
                             <input
                               type="text"
                               placeholder="0000AA"
-                              className="text"
+                              className="GIU-text"
                               {...register("postcode")}
                             ></input>
                           </div>
                         </div>
-                        <div className="error-message">
+                        <div className="GIU-error-message">
                           {errors.postcode && <p>{errors.postcode.message}</p>}
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="leftboxRIGHT">
-                  <div className="input-field">
-                    <div className="input-field-base">
-                      <div className="input-with-label">
-                        <div className="label">Aandoening/Ziekte </div>
-                        <div className="input">
-                          <div className="content3">
+                <div className="GIU-leftboxRIGHT">
+                  <div className="GIU-input-field">
+                    <div className="GIU-input-field-base">
+                      <div className="GIU-input-with-label">
+                        <div className="GIU-label">Aandoening/Ziekte </div>
+                        <div className="GIU-input">
+                          <div className="GIU-content3">
                             <input
                               type="text"
                               placeholder="vul uw aandoening/ziekte in"
-                              className="text"
+                              className="GIU-text"
                               {...register("aandoeningZiekte")}
                             ></input>
                           </div>
                         </div>
-                        <div className="error-message">
+                        <div className="GIU-error-message">
                           {errors.aandoeningZiekte && (
                             <p>{errors.aandoeningZiekte.message}</p>
                           )}
@@ -172,174 +236,191 @@ export const GegevensInvullenUser = (): JSX.Element => {
                       </div>
                     </div>
                   </div>
-                  <div className="textarea-input-field">
-                    <div className="textarea-input-field-base">
-                      <div className="input-with-label2">
-                        <label className="label2">Hulpmiddelen </label>
-                        <div className="input2">
+                  <div className="GIU-textarea-input-field">
+                    <div className="GIU-textarea-input-field-base">
+                      <div className="GIU-input-with-label2">
+                        <label className="GIU-label2">Hulpmiddelen </label>
+                        <div className="GIU-input2">
                           <textarea
                             placeholder="vul de hulpmiddelen in die u gebruikt"
-                            className="text"
+                            className="GIU-text"
                             {...register("hulpmiddelen")}
                           ></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="leeftijd-checkbox">
-                    <label className="leeftijd">Leeftijd </label>
-                    <input type="date" {...register("leeftijd")} />
+                  <div className="GIU-leeftijd-checkbox">
+                    <label className="GIU-leeftijd">Geboortedatum </label>
+                    <input type="date" {...register("geboortedatum")} />
                   </div>
                 </div>
               </div>
-              <div className="rightbox">
-                <div className="checkboxes-onderzoek-benadering">
-                  <div className="onderzoek-checkboxes">
-                    <h4 className="onderzoek-waar-u-aan-wilt-meedoen">
+              <div className="GIU-rightbox">
+                <div className="GIU-checkboxes-onderzoek-benadering">
+                  <div className="GIU-onderzoek-checkboxes">
+                    <h4 className="GIU-onderzoek-waar-u-aan-wilt-meedoen">
                       Onderzoek waar u aan wilt meedoen
                     </h4>
-                    <div className="interview-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-interview-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("onderzoekWensen.interview")}
                         ></input>
                       </div>
-                      <h5 className="Interview">Interview </h5>
+                      <h5 className="GIU-Interview">Interview </h5>
                     </div>
-                    <div className="groepsgesprekken-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-groepsgesprekken-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("onderzoekWensen.groepsgesprekken")}
                         ></input>
                       </div>
-                      <h5 className="Groepsgesprekken">Groepsgesprekken </h5>
+                      <h5 className="GIU-Groepsgesprekken">
+                        Groepsgesprekken
+                      </h5>
                     </div>
-                    <div className="online-onderzoek-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-online-onderzoek-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                         ></input>
                       </div>
-                      <h5 className="OnlineOnderzoek">Online onderzoek </h5>
+                      <h5 className="GIU-OnlineOnderzoek">Online onderzoek </h5>
                     </div>
-                    <div className="engelstalig-onderzoek-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-engelstalig-onderzoek-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("onderzoekWensen.engelstaligOnderzoek")}
                         ></input>
                       </div>
-                      <h5 className="EngelstaligOnderzoek">
+                      <h5 className="GIU-EngelstaligOnderzoek">
                         Engelstalig onderzoek
                       </h5>
                     </div>
-                    <div className="verstandelijke-beperking-checkbox">
-                      <label className="heeft-uw-kind-client-een-verstandelijke-beperking">
+                    <div className="GIU-verstandelijke-beperking-checkbox">
+                      <label className="GIU-heeft-uw-kind-client-een-verstandelijke-beperking">
                         Heeft uw kind/client een verstandelijke beperking?
                         <br></br>(niet van toepassing? vink niks aan!)
                       </label>
-                      <div className="VerstandelijkeBeperkingCheckbox">
-                        <div className="checkbox">
+                      <div className="GIU-VerstandelijkeBeperkingCheckbox">
+                        <div className="GIU-checkbox">
                           <input
                             type="checkbox"
-                            className="checkbox-base"
+                            className="GIU-checkbox-base"
                           ></input>
                         </div>
-                        <h5 className="Ja">Ja </h5>
+                        <h5 className="GIU-Ja">Ja </h5>
                       </div>
-                      <div className="VerstandelijkeBeperkingCheckbox">
-                        <div className="checkbox">
+                      <div className="GIU-VerstandelijkeBeperkingCheckbox">
+                        <div className="GIU-checkbox">
                           <input
                             type="checkbox"
-                            className="checkbox-base"
+                            className="GIU-checkbox-base"
                           ></input>
                         </div>
-                        <h5 className="Nee">nee </h5>
+                        <h5 className="GIU-Nee">nee </h5>
                       </div>
                     </div>
                   </div>
-                  <div className="benadering-checkboxes">
-                    <h4 className="voorkeur-benadering">Voorkeur benadering</h4>
-                    <div className="telefonish-checkbox">
-                      <div className="checkbox">
+                  <div className="GIU-benadering-checkboxes">
+                    <h4 className="GIU-voorkeur-benadering">
+                      Voorkeur benadering
+                    </h4>
+                    <div className="GIU-telefonish-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("benaderingVoorkeur.telefonisch")}
                         ></input>
                       </div>
-                      <h5 className="Telefonisch">Telefonisch </h5>
+                      <h5 className="GIU-Telefonisch">Telefonisch </h5>
                     </div>
-                    <div className="portal-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-portal-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("benaderingVoorkeur.viaPortalAlleen")}
                         ></input>
                       </div>
-                      <h5 className="ViaPortalAlleen">Via portal alleen </h5>
+                      <h5 className="GIU-ViaPortalAlleen">
+                        Via portal alleen{" "}
+                      </h5>
                     </div>
-                    <div className="nvt-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-nvt-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("benaderingVoorkeur.nvt")}
                         ></input>
                       </div>
-                      <h5 className="nvt">niet van toepassing </h5>
+                      <h5 className="GIU-nvt">niet van toepassing </h5>
                     </div>
-                    <h4 className="mogen-commerciele-partijen-u-benaderen">
+                    <h4 className="GIU-mogen-commerciele-partijen-u-benaderen">
                       mogen commerciele partijen u benaderen?
                     </h4>
-                    <div className="checkbox2">
-                      <div className="checkbox">
+                    <div className="GIU-checkbox2">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("commercieleBenadering")}
                         ></input>
                       </div>
-                      <h5 className="Ja">Ja </h5>
+                      <h5 className="GIU-Ja">Ja </h5>
                     </div>
-                    <div className="nee-checkbox">
-                      <div className="checkbox">
+                    <div className="GIU-nee-checkbox">
+                      <div className="GIU-checkbox">
                         <input
                           type="checkbox"
-                          className="checkbox-base"
+                          className="GIU-checkbox-base"
                           {...register("commercieleBenadering")}
                         ></input>
                       </div>
-                      <h5 className="Nee">Nee </h5>
+                      <h5 className="GIU-Nee">Nee </h5>
                     </div>
                   </div>
                 </div>
-                <div className="beperkinglijstbox"></div>
+                <select className="GIU-beperkinglijstbox">
+                  <option value="motorische beperking">
+                    Motorische beperking
+                  </option>
+                  <option value="visuele beperking">Visuele beperking</option>
+                  <option value="cognitieve beperking">
+                    Cognitieve beperking
+                  </option>
+                  <option value="auditieve beperking">
+                    Auditieve beperking
+                  </option>
+                </select>
               </div>
-            </form>
+            </div>
           </div>
-          <footer className="footer">
-            <button className="TerugButton">
-              <p className="text6">Terug </p>
+          <footer className="GIU-footer">
+            <button className="GIU-TerugButton">
+              <p className="GIU-text6">Terug </p>
             </button>
-            <div className="button">
+            <div className="GIU-button">
               <button
-                className="VerderButton"
+                className="GIU-VerderButton"
                 type="button"
                 onClick={handleSubmit(onSubmit)}
               >
-                <p className="text6">Verder</p>
+                <p className="GIU-text6">Verder</p>
               </button>
             </div>
           </footer>
-        </div>
+        </form>
       </div>
     </div>
   );

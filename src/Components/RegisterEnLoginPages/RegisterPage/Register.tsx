@@ -10,13 +10,25 @@ import { registerUser } from '../../../Services/apiUtils';
 
 
 
+import { Link, useNavigate } from "react-router-dom";
+
 const schema = z.object({
-  email: z.string().email(),
-  password: z.string(),
-  // .min(8, 'The password must be at least 8 characters long')
-  // .max(32, 'The password must be a maximun 32 characters')
+  email: z.string().email().min(1),
+  password: z
+    .string({
+      required_error: "moet ingevuld worden",
+    })
+    .min(8)
+    .max(32, {
+      message: "uw wachtwoord moet tenminste 8 characters lang zijn.",
+    }),
   // .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%&*-])[A- Za-z\d!@#$%&*-]{8,}$/),
-  confirmPassword: z.string()
+  confirmPassword: z
+    .string()
+    .min(8)
+    .max(32, {
+      message: "uw wachtwoord moet tenminste 8 characters lang zijn.",
+    }),
 });
 
 type Formdata = z.infer<typeof schema>;
@@ -42,6 +54,10 @@ export const Register = (): JSX.Element => {
   };
 
   const onSubmit: SubmitHandler<Formdata> =async (data) => {
+
+  const navigate = useNavigate();
+
+  const onSubmit: SubmitHandler<Formdata> = (data) => {
     const { email, password } = data;
 
     const encryptedPassword = encrypt(password);
@@ -65,32 +81,48 @@ export const Register = (): JSX.Element => {
     }
 
   };
+    // const registrationSuccessful = await registerUser(user);
+    // if (registrationSuccessful) {
+      
+    //   console.log('register successful!');
 
-  const handleLoginButtonClick = () => {
-    console.log("Login button clicked");
+    // } else {
+      
+    //   console.log('register unsuccessful');
+
+    // }
+
+    navigate(`/gegevensinvullenuser/${user.id}`);
+
+    console.log("formdata: " + JSON.stringify(user));
+
   };
 
   return (
     <div className="register">
       <div className="register2">
-        <div className="content">
-          <div className="header">
+        <div className="registerContent">
+          <div className="registerheader">
             <div className="text-and-supporting-text">
               <div className="logo">
-                <img className="logo-image" src="./public/Images/logo.png" aria-label="logo accesibility"/>
+                <img
+                  className="logo-image"
+                  src="./public/Images/logo.png"
+                  aria-label="logo accesibility"
+                />
               </div>
-              <h1 className="text">Registreer </h1>
+              <h1 className="registertext">Registreer </h1>
             </div>
           </div>
-          <div className="content2">
-            <form className="form">
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label htmlFor="email" className="label">
+          <div className="RegisterContent2">
+            <form className="RegisterForm">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
+                    <label htmlFor="email" className="RegisterLabel">
                       Email
                     </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <svg
                           className="mail"
@@ -125,13 +157,13 @@ export const Register = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
-                    <label htmlFor="password" className="label">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
+                    <label htmlFor="password" className="RegisterLabel">
                       Wachtwoord{" "}
                     </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <input
                           {...register("password")}
@@ -168,11 +200,11 @@ export const Register = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              <div className="input-field">
-                <div className="input-field-base">
-                  <div className="input-with-label">
+              <div className="RegisterInput-field">
+                <div className="RegisterInput-field-base">
+                  <div className="RegisterInput-with-label">
                     <label className="label">Wachtwoord Bevestigen </label>
-                    <div className="input">
+                    <div className="RegisterInput">
                       <div className="content3">
                         <input
                           className="Wachtwoord"
@@ -192,11 +224,10 @@ export const Register = (): JSX.Element => {
                 </div>
               </div>
             </form>
-            <div className="actions">
-              <div className="button">
+            <div className="registeractions">
+              <div className="registerbutton">
                 <button
-                  
-                  className="button-base"
+                  className="registerbutton-base"
                   type="submit"
                   onClick={handleSubmit(onSubmit)}
                 >
@@ -208,13 +239,9 @@ export const Register = (): JSX.Element => {
           <div className="row">
             <h3 className="al-een-account">Al een account? </h3>
             <div className="button2">
-              <button
-                className="LoginBtn"
-                aria-label="login"
-                onClick={handleLoginButtonClick}
-              >
-                Log in
-              </button>
+              <Link to="/login" className="LoginBtn">
+                Login
+              </Link>
             </div>
           </div>
         </div>
