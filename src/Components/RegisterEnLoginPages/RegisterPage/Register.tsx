@@ -3,6 +3,13 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
+import { registerUser } from '../../../Services/apiUtils';
+
+
+
+
+
+
 import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
@@ -46,6 +53,8 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
+  const onSubmit: SubmitHandler<Formdata> =async (data) => {
+
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<Formdata> = (data) => {
@@ -58,6 +67,20 @@ export const Register = (): JSX.Element => {
       password: encryptedPassword,
     };
 
+    console.log("Registration data:", user);
+    // Add logic to send registration data
+    const registrationSuccessful = await registerUser(user);
+    if (registrationSuccessful) {
+      // Handle success, such as redirecting to a login page or showing a success message
+      console.log('register successful!');
+
+    } else {
+      // Handle error, such as displaying an error message to the user
+      console.log('register unsuccessful');
+
+    }
+
+  };
     // const registrationSuccessful = await registerUser(user);
     // if (registrationSuccessful) {
       

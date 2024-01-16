@@ -1,3 +1,0 @@
-class Gebruker{
-    String voornaam;
-}
