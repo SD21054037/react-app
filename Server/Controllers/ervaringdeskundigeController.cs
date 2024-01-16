@@ -20,45 +20,45 @@ public class ervaringdeskundigeController : ControllerBase
         return Ok("Ervaringsdeskundige added successfully.");
     }
      [HttpPatch("{ervaringsdeskundigeId}/update-postcode")]
-    public IActionResult UpdatePostcode(int ervaringsdeskundigeId, [FromBody] Ervaringsdeskundige request)
-    {
-        var ervaringsdeskundige = _ervaringsdeskundigeRepository.GetErvaringsdeskundigeById(ervaringsdeskundigeId);
+    // public IActionResult UpdatePostcode(int ervaringsdeskundigeId, [FromBody] Ervaringsdeskundige request)
+    // {
+    //     var ervaringsdeskundige = _ervaringsdeskundigeRepository.GetErvaringsdeskundigeById(ervaringsdeskundigeId);
 
-        if (ervaringsdeskundige == null)
-        {
-            return NotFound("Ervaringsdeskundige not found.");
-        }
+    //     if (ervaringsdeskundige == null)
+    //     {
+    //         return NotFound("Ervaringsdeskundige not found.");
+    //     }
 
-        ervaringsdeskundige.Postcode = request.Postcode;
+    //     ervaringsdeskundige.Postcode = request.Postcode;
 
-        _ervaringsdeskundigeRepository.SaveChanges();
+    //     _ervaringsdeskundigeRepository.SaveChanges();
 
-        return Ok("Postcode updated successfully.");
-    }
+    //     return Ok("Postcode updated successfully.");
+    // }
 
-    [HttpPatch("{ervaringsdeskundigeId}/update-type-beperking")]
-    public IActionResult UpdateTypeBeperking(int ervaringsdeskundigeId, [FromBody] Ervaringsdeskundige request)
-    {
-        var ervaringsdeskundige = _ervaringsdeskundigeRepository.GetErvaringsdeskundigeById(ervaringsdeskundigeId);
+    // [HttpPatch("{ervaringsdeskundigeId}/update-type-beperking")]
+    // public IActionResult UpdateTypeBeperking(int ervaringsdeskundigeId, [FromBody] Ervaringsdeskundige request)
+    // {
+    //     var ervaringsdeskundige = _ervaringsdeskundigeRepository.GetErvaringsdeskundigeById(ervaringsdeskundigeId);
 
-        if (ervaringsdeskundige == null)
-        {
-            return NotFound("Ervaringsdeskundige not found.");
-        }
+    //     if (ervaringsdeskundige == null)
+    //     {
+    //         return NotFound("Ervaringsdeskundige not found.");
+    //     }
 
-        ervaringsdeskundige.TypeBeperking = request.TypeBeperking;
+    //     ervaringsdeskundige.TypeBeperking = request.TypeBeperking;
 
-        _ervaringsdeskundigeRepository.SaveChanges();
+    //     _ervaringsdeskundigeRepository.SaveChanges();
 
-        return Ok("TypeBeperking updated successfully.");
-    }
+    //     return Ok("TypeBeperking updated successfully.");
+    // }
 
 
-    [HttpGet("all")]
-    public IActionResult GetAllErvaringsdeskundigen()
-    {
-        var allErvaringsdeskundigen = _ervaringsdeskundigeRepository.GetAllErvaringsdeskundigen();
-        return Ok(allErvaringsdeskundigen);
-    }
+    // [HttpGet("all")]
+    // public IActionResult GetAllErvaringsdeskundigen()
+    // {
+    //     var allErvaringsdeskundigen = _ervaringsdeskundigeRepository.GetAllErvaringsdeskundigen();
+    //     return Ok(allErvaringsdeskundigen);
+    // }
 }
 
