@@ -53,9 +53,9 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
-  const onSubmit: SubmitHandler<Formdata> =async (data) => {
+  // const onSubmit: SubmitHandler<Formdata> =async (data) => {
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<Formdata> = (data) => {
     const { email, password } = data;
