@@ -94,6 +94,8 @@ export const Register = (): JSX.Element => {
 
     navigate(`/gegevensinvullenuser/${user.id}`);
 
+    // dione kijk na dit gedeelde fix dit
+
     console.log("formdata: " + JSON.stringify(user));
 
   };

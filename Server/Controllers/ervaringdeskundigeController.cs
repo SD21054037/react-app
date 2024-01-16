@@ -19,7 +19,7 @@ public class ervaringdeskundigeController : ControllerBase
 
         return Ok("Ervaringsdeskundige added successfully.");
     }
-     [HttpPatch("{ervaringsdeskundigeId}/update-postcode")]
+    //  [HttpPatch("{ervaringsdeskundigeId}/update-postcode")]
     // public IActionResult UpdatePostcode(int ervaringsdeskundigeId, [FromBody] Ervaringsdeskundige request)
     // {
     //     var ervaringsdeskundige = _ervaringsdeskundigeRepository.GetErvaringsdeskundigeById(ervaringsdeskundigeId);

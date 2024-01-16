@@ -16,7 +16,8 @@ function App() {
 import Switch from "react-switch";
 import LoginPage, {
   LogIn,
-} from "./Components/RegisterEnLoginPages/LoginPage/Login";
+} 
+from "./Components/RegisterEnLoginPages/LoginPage/Login";
 import RegisterPage, {
   Register,
 } from "./Components/RegisterEnLoginPages/RegisterPage/Register";
@@ -40,13 +41,13 @@ import Onderzoek from "./Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 
 
-<!--     // </Router>
-//  <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
- <RegisterPage></RegisterPage>
-      ); -->
-function App() {
-  return <Onderzoek></Onderzoek>;
+// <!--     // </Router>
+// //  <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
+//  <RegisterPage></RegisterPage>
+//       ); -->
+// function App() {
+//   return <Onderzoek></Onderzoek>;
 
-}
+// }
 
-export default App;
+// export default App;
