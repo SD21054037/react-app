@@ -10462,24 +10462,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\troyk\\.nuget\\packages\\": {}
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
-      "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
-      "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
+      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10541,13 +10543,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
