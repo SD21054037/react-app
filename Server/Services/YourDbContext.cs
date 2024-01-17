@@ -6,6 +6,17 @@ public class YourDbContext : DbContext
 {
     public DbSet<Gebruikers> Gebruikers { get; set; }
     public DbSet<Ervaringsdeskundige> Ervaringsdeskundigen { get; set; }
+    // public YourDbContext(DbContextOptions<YourDbContext> options)
+    //         : base(options)
+    //     {
+    //     }
+     protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+
+            
+        }
    public void RegisterUser(Gebruikers user)
     {
         // Perform any necessary validation before saving to the database
