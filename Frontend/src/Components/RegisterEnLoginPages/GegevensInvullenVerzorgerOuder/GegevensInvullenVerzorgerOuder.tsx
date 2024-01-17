@@ -2,6 +2,7 @@ import "./GegevensInvullenVerzorgerOuder.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import React from 'react';
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),

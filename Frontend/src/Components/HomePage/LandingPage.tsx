@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 
+
 const HomePage: React.FC = () => {
   return (
     <div className="Landingpage">

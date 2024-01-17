@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
 import { registerUser } from '../../../Services/apiUtils';
 import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
 
 const schema = z.object({
   email: z.string().email().min(1),

@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import React from 'react';
 
 const schema = z.object({
   BedrijfsNaam: z.string().min(1).max(255),

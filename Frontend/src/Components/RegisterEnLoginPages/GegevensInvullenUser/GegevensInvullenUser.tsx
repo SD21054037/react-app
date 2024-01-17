@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
+import React from 'react';
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
