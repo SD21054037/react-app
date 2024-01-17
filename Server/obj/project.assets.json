@@ -10925,11 +10925,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectPath": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
+      "outputPath": "C:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -11009,5 +11009,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Gebruiker\\react-app\\Server\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
