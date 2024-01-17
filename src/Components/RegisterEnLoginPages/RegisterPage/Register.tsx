@@ -4,12 +4,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState, useEffect } from "react";
 import { registerUser } from '../../../Services/apiUtils';
-
-
-
-
-
-
 import { Link, useNavigate } from "react-router-dom";
 
 const schema = z.object({
@@ -53,11 +47,7 @@ export const Register = (): JSX.Element => {
     setPasswordVisible(!passwordVisible);
   };
 
-  // const onSubmit: SubmitHandler<Formdata> =async (data) => {
-
-  // const navigate = useNavigate();
-
-  const onSubmit: SubmitHandler<Formdata> = (data) => {
+  const onSubmit: SubmitHandler<Formdata> = async (data) => {
     const { email, password } = data;
 
     const encryptedPassword = encrypt(password);
@@ -80,25 +70,11 @@ export const Register = (): JSX.Element => {
 
     }
 
+    const navigate = useNavigate();
+    navigate(`/gegevensinvullenuser/${user}`);
   };
-    // const registrationSuccessful = await registerUser(user);
-    // if (registrationSuccessful) {
-      
-    //   console.log('register successful!');
+   
 
-    // } else {
-      
-    //   console.log('register unsuccessful');
-
-    // }
-
-    navigate(`/gegevensinvullenuser/${user.id}`);
-
-    // dione kijk na dit gedeelde fix dit
-
-    console.log("formdata: " + JSON.stringify(user));
-
-  };
 
   return (
     <div className="register">

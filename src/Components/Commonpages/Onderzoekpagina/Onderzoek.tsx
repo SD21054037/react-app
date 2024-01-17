@@ -10,6 +10,7 @@ const Onderzoek = () => {
         <Header/>
         <div className="GeselecteerdeOnderzoekFrame">
           <div className="GeselecteerdeOnderzoekDetails"></div>
+          <div className="OnderzoekExtras"></div>
 
         </div>
 

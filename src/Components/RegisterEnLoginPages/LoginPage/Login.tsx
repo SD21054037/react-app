@@ -35,7 +35,7 @@ export const LogIn = (): JSX.Element => {
 
 
 
-  const onSubmit: SubmitHandler<Formdata> = (data) => {
+  const onSubmit: SubmitHandler<Formdata> = async (data) => {
     const { email, password } = data;
     const encryptedPassword = btoa(password);
 
