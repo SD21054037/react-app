@@ -9,6 +9,7 @@ import HomePage from "../Components/HomePage/LandingPage";
 import ErrorPage from "../Components/Commonpages/ErrorPage/Error";
 import { MainPage } from "../Components/Commonpages/MainPage/MainPage";
 import { Onderzoekenpagina } from "../Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
+import React, { Children } from "react";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,9 @@ const router = createBrowserRouter([
       { path: "login", element: <LogIn /> },
       { path: "register", element: <Register /> },
       { path: "registerBedrijven", element: <RegisterBedrijven /> },
-      { path: "loginBedrijven", element: <Loginbedrijven /> },
+      { path: "loginBedrijven", element: <Loginbedrijven />
+      Children={}
+     },
       { path: "gegevensinvullenuser", element: <GegevensInvullenUser /> },
     ],
   },

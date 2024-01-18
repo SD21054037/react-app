@@ -11024,11 +11024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
+      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",

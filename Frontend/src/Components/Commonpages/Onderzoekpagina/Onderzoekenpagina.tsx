@@ -16,6 +16,7 @@ import Footer from "../../CommonComponents/Footer/Footer";
 import {useEffect} from "react"
 import onderzoekenServices from "../../../Services/onderzoeken-services";
 import {useState} from "react"
+import React from "react";
 
 
 export interface Onderzoeken {
@@ -32,7 +33,7 @@ export interface Onderzoeken {
   uitnodiging?:string
 }
 
-const [onderzoeken, setOnderzoeken] = useState<Onderzoeken[]>([]);
+// const [onderzoeken, setOnderzoeken] = useState<Onderzoeken[]>([]);
 
 
 
@@ -89,13 +90,13 @@ useEffect(()=> {
                   </Tr>
                 </Thead>
                 <Tbody>
-                {onderzoeken.map((onderzoek) => (
+                {/* {onderzoeken.map((onderzoek) => (
                     <Tr key={onderzoek.id}>
                       <Td>{onderzoek.naam}</Td>
                       <Td>{onderzoek.soort}</Td>
                       <Td>{onderzoek.beschrijving}</Td>
                     </Tr>
-                  ))}
+                  ))} */}
                 </Tbody>
               </Table>
             </TableContainer>

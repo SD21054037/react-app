@@ -32,6 +32,7 @@ const encrypt = (data: string): string => {
   return btoa(data);
 };
 
+
 export const Register = (): JSX.Element => {
   const {
     register,
@@ -54,8 +55,13 @@ export const Register = (): JSX.Element => {
     const encryptedPassword = encrypt(password);
 
     const user = {
+      id: 1,
       email: email,
       password: encryptedPassword,
+      voornaam: null,
+      achternaam: null,
+      telefoonnummer: null,
+      type_gebruikers: 'Ervaringsdeskundige',
     };
 
     console.log("Registration data:", user);
@@ -218,9 +224,9 @@ export const Register = (): JSX.Element => {
           <div className="row">
             <h3 className="al-een-account">Al een account? </h3>
             <div className="button2">
-              <Link to="/login" className="LoginBtn">
+              {/* <Link to="/login" className="LoginBtn">
                 Login
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

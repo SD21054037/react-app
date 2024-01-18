@@ -3,7 +3,7 @@ import "./MainPage.css";
 import Footer from "../../CommonComponents/Footer/Footer";
 import { useState } from "react"
 import {Button} from "@chakra-ui/react"
-
+import React  from "react";
 
 interface Onderzoeken {
   id: number;
