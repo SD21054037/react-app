@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
+
 namespace Server
 {
     public class Program
@@ -9,13 +11,26 @@ namespace Server
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+    //     public static IHostBuilder CreateHostBuilder(string[] args) =>
+    //         Host.CreateDefaultBuilder(args)
+    //             .ConfigureWebHostDefaults(webBuilder =>
+    //             {
+    //                 webBuilder.UseStartup<Startup>();
+    //             });
+    // }
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+    Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
+            {
+                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                // Add other configuration sources if needed
+            });
+
+            webBuilder.UseStartup<Startup>();
+        });
+}
 }
 // using DemoApp.Data;
 // using Server.Services.YourDbContext;

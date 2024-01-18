@@ -218,9 +218,9 @@ export const Register = (): JSX.Element => {
           <div className="row">
             <h3 className="al-een-account">Al een account? </h3>
             <div className="button2">
-              <Link to="/login" className="LoginBtn">
+              {/* <Link to="/login" className="LoginBtn">
                 Login
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

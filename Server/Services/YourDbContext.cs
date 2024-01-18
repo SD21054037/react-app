@@ -10,6 +10,11 @@ public class YourDbContext : DbContext
     //         : base(options)
     //     {
     //     }
+
+    public YourDbContext(DbContextOptions<YourDbContext> options)
+        : base(options)
+    {
+    }
      protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -23,14 +28,14 @@ public class YourDbContext : DbContext
         Gebruikers.Add(user);
         SaveChanges();
     }
-       public  void SaveToDatabase(Gebruikers user)
-    {
-        using (var dbContext = new YourDbContext())
-        {
-            dbContext.Gebruikers.Add(user);
-            dbContext.SaveChanges();
-        }
-    }
+    //    public  void SaveToDatabase(Gebruikers user)
+    // {
+    //     using (var dbContext = new YourDbContext())
+    //     {
+    //         dbContext.Gebruikers.Add(user);
+    //         dbContext.SaveChanges();
+    //     }
+    // }
     // 1 van deze 2 methodes hierboven maar gebruiken dit nog later zien
 
      public void UpdateUser(Gebruikers user)
@@ -39,11 +44,11 @@ public class YourDbContext : DbContext
         Entry(user).State = EntityState.Modified;
         SaveChanges();
     }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        // Configure your database connection here
-        optionsBuilder.UseSqlServer("YourConnectionString");
-    }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     // Configure your database connection here
+    //     optionsBuilder.UseSqlServer("YourConnectionString");
+    // }
 
     // public void addUser(string username, string password, string email, string telefoonnummer)
     // {
