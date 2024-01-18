@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Gebruiker\\react-app\\Server\\server.csproj": {}
   },
   "projects": {
@@ -16,13 +17,34 @@
         "configFilePaths": [
           "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {}
+  },
+  "projects": {
+    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
+        "projectName": "server",
+        "projectPath": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
+        "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
+        "outputPath": "D:\\Wdpr2023\\react-app\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\troy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> d05ebc2c8fd98370bbd95335ca1c2499c82ea4da
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+<<<<<<< HEAD
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
+=======
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2/": {}
+>>>>>>> d05ebc2c8fd98370bbd95335ca1c2499c82ea4da
         },
         "frameworks": {
           "net7.0": {
@@ -52,11 +74,19 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
             },

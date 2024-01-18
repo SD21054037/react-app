@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
+=======
+using Microsoft.Extensions.Configuration;
+>>>>>>> d05ebc2c8fd98370bbd95335ca1c2499c82ea4da
 
 namespace Server
 {
@@ -11,13 +15,26 @@ namespace Server
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+    //     public static IHostBuilder CreateHostBuilder(string[] args) =>
+    //         Host.CreateDefaultBuilder(args)
+    //             .ConfigureWebHostDefaults(webBuilder =>
+    //             {
+    //                 webBuilder.UseStartup<Startup>();
+    //             });
+    // }
+    public static IHostBuilder CreateHostBuilder(string[] args) =>
+    Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
+            {
+                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                // Add other configuration sources if needed
+            });
+
+            webBuilder.UseStartup<Startup>();
+        });
+}
 }
 // using DemoApp.Data;
 // using Server.Services.YourDbContext;

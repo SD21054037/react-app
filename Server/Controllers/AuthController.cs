@@ -14,15 +14,30 @@ public class AuthController : ControllerBase
     }
             private readonly YourDbContext _dbContext;
 
-    
-       [HttpPost("register")]
+    [HttpPost("register")]
     public IActionResult RegisterUser([FromBody] Gebruikers user)
-    {
-        Console.WriteLine("well it came this far");
+{
+    Console.WriteLine("well it came this far");
 
+    try
+    {
         _dbContext.RegisterUser(user);
         return Ok("User registered successfully.");
     }
+    catch (Exception ex)
+    {
+        Console.Error.WriteLine($"Error registering user: {ex.Message}");
+        return StatusCode(500, "Internal Server Error");
+    }
+}
+    //    [HttpPost("register")]
+    // public IActionResult RegisterUser([FromBody] Gebruikers user)
+    // {
+    //     Console.WriteLine("well it came this far");
+
+    //     _dbContext.RegisterUser(user);
+    //     return Ok("User registered successfully.");
+    // }
     [HttpPatch("{userId}/update-name")]
     public IActionResult UpdateName(int userId, [FromBody] Gebruikers request)
     {
