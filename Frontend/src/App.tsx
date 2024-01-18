@@ -9,7 +9,7 @@ import { Onderzoekenpagina } from './Components/Commonpages/Onderzoekpagina/Onde
 
 const App = () => {
   return (
-    <Register></Register>
+    
   )
 }
 
