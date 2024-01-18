@@ -25,7 +25,7 @@ interface Props{
 }
 
 
-export const MainPage = ({onderzoeken}: Props): JSX.Element => {
+export const MainPage = (): JSX.Element => {
   return (
     <div className="main-page">
       <Header></Header>
@@ -39,7 +39,7 @@ export const MainPage = ({onderzoeken}: Props): JSX.Element => {
         <div className="RecenteOnderzoekenContent">
           <h2 className="ROContentTitel">Recente Onderzoeken</h2>
           <div className="RecenteOnderzoeken">
-          {onderzoeken.slice(0,3).map((onderzoek) => (
+          {/* {onderzoeken.slice(0,3).map((onderzoek) => (
             <article key={onderzoek.id} className="RecenteOnderzoek1" >
               <div className="OnderzoekFrame">
                 <h3 className="onderzoek-naam">{onderzoek.naam}</h3>
@@ -52,7 +52,7 @@ export const MainPage = ({onderzoeken}: Props): JSX.Element => {
                 <Button>View here</Button>
               </div>
             </article>
-          ) )}
+          ) )} */}
             
           </div>
         </div>

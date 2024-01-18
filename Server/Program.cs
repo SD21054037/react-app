@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-<<<<<<< HEAD
-using Microsoft.EntityFrameworkCore;
-=======
+
 using Microsoft.Extensions.Configuration;
->>>>>>> d05ebc2c8fd98370bbd95335ca1c2499c82ea4da
+
 
 namespace Server
 {
