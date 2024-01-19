@@ -1,28 +1,87 @@
+
 html, body {
     margin: 0;
-    padding: 0;  
-}
-
-.Onderzoek{
-    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .Onderzoek {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
     background: #3e478b;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 100vh;
     padding-left: 20px;
     padding-right: 20px;
+    overflow-y: auto
+  }
+
+  .randomfoto{
+    background: white;
+    height: 50%;
+    width: 100%;
     position: relative;
-}
+  }
 
-
-.GeselecteerdeOnderzoekFrame{
+  .randomfoto img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .GeselecteerdeOnderzoekFrame {
     display: flex;
-    align-self: stretch;
+    height: 60%;
+    justify-content: space-between;
     align-items: flex-start;
-    background: #4453AE;
+    background: #3e478b;
+    padding: 20px;
+    margin-top: 20px;
     position: relative;
-}
+  }
+  
+  .GeselecteerdeOnderzoekDetails {
+    color: white;
+    width: 70%;
+    position: relative;
+  }
+  
+  .OnderzoekExtras {
+    height: 100%; 
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+
+  .OnderzoekExtras button {
+    background-color: white;
+    color:#34409b ;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out color 0.2s ease-in-out transform 0.4s ease-in-out;
+  }
+  
+  .OnderzoekExtras button:hover {
+    background-color: #34409b;
+    color: white;
+  }
+
+  .OnderzoekExtras button:active {
+    transform: scale(80%);
+  }
+  
+
+  .GeselecteerdeOnderzoekDetails a {
+    color: white;
+  }
+  
+  .GeselecteerdeOnderzoekDetails a:hover {
+    color: white;
+  }
+  
+
+  

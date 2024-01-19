@@ -10,6 +10,7 @@ import ErrorPage from "../Components/Commonpages/ErrorPage/Error";
 import { MainPage } from "../Components/Commonpages/MainPage/MainPage";
 import { Onderzoekenpagina } from "../Components/Commonpages/Onderzoekpagina/Onderzoekenpagina";
 import React, { Children } from "react";
+import Onderzoek from "../Components/Commonpages/Onderzoekpagina/Onderzoek";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,13 @@ const router = createBrowserRouter([
   },
   { path: "mainpage", element: <MainPage /> },
   { path: "onderzoekenpage", element: <Onderzoekenpagina /> },
+  { path: "onderzoek/:id", element: <Onderzoek/>,
+  children: [
+
+  ]
+
+
+}
   
 ]);
 

@@ -146,7 +146,7 @@ export const Register = (): JSX.Element => {
                 <div className="RegisterInput-field-base">
                   <div className="RegisterInput-with-label">
                     <label htmlFor="password" className="RegisterLabel">
-                      Wachtwoord{" "}
+                      Wachtwoord
                     </label>
                     <div className="RegisterInput">
                       <div className="content3">
