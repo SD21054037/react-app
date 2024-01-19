@@ -2,8 +2,7 @@ import "./GegevensInvullenUser.modules.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useNavigate, useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import React from 'react';
 
 const schema = z.object({
@@ -24,10 +23,10 @@ const schema = z.object({
     viaPortalAlleen: z.boolean(),
     nvt: z.boolean(),
   }),
-  commercieleBenadering: z.boolean(),
   geboortedatum: z.date(),
-  verstandelijkeBeperking: z.boolean(),
+  verstandelijkeBeperking: z.enum(['ja', 'nee', 'nvt']),
   beperkingen: z.array(z.string()),
+  commercieleBenadering: z.enum(['ja', 'nee']),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -41,7 +40,24 @@ export const GegevensInvullenUser = (): JSX.Element => {
     resolver: zodResolver(schema),
   });
   
+  const [commercieleBenaderingJa, setCommercieleBenaderingJa] = React.useState(true);
+  const [commercieleBenaderingNee, setCommercieleBenaderingNee] = React.useState(false);
 
+  const [verstandelijkeBeperking, setVerstandelijkeBeperking] = React.useState(''); // Changed to string type
+  const [benaderingVoorkeurBeide, setBenaderingVoorkeurBeide] = React.useState(false);
+  const [benaderingVoorkeur, setBenaderingVoorkeur] = React.useState({
+    telefonisch: false,
+    viaPortalAlleen: false,
+    nvt: false,
+  });
+
+  const handleBenaderingVoorkeur = (type: string) => {
+    setBenaderingVoorkeur((prev) => ({
+      telefonisch: type === "telefonisch",
+      viaPortalAlleen: type === "viaPortalAlleen",
+      nvt: type === "nvt" ? !prev.nvt : false, // Set "Beide" to false when either "Telefonisch" or "Via portal alleen" is selected
+    }));
+  }
 
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
@@ -54,13 +70,11 @@ export const GegevensInvullenUser = (): JSX.Element => {
       hulpmiddelen,
       onderzoekWensen,
       benaderingVoorkeur,
-      commercieleBenadering,
       geboortedatum,
       verstandelijkeBeperking,
       beperkingen,
+      commercieleBenadering,
     } = data;
-
-  
 
     function calculateAge(geboortedatum: Date, currentDate: Date): number {
       const birthYear = geboortedatum.getFullYear();
@@ -68,7 +82,6 @@ export const GegevensInvullenUser = (): JSX.Element => {
     
       const age = currentYear - birthYear;
     
-      
       const birthdateThisYear = new Date(currentDate);
       birthdateThisYear.setFullYear(birthYear);
     
@@ -80,9 +93,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
     }
 
     const currentdate = new Date();
-
     const leeftijd = calculateAge(geboortedatum, currentdate);
-  
 
     const user = {
       voornaam: voornaam,
@@ -98,13 +109,14 @@ export const GegevensInvullenUser = (): JSX.Element => {
       verstandelijkeBeperking: verstandelijkeBeperking,
       beperkingen: beperkingen,
     };
-
     
     const navigate = useNavigate();
 
-   if (leeftijd < 18 || verstandelijkeBeperking == true )
-    navigate(`/gegevensinvullenverzorgerouder`)
-    else navigate(`/mainpage`)
+    if (leeftijd < 18 || verstandelijkeBeperking === 'ja') {
+      navigate(`/gegevensinvullenverzorgerouder`);
+    } else {
+      navigate(`/mainpage`);
+    }
   };
 
   return (
@@ -309,13 +321,14 @@ export const GegevensInvullenUser = (): JSX.Element => {
                     <div className="GIU-verstandelijke-beperking-checkbox">
                       <label className="GIU-heeft-uw-kind-client-een-verstandelijke-beperking">
                         Heeft uw kind/client een verstandelijke beperking?
-                        <br></br>(niet van toepassing? vink niks aan!)
                       </label>
                       <div className="GIU-VerstandelijkeBeperkingCheckbox">
                         <div className="GIU-checkbox">
                           <input
                             type="checkbox"
                             className="GIU-checkbox-base"
+                            checked={verstandelijkeBeperking === 'ja'}
+                            onChange={() => setVerstandelijkeBeperking('ja')}
                           ></input>
                         </div>
                         <h5 className="GIU-Ja">Ja </h5>
@@ -325,10 +338,24 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           <input
                             type="checkbox"
                             className="GIU-checkbox-base"
+                            checked={verstandelijkeBeperking === 'nee'}
+                            onChange={() => setVerstandelijkeBeperking('nee')}
                           ></input>
                         </div>
                         <h5 className="GIU-Nee">nee </h5>
                       </div>
+                      <div className="GIU-nvt-checkbox">
+                      <div className="GIU-checkbox">
+                        <input
+                          type="checkbox"
+                          className="GIU-checkbox-base"
+                          checked={verstandelijkeBeperking === 'nvt'}
+                          onChange={() => setVerstandelijkeBeperking('nvt')}
+                          
+                        ></input>
+                      </div>
+                      <h5 className="GIU-nvt">niet van toepassing </h5>
+                    </div>
                     </div>
                   </div>
                   <div className="GIU-benadering-checkboxes">
@@ -336,37 +363,42 @@ export const GegevensInvullenUser = (): JSX.Element => {
                       Voorkeur benadering
                     </h4>
                     <div className="GIU-telefonish-checkbox">
-                      <div className="GIU-checkbox">
-                        <input
-                          type="checkbox"
-                          className="GIU-checkbox-base"
-                          {...register("benaderingVoorkeur.telefonisch")}
-                        ></input>
-                      </div>
-                      <h5 className="GIU-Telefonisch">Telefonisch </h5>
-                    </div>
-                    <div className="GIU-portal-checkbox">
-                      <div className="GIU-checkbox">
-                        <input
-                          type="checkbox"
-                          className="GIU-checkbox-base"
-                          {...register("benaderingVoorkeur.viaPortalAlleen")}
-                        ></input>
-                      </div>
-                      <h5 className="GIU-ViaPortalAlleen">
-                        Via portal alleen{" "}
-                      </h5>
-                    </div>
-                    <div className="GIU-nvt-checkbox">
-                      <div className="GIU-checkbox">
-                        <input
-                          type="checkbox"
-                          className="GIU-checkbox-base"
-                          {...register("benaderingVoorkeur.nvt")}
-                        ></input>
-                      </div>
-                      <h5 className="GIU-nvt">niet van toepassing </h5>
-                    </div>
+  <div className="GIU-checkbox">
+    <input
+      type="checkbox"
+      className="GIU-checkbox-base"
+      {...register("benaderingVoorkeur.telefonisch")}
+      checked={benaderingVoorkeur.telefonisch}
+      onChange={() => handleBenaderingVoorkeur("telefonisch")}
+    ></input>
+  </div>
+  <h5 className="GIU-Telefonisch">Telefonisch </h5>
+</div>
+<div className="GIU-portal-checkbox">
+  <div className="GIU-checkbox">
+    <input
+      type="checkbox"
+      className="GIU-checkbox-base"
+      {...register("benaderingVoorkeur.viaPortalAlleen")}
+      checked={benaderingVoorkeur.viaPortalAlleen}
+      onChange={() => handleBenaderingVoorkeur("viaPortalAlleen")}
+    ></input>
+  </div>
+  <h5 className="GIU-ViaPortalAlleen">Via portal alleen</h5>
+</div>
+<div className="GIU-beide-checkbox">
+  <div className="GIU-checkbox">
+    <input
+      type="checkbox"
+      className="GIU-checkbox-base"
+      checked={benaderingVoorkeur.nvt}
+      onChange={() => handleBenaderingVoorkeur("nvt")}
+    ></input>
+  </div>
+  <h5 className="GIU-Beide">Beide</h5>
+</div>
+
+
                     <h4 className="GIU-mogen-commerciele-partijen-u-benaderen">
                       mogen commerciele partijen u benaderen?
                     </h4>
@@ -375,7 +407,10 @@ export const GegevensInvullenUser = (): JSX.Element => {
                         <input
                           type="checkbox"
                           className="GIU-checkbox-base"
-                          {...register("commercieleBenadering")}
+                          checked={commercieleBenaderingJa}
+                          onChange={() =>{setCommercieleBenaderingJa(!commercieleBenaderingJa);
+                            setCommercieleBenaderingNee(false);} }
+                          
                         ></input>
                       </div>
                       <h5 className="GIU-Ja">Ja </h5>
@@ -385,25 +420,26 @@ export const GegevensInvullenUser = (): JSX.Element => {
                         <input
                           type="checkbox"
                           className="GIU-checkbox-base"
-                          {...register("commercieleBenadering")}
+                          checked={commercieleBenaderingNee}
+                          onChange={() => {
+                            setCommercieleBenaderingNee(!commercieleBenaderingNee);
+                            setCommercieleBenaderingJa(false);
+                          }}
                         ></input>
                       </div>
                       <h5 className="GIU-Nee">Nee </h5>
                     </div>
                   </div>
                 </div>
-                <select className="GIU-beperkinglijstbox">
-                  <option value="motorische beperking">
-                    Motorische beperking
-                  </option>
-                  <option value="visuele beperking">Visuele beperking</option>
-                  <option value="cognitieve beperking">
-                    Cognitieve beperking
-                  </option>
-                  <option value="auditieve beperking">
-                    Auditieve beperking
-                  </option>
-                </select>
+                <select
+  className="GIU-beperkinglijstbox"
+  {...register("beperkingen")}
+>
+  <option value="motorische beperking">Motorische beperking</option>
+  <option value="visuele beperking">Visuele beperking</option>
+  <option value="cognitieve beperking">Cognitieve beperking</option>
+  <option value="auditieve beperking">Auditieve beperking</option>
+</select>
               </div>
             </div>
           </div>

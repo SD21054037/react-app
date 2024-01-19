@@ -6,10 +6,11 @@ import { Register } from './Components/RegisterEnLoginPages/RegisterPage/Registe
 
 import React from 'react'
 import { Onderzoekenpagina } from './Components/Commonpages/Onderzoekpagina/Onderzoekenpagina'
+import { GegevensInvullenUser } from './Components/RegisterEnLoginPages/GegevensInvullenUser/GegevensInvullenUser'
 
 const App = () => {
   return (
-    
+    <GegevensInvullenUser></GegevensInvullenUser>
   )
 }
 
