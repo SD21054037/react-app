@@ -184,6 +184,7 @@ D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Desi
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
@@ -193,6 +194,7 @@ D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.OpenApi.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\MySql.Data.dll
+D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\MySqlConnector.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Newtonsoft.Json.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 D:\Wdpr2023\react-app\Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
