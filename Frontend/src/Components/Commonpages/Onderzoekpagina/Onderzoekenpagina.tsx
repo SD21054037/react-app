@@ -18,6 +18,7 @@ import onderzoekenServices from "../../../Services/onderzoeken-services";
 import {useState} from "react"
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import {Button } from "@chakra-ui/react"
 
 
 export interface Onderzoeken {
@@ -35,9 +36,21 @@ export interface Onderzoeken {
 }
 export const Onderzoekenpagina = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState(0); 
-  const [filteredOnderzoeken, setFilteredOnderzoeken] = useState([]); 
+  const [filteredOnderzoeken, setFilteredOnderzoeken] = useState<Onderzoeken[]>([]); 
 
-  const onderzoeken = []; 
+  const onderzoeken: Onderzoeken[] = [{
+    id: 1,
+    naam: "Onderzoek 1",
+    soort: "Medisch",
+    beschrijving: "Onderzoek naar de effecten van nieuwe medicatie.",
+    typebeperking: "Geen",
+    uitvoerder: "Medisch Centrum XYZ",
+    adres: "Straatnaam 123",
+    postcode: "1234 AB",
+    link: "http://onderzoek1.com",
+    beloning: "€100",
+    uitnodiging: "Stuur een e-mail voor deelname",
+  }]; 
   
   useEffect(() => {
 
@@ -113,18 +126,18 @@ export const Onderzoekenpagina = (): JSX.Element => {
                   </Tr>
                 </Thead>
                 <Tbody>
-                {/* {filteredOnderzoeken.map((onderzoek) => (
+                {filteredOnderzoeken.map((onderzoek) => (
                     <Tr key={onderzoek.id}>
                       <Td>{onderzoek.naam}</Td>
                       <Td>{onderzoek.soort}</Td>
                       <Td>{onderzoek.beschrijving}</Td>
                       <Td>
-                    <Button onClick={() => navigateToOnderzoek(onderzoek.id)}>
+                     <Button onClick={() => navigateToOnderzoek(onderzoek.id)}>
                       Details
                     </Button>
-                  </Td>
+                  </Td> 
                     </Tr>
-                  ))} */}
+                  ))}
                 </Tbody>
               </Table>
             </TableContainer>
