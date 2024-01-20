@@ -6,10 +6,10 @@ import { Register } from './Components/RegisterEnLoginPages/RegisterPage/Registe
 
 import React from 'react'
 import { Onderzoekenpagina } from './Components/Commonpages/Onderzoekpagina/Onderzoekenpagina'
-
+ 
 const App = () => {
   return (
-    
+    <Register></Register>
   )
 }
 

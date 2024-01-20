@@ -1,12 +1,14 @@
 // apiUtils.ts
-export const registerUser = async (user: any): Promise<boolean> => {
+import axios from 'axios';
+
+export const registerUser = async (Gebruikers: any): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch('http://localhost:3306/api/gebruiker/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(user),
+        body: JSON.stringify(Gebruikers),
       });
   
       if (response.ok) {
@@ -24,7 +26,7 @@ export const registerUser = async (user: any): Promise<boolean> => {
   // apiUtils.ts
 export const loginUser = async (credentials: { email: string; password: string }): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('http://localhost:5000/api/gebruiker/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,5 +68,16 @@ export const loginUser = async (credentials: { email: string; password: string }
       return false;
     }
   };
-  
-  
+  const apiUrl = 'http://localhost:5000/api/gebruiker/getUsers';
+
+  class YourFrontendClass {
+    async fetchUsers() {
+        try {
+            const response = await axios.get(apiUrl);
+            const users = response.data;
+            console.log(users);  // Do something with the retrieved users
+        } catch (error) {
+            console.error('Error fetching users', error);
+        }
+    }
+}

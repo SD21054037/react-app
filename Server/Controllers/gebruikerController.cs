@@ -1,14 +1,14 @@
-// Controllers/AuthController.cs
+// Controllers/gebruikerController.cs
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using System.Threading.Tasks;
 
-[Route("api/auth")]
+[Route("api/gebruiker")]
 [ApiController]
-public class AuthController : ControllerBase
+public class gebruikerController : ControllerBase
 {
-         public AuthController(YourDbContext dbContext)
+         public gebruikerController(YourDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -21,15 +21,31 @@ public class AuthController : ControllerBase
 
     try
     {
-        _dbContext.RegisterUser(user);
-        return Ok("User registered successfully.");
-    }
+          Gebruikers newUser = new Gebruikers
+        {
+            Voornaam = registrationDto.Voornaam,
+            Achternaam = registrationDto.Achternaam,
+            Email = registrationDto.Email,
+            Telefoonnummer = registrationDto.Telefoonnummer,
+            Type_Gebruiker = registrationDto.Type_Gebruiker,
+            // Optionally, you can set other attributes or perform validation here
+        };
+
+        _dbContext.RegisterUser(newUser);
+        return Ok("User registered successfully.");}
     catch (Exception ex)
     {
         Console.Error.WriteLine($"Error registering user: {ex.Message}");
         return StatusCode(500, "Internal Server Error");
     }
 }
+ [HttpGet("getUsers")]
+    public ActionResult<IEnumerable<Gebruikers>> GetGebruikers()
+    {
+        return _dbContext.Gebruikers.ToList();
+    }
+
+
     //    [HttpPost("register")]
     // public IActionResult RegisterUser([FromBody] Gebruikers user)
     // {
