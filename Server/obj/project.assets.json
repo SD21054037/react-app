@@ -11196,11 +11196,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "projectName": "server",
       "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
       "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
       "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
+=======
+      "projectUniqueName": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
+      "projectName": "server",
+      "projectPath": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
+      "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
+      "outputPath": "d:\\Wdpr2023\\react-app\\Server\\obj\\",
+>>>>>>> deb09b860120b4157edc4a02ddce0a47e8a26cce
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",

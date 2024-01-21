@@ -6,10 +6,7 @@ public class YourDbContext : DbContext
 {
     public DbSet<Gebruikers> Gebruikers { get; set; }
     public DbSet<Ervaringsdeskundige> Ervaringsdeskundigen { get; set; }
-    // public YourDbContext(DbContextOptions<YourDbContext> options)
-    //         : base(options)
-    //     {
-    //     }
+    
 
     public YourDbContext(DbContextOptions<YourDbContext> options)
         : base(options)
