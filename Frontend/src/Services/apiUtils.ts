@@ -1,14 +1,15 @@
 // apiUtils.ts
 import axios from 'axios';
+// import { Gebruikers } from './../../../Server/Model/gebruikerInterface';
 
-export const registerUser = async (Gebruikers: any): Promise<boolean> => {
+export const registerUser = async (gebruiker: any): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:3306/api/gebruiker/register', {
+      const response = await fetch('http://localhost:5000/api/gebruiker/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(Gebruikers),
+        body: JSON.stringify(gebruiker),
       });
   
       if (response.ok) {

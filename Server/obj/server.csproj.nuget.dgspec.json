@@ -1,31 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {}
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {}
   },
   "projects": {
-    "D:\\Wdpr2023\\react-app\\Server\\server.csproj": {
+    "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
+        "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
         "projectName": "server",
-        "projectPath": "D:\\Wdpr2023\\react-app\\Server\\server.csproj",
-        "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
-        "outputPath": "D:\\Wdpr2023\\react-app\\Server\\obj\\",
+        "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
+        "packagesPath": "C:\\Users\\troyk\\.nuget\\packages\\",
+        "outputPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\troy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -36,48 +37,26 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[*, )"
-            },
-            "MySqlConnector": {
-              "target": "Package",
-              "version": "[2.3.4, )"
+              "version": "[8.0.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -99,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -55,13 +55,14 @@ export const Register = (): JSX.Element => {
     const encryptedPassword = encrypt(password);
 
     const user = {
-      id: 1,
-      email: email,
+      gebruikerId: 1,
+      Email: email,
       password: encryptedPassword,
-      voornaam: null,
-      achternaam: null,
-      telefoonnummer: null,
-      type_gebruikers: 'Ervaringsdeskundige',
+      Voornaam: null,
+      Achternaam: null,
+      Telefoonnummer: null,
+      Type_Gebruiker: 'Ervaringsdeskundige',
+      datum_Registratie: "hoho",
     };
 
     console.log("Registration data:", user);
