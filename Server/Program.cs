@@ -1,86 +1,36 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.EntityFrameworkCore;
+using Model;
+using Services;
+using System.Globalization;
+var builder = WebApplication.CreateBuilder(args);
 
-using Microsoft.Extensions.Configuration;
+// Add services to the container.
 
+builder.Services.AddControllers();
 
-namespace Server
+CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+
+builder.Services.AddDbContext<yourDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("YourConnectionString")));
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-    //     public static IHostBuilder CreateHostBuilder(string[] args) =>
-    //         Host.CreateDefaultBuilder(args)
-    //             .ConfigureWebHostDefaults(webBuilder =>
-    //             {
-    //                 webBuilder.UseStartup<Startup>();
-    //             });
-    // }
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-    Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder =>
-        {
-            webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
-            {
-                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-                // Add other configuration sources if needed
-            });
-
-            webBuilder.UseStartup<Startup>();
-        });
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
-}
-// using DemoApp.Data;
-// using Server.Services.YourDbContext;
-// using Microsoft.EntityFrameworkCore; 
 
-// var builder = WebApplication.CreateBuilder(args);
+app.UseHttpsRedirection();
 
-// // Add services to the container.
-// var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+app.UseAuthorization();
 
-// builder.Services.AddDbContext<YourDbContext>(options =>
-//     options.UseNpgsql(conn));
+app.MapControllers();
 
-// builder.Services.AddControllers();
-// builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
+app.Run();
 
-// // Adding CORS policy
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("AllowAll",
-//         builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-// });
-
-// var app = builder.Build();
-
-// // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseSwagger();
-//     app.UseSwaggerUI();
-// }
-
-// // Using CORS policy
-// app.UseCors("AllowAll");
-
-// //app.UseHttpsRedirection();
-
-// app.UseAuthorization();
-
-// //app.UseEndpoints(endpoints => {endpoints.MapControllers()});
-// app.MapControllers();
-
-// // Apply EF Core migrations
-// using (var scope = app.Services.CreateScope())
-// {
-//     var dbContext = scope.ServiceProvider.GetRequiredService<ApiDbContext>();
-//     dbContext.Database.Migrate();
-// }
-
-// app.Run();

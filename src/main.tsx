@@ -4,6 +4,8 @@ import App from './App'
 import { RouterProvider } from 'react-router-dom'
 import router from './routing/routes'
 import { ChakraProvider } from '@chakra-ui/react'
+import { Register } from './Components/RegisterEnLoginPages/RegisterPage/Register'
+
 
 
 
