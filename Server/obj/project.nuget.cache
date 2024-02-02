@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nv0wH9YzL0Q9PcCj7CpDzxMnR0oE1W9dnTfCVsbuM1t69GRVD1Zv+UFSm9tjF0WtiaDNcoTUv2L1t38f4GpReQ==",
+  "dgSpecHash": "kqaqGbHu8aONW2uPXREMQ+NGPZNCziVinKduLNzGSHyebcmRHCdDU63CRwrH1fOaIsvQTzFa5Z6bBaPtjMXAIg==",
   "success": true,
   "projectFilePath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
   "expectedPackageFiles": [
@@ -86,12 +86,5 @@
     "C:\\Users\\troyk\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\troyk\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\AllProjects\\WDPR\\react-app\\Server\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

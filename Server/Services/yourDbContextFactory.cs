@@ -10,7 +10,7 @@ namespace Services
             var optionsBuilder = new DbContextOptionsBuilder<yourDbContext>();
 
             // Ensure that the design-time context uses the invariant culture
-            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=dbAccessibility;Trusted_Connection=True;", options =>
+            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=dbAccessibility;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=true;", options =>
             {
                 options.UseRelationalNulls(); // Use relational database null semantics
                 options.EnableRetryOnFailure(3); // Retry on failure
