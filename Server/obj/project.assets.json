@@ -4426,11 +4426,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\troyk\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
+>>>>>>> 1d48a136843597c8e594c4ef9c99fb8856e85085
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
       "projectName": "server",
       "projectPath": "C:\\AllProjects\\WDPR\\react-app\\Server\\server.csproj",
@@ -4439,6 +4444,24 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\troyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectName": "server",
+      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
+=======
+      "projectUniqueName": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
+      "projectName": "server",
+      "projectPath": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
+      "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
+      "outputPath": "d:\\Wdpr2023\\react-app\\Server\\obj\\",
+>>>>>>> deb09b860120b4157edc4a02ddce0a47e8a26cce
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 1d48a136843597c8e594c4ef9c99fb8856e85085
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

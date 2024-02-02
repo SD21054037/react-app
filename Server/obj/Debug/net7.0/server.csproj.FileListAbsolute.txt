@@ -160,6 +160,7 @@ D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\refint\server.dll
 D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.pdb
 D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\server.genruntimeconfig.cache
 D:\Wdpr2023\react-app\Server\obj\Debug\net7.0\ref\server.dll
+<<<<<<< HEAD
 C:\AllProjects\WDPR\react-app\Server\bin\Debug\net7.0\server.exe
 C:\AllProjects\WDPR\react-app\Server\bin\Debug\net7.0\server.deps.json
 C:\AllProjects\WDPR\react-app\Server\bin\Debug\net7.0\server.runtimeconfig.json
@@ -242,3 +243,7 @@ C:\AllProjects\WDPR\react-app\Server\obj\Debug\net7.0\refint\server.dll
 C:\AllProjects\WDPR\react-app\Server\obj\Debug\net7.0\server.pdb
 C:\AllProjects\WDPR\react-app\Server\obj\Debug\net7.0\server.genruntimeconfig.cache
 C:\AllProjects\WDPR\react-app\Server\obj\Debug\net7.0\ref\server.dll
+=======
+C:\Users\Gebruiker\react-app\Server\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Gebruiker\react-app\Server\bin\Debug\net7.0\MySqlConnector.dll
+>>>>>>> 1d48a136843597c8e594c4ef9c99fb8856e85085
