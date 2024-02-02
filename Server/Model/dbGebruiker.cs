@@ -4,21 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Model{
     public enum UserType
     {
-        Option1,
-        Option2,
-        Option3
+       Ervaringsdeskundige,
+       bedrijf,
+       Admin
     }
     public class dbGebruiker{
     [Key]
     public int GebruikerID { get; set; }
 
-    [Required]
-    [StringLength(100)]
-    public string Voornaam { get; set; }
+    [Column (TypeName ="nvarchar(100)")]
+    public string? Voornaam { get; set; }
 
 
     [Column (TypeName ="nvarchar(100)")]
-    public string Achternaam { get; set; }
+    public string? Achternaam { get; set; }
 
 
     [Column (TypeName ="nvarchar(100)")]  
@@ -29,8 +28,8 @@ namespace Model{
     public string Email { get; set; }
 
     [Column (TypeName ="nvarchar(100)")]
-    public string Telefoonnummer { get; set; }
-    public UserType Type_Gebruiker { get; set; }
+    public string? Telefoonnummer { get; set; }
+    public UserType? Type_Gebruiker { get; set; }
     
     public DateTime Datum_Registratie { get; set; }
     }
