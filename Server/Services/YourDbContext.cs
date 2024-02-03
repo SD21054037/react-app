@@ -14,11 +14,13 @@ namespace Services{
     {
     }
         public DbSet<dbGebruiker> Gebruikers { get; set; }
-        public DbSet<dbErvaringsdeskundige> ervaringsdeskundigen {get;set;}
         public DbSet<dbAdmin> Admins {get;set;}
         public DbSet<dbBedrijf> bedrijven {get;set;}
         public DbSet<dbChatBericht> berichten {get;set;}
         public DbSet<dbOnderzoek> onderzoeken {get;set;}
+        public DbSet<dbOuder> Ouders{get;set;}
+
+        public DbSet<dbLijstgebruikers> lijstgebruikers{get;set;}
 
             public yourDbContext() { 
 
@@ -39,6 +41,22 @@ namespace Services{
             .OnDelete(DeleteBehavior.NoAction);
 
         // other configurations...
+        // modelBuilder.Entity<dbLijstgebruikers>()
+        // .HasKey(og => new { og.GebruikerID, og.OnderzoekID });
+
+    // modelBuilder.Entity<dbLijstgebruikers>()
+    //     .HasOne(og => og.Gebruiker)
+    //     .WithMany(g => g.OnderzoekGebruikers)
+    //     .HasForeignKey(og => og.GebruikerID)
+    //     .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
+
+    // modelBuilder.Entity<dbLijstgebruikers>()
+    //     .HasOne(og => og.Onderzoek)
+    //     .WithMany(o => o.OnderzoekGebruikers)
+    //     .HasForeignKey(og => og.OnderzoekID)
+    //     .OnDelete(DeleteBehavior.Cascade);
+
+
 
         base.OnModelCreating(modelBuilder);
     }

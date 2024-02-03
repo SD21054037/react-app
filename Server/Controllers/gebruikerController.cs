@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Controller
+namespace Controllers
 {
 
     [ApiController]
@@ -20,7 +20,7 @@ namespace Controller
             _dbContext = dbContext;
         }
 
-    [HttpPost]
+        [HttpPost]
         public async Task<ActionResult<dbGebruiker>> AddUser([FromBody] dbGebruiker newUser)
         {
             try
@@ -43,71 +43,58 @@ namespace Controller
             var users = await _dbContext.Gebruikers.ToListAsync();
             return Ok(users);
         }
-        
+
 
         [HttpGet("{gebruikerID}", Name = "GetGebruikerById")]
         public async Task<ActionResult<dbGebruiker>> GetGebruikerById(int gebruikerID)
         {
-                var gebruiker = await _dbContext.Gebruikers.FindAsync(gebruikerID);         
-                if (gebruiker == null)
-                {
-                    return NotFound(); // Return 404 if user with the specified ID is not found
-                     }
-                     return Ok(gebruiker);
-}
+            var gebruiker = await _dbContext.Gebruikers.FindAsync(gebruikerID);
+            if (gebruiker == null)
+            {
+                return NotFound(); // Return 404 if user with the specified ID is not found
+            }
+            return Ok(gebruiker);
+        }
 
 
-    
-
-        [HttpPut("{id}/update")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<dbGebruiker>> UpdateUser(int id, [FromBody] dbGebruiker updatedUser)
         {
             try
             {
-        var user = await _dbContext.Gebruikers.FindAsync(id);
+                var existingUser = await _dbContext.Gebruikers.FindAsync(id);
 
-        if (user == null)
-        {
-            return NotFound($"User with ID {id} not found.");
+                if (existingUser == null)
+                {
+                    return NotFound($"User with ID {id} not found");
+                }
+
+                // Update the properties that are allowed to be modified
+                existingUser.Voornaam = updatedUser.Voornaam ?? existingUser.Voornaam;
+                existingUser.Achternaam = updatedUser.Achternaam ?? existingUser.Achternaam;
+                existingUser.Telefoonnummer = updatedUser.Telefoonnummer ?? existingUser.Telefoonnummer;
+                existingUser.Postcode = updatedUser.Postcode ?? existingUser.Postcode;
+                existingUser.Type_Beperking = updatedUser.Type_Beperking ?? existingUser.Type_Beperking;
+                existingUser.Hulpmiddelen = updatedUser.Hulpmiddelen ?? existingUser.Hulpmiddelen;
+                existingUser.Aandoening_Ziekte = updatedUser.Aandoening_Ziekte ?? existingUser.Aandoening_Ziekte;
+                existingUser.Voorkeur_Onderzoek = updatedUser.Voorkeur_Onderzoek ?? existingUser.Voorkeur_Onderzoek;
+                existingUser.Verstandelijkheid = updatedUser.Verstandelijkheid ?? existingUser.Verstandelijkheid;
+                existingUser.Voorkeur_Benadering = updatedUser.Voorkeur_Benadering ?? existingUser.Voorkeur_Benadering;
+                existingUser.Commerciele_Benadering = updatedUser.Commerciele_Benadering ?? existingUser.Commerciele_Benadering;
+                existingUser.Geboortedatum = updatedUser.Geboortedatum ?? existingUser.Geboortedatum;
+
+                await _dbContext.SaveChangesAsync();
+
+                return Ok(existingUser);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Failed to update user. Error: {ex.Message}");
+            }
         }
 
-        if (!string.IsNullOrEmpty(updatedUser.Voornaam))
-        {
-            user.Voornaam = updatedUser.Voornaam;
-        }
-
-        if (!string.IsNullOrEmpty(updatedUser.Achternaam))
-        {
-            user.Achternaam = updatedUser.Achternaam;
-        }
-
-        if (!string.IsNullOrEmpty(updatedUser.Email))
-        {
-            user.Email = updatedUser.Email;
-        }
-
-        if (!string.IsNullOrEmpty(updatedUser.Telefoonnummer))
-        {
-            user.Telefoonnummer = updatedUser.Telefoonnummer;
-        }
-
-        if (!string.IsNullOrEmpty(updatedUser.Password))
-        {
-            user.Password = updatedUser.Password;
-        }
-
-        await _dbContext.SaveChangesAsync();
-
-        return Ok(user);
-    }
-    catch (Exception ex)
-    {
-        return BadRequest($"Failed to update user. Error: {ex.Message}");
-    }
-}
 
 
 
-        
     }
 }

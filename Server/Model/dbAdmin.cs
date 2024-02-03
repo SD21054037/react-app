@@ -10,6 +10,6 @@ namespace Model{
         public int GebruikerID { get; set; }
 
         [ForeignKey("GebruikerID")]
-        public dbGebruiker Gebruiker { get; set; }
+        public dbGebruiker? Gebruiker { get; set; }
     }
 }

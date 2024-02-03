@@ -6,12 +6,9 @@ namespace Model{
         [Key]
         public int BedrijfID { get; set; }
 
-        [Required]
-        public int GebruikerID { get; set; }
-
         [ForeignKey("GebruikerID")]
-        public dbGebruiker Gebruiker { get; set; }
-
+        public int GebruikerID { get; set; }
+        
         [Column(TypeName = "nvarchar(255)")]
         public string Bedrijfsnaam { get; set; }
 

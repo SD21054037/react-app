@@ -12,7 +12,7 @@ using Services;
 namespace server.Migrations
 {
     [DbContext(typeof(yourDbContext))]
-    [Migration("20240202224015_InitialCreate")]
+    [Migration("20240203182547_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -68,8 +68,6 @@ namespace server.Migrations
 
                     b.HasKey("BedrijfID");
 
-                    b.HasIndex("GebruikerID");
-
                     b.ToTable("bedrijven");
                 });
 
@@ -103,39 +101,6 @@ namespace server.Migrations
                     b.ToTable("berichten");
                 });
 
-            modelBuilder.Entity("Model.dbErvaringsdeskundige", b =>
-                {
-                    b.Property<int>("ErvaringsdeskundigeID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ErvaringsdeskundigeID"));
-
-                    b.Property<string>("Aandoening_Ziekte")
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("GebruikerID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Hulpmiddelen")
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Postcode")
-                        .HasColumnType("nvarchar(10)");
-
-                    b.Property<string>("TypeBeperking")
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("ErvaringsdeskundigeID");
-
-                    b.HasIndex("GebruikerID");
-
-                    b.ToTable("ervaringsdeskundigen");
-                });
-
             modelBuilder.Entity("Model.dbGebruiker", b =>
                 {
                     b.Property<int>("GebruikerID")
@@ -144,25 +109,47 @@ namespace server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GebruikerID"));
 
+                    b.Property<string>("Aandoening_Ziekte")
+                        .HasColumnType("nvarchar(255)");
+
                     b.Property<string>("Achternaam")
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Commerciele_Benadering")
+                        .HasColumnType("nvarchar(1)");
 
                     b.Property<DateTime>("Datum_Registratie")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<DateTime?>("Geboortedatum")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Hulpmiddelen")
+                        .HasColumnType("nvarchar(255)");
+
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Postcode")
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Telefoonnummer")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int?>("Type_Gebruiker")
+                    b.Property<string>("Type_Beperking")
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool?>("Verstandelijkheid")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Voorkeur_Benadering")
                         .HasColumnType("int");
+
+                    b.Property<string>("Voorkeur_Onderzoek")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Voornaam")
                         .HasColumnType("nvarchar(100)");
@@ -170,6 +157,40 @@ namespace server.Migrations
                     b.HasKey("GebruikerID");
 
                     b.ToTable("Gebruikers");
+                });
+
+            modelBuilder.Entity("Model.dbLijstgebruikers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("GebruikerID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OnderzoekID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("dbGebruikerGebruikerID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("dbGebruikerGebruikerID1")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("dbOnderzoekOnderzoekID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("dbGebruikerGebruikerID");
+
+                    b.HasIndex("dbGebruikerGebruikerID1");
+
+                    b.HasIndex("dbOnderzoekOnderzoekID");
+
+                    b.ToTable("lijstgebruikers");
                 });
 
             modelBuilder.Entity("Model.dbOnderzoek", b =>
@@ -180,7 +201,7 @@ namespace server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OnderzoekID"));
 
-                    b.Property<int>("BedrijfID")
+                    b.Property<int?>("BedrijfID")
                         .HasColumnType("int");
 
                     b.Property<string>("Beloning")
@@ -194,6 +215,9 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("EngelsTaligOnderzoek")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Locatie")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
@@ -206,6 +230,9 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<int>("TypeOnderzoek")
+                        .HasColumnType("int");
+
                     b.HasKey("OnderzoekID");
 
                     b.HasIndex("BedrijfID");
@@ -213,18 +240,37 @@ namespace server.Migrations
                     b.ToTable("onderzoeken");
                 });
 
-            modelBuilder.Entity("Model.dbAdmin", b =>
+            modelBuilder.Entity("Model.dbOuder", b =>
                 {
-                    b.HasOne("Model.dbGebruiker", "Gebruiker")
-                        .WithMany()
-                        .HasForeignKey("GebruikerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("OuderID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.Navigation("Gebruiker");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OuderID"));
+
+                    b.Property<string>("Achternaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("GebruikerID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Telefoonnummer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Voornaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("OuderID");
+
+                    b.HasIndex("GebruikerID");
+
+                    b.ToTable("Ouders");
                 });
 
-            modelBuilder.Entity("Model.dbBedrijf", b =>
+            modelBuilder.Entity("Model.dbAdmin", b =>
                 {
                     b.HasOne("Model.dbGebruiker", "Gebruiker")
                         .WithMany()
@@ -254,7 +300,31 @@ namespace server.Migrations
                     b.Navigation("Zender");
                 });
 
-            modelBuilder.Entity("Model.dbErvaringsdeskundige", b =>
+            modelBuilder.Entity("Model.dbLijstgebruikers", b =>
+                {
+                    b.HasOne("Model.dbGebruiker", null)
+                        .WithMany("OnderzoekGebruikers")
+                        .HasForeignKey("dbGebruikerGebruikerID");
+
+                    b.HasOne("Model.dbGebruiker", null)
+                        .WithMany("lijstgebruikers")
+                        .HasForeignKey("dbGebruikerGebruikerID1");
+
+                    b.HasOne("Model.dbOnderzoek", null)
+                        .WithMany("OnderzoekGebruikers")
+                        .HasForeignKey("dbOnderzoekOnderzoekID");
+                });
+
+            modelBuilder.Entity("Model.dbOnderzoek", b =>
+                {
+                    b.HasOne("Model.dbBedrijf", "Bedrijf")
+                        .WithMany()
+                        .HasForeignKey("BedrijfID");
+
+                    b.Navigation("Bedrijf");
+                });
+
+            modelBuilder.Entity("Model.dbOuder", b =>
                 {
                     b.HasOne("Model.dbGebruiker", "Gebruiker")
                         .WithMany()
@@ -265,15 +335,16 @@ namespace server.Migrations
                     b.Navigation("Gebruiker");
                 });
 
+            modelBuilder.Entity("Model.dbGebruiker", b =>
+                {
+                    b.Navigation("OnderzoekGebruikers");
+
+                    b.Navigation("lijstgebruikers");
+                });
+
             modelBuilder.Entity("Model.dbOnderzoek", b =>
                 {
-                    b.HasOne("Model.dbBedrijf", "Bedrijf")
-                        .WithMany()
-                        .HasForeignKey("BedrijfID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bedrijf");
+                    b.Navigation("OnderzoekGebruikers");
                 });
 #pragma warning restore 612, 618
         }

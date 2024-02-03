@@ -1,6 +1,9 @@
 import Onderzoek from './Components/Commonpages/Onderzoekpagina/Onderzoek'
 
 import { Register } from './Components/RegisterEnLoginPages/RegisterPage/Register'
+import  { GegevensInvullenUser } from "./Components/RegisterEnLoginPages/GegevensInvullenUser/GegevensInvullenUser"
+import {GegevensInvullenVerzorgerOuder} from "./Components/RegisterEnLoginPages/GegevensInvullenVerzorgerOuder/GegevensInvullenVerzorgerOuder"
+
 
 
 
@@ -9,7 +12,7 @@ import { Onderzoekenpagina } from './Components/Commonpages/Onderzoekpagina/Onde
  
 const App = () => {
   return (
-    <Register></Register>
+    <GegevensInvullenVerzorgerOuder></GegevensInvullenVerzorgerOuder>
   )
 }
 
