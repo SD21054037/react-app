@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const registerUser = async (gebruiker: any): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5000/api/gebruiker/register', {
+      const response = await fetch('http://localhost:5232/Gebruiker', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ export const registerUser = async (gebruiker: any): Promise<boolean> => {
   // apiUtils.ts
 export const loginUser = async (credentials: { email: string; password: string }): Promise<boolean> => {
     try {
-      const response = await fetch('http://localhost:5000/api/gebruiker/login', {
+      const response = await fetch('http://localhost:5232/api/gebruiker/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
