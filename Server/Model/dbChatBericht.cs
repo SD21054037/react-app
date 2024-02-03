@@ -18,9 +18,9 @@ namespace Model{
 
         public DateTime Timestamp { get; set; }
 
-        public dbGebruiker Zender { get; set; }
+        public dbGebruiker? Zender { get; set; }
 
-        public dbGebruiker Ontvanger { get; set; }
+        public dbGebruiker? Ontvanger { get; set; }
 
     }
 }

@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Controllers{
-    
+
     [ApiController]
     [Route("[controller]")]
     public class BedrijfController : ControllerBase
@@ -38,6 +38,19 @@ namespace Controllers{
             return BadRequest($"Failed to add bedrijf. Error: {ex.Message}");
         }
     }
+        [HttpGet("GetAllBedrijven")]
+        public ActionResult<IEnumerable<dbBedrijf>> GetAllBedrijven()
+        {
+            try
+            {
+                var bedrijven = _dbContext.bedrijven.ToList();
+                return Ok(bedrijven);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Failed to retrieve bedrijven. Error: {ex.Message}");
+            }
+        }
 }
 
 }

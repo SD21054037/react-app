@@ -18,9 +18,14 @@ namespace server.Migrations
                     BedrijfID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     GebruikerID = table.Column<int>(type: "int", nullable: false),
+                    email = table.Column<string>(type: "nvarchar(255)", nullable: false),
+                    wachtwoord = table.Column<string>(type: "nvarchar(255)", nullable: false),
+                    wachtwoordbevestiging = table.Column<string>(type: "nvarchar(255)", nullable: false),
                     Bedrijfsnaam = table.Column<string>(type: "nvarchar(255)", nullable: false),
-                    Locatie = table.Column<string>(type: "nvarchar(255)", nullable: false),
-                    WebsiteLink = table.Column<string>(type: "nvarchar(255)", nullable: false)
+                    websiteUrl = table.Column<string>(type: "nvarchar(255)", nullable: false),
+                    bedrijfsplaats = table.Column<string>(type: "nvarchar(255)", nullable: false),
+                    bedrijfspostcode = table.Column<string>(type: "nvarchar(7)", nullable: false),
+                    bedrijfsadres = table.Column<string>(type: "nvarchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,8 +110,8 @@ namespace server.Migrations
                 {
                     ChatBerichtID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ZenderID = table.Column<int>(type: "int", nullable: false),
-                    OntvangerID = table.Column<int>(type: "int", nullable: false),
+                    ZenderID = table.Column<int>(type: "int", nullable: true),
+                    OntvangerID = table.Column<int>(type: "int", nullable: true),
                     Inhoud_Bericht = table.Column<string>(type: "TEXT", nullable: false),
                     Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

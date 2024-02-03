@@ -12,7 +12,7 @@ using Services;
 namespace server.Migrations
 {
     [DbContext(typeof(yourDbContext))]
-    [Migration("20240203182547_InitialCreate")]
+    [Migration("20240203191608_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -58,11 +58,31 @@ namespace server.Migrations
                     b.Property<int>("GebruikerID")
                         .HasColumnType("int");
 
-                    b.Property<string>("Locatie")
+                    b.Property<string>("bedrijfsadres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("bedrijfsplaats")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("WebsiteLink")
+                    b.Property<string>("bedrijfspostcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(7)");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("wachtwoord")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("wachtwoordbevestiging")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("websiteUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
 
@@ -83,13 +103,13 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("OntvangerID")
+                    b.Property<int?>("OntvangerID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ZenderID")
+                    b.Property<int?>("ZenderID")
                         .HasColumnType("int");
 
                     b.HasKey("ChatBerichtID");
@@ -286,14 +306,12 @@ namespace server.Migrations
                     b.HasOne("Model.dbGebruiker", "Ontvanger")
                         .WithMany()
                         .HasForeignKey("OntvangerID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Model.dbGebruiker", "Zender")
                         .WithMany()
                         .HasForeignKey("ZenderID")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Ontvanger");
 
