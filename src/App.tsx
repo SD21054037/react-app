@@ -13,7 +13,7 @@ import { Onderzoekenpagina } from './Components/Commonpages/Onderzoekpagina/Onde
  
 const App = () => {
   return (
-    <RegisterBedrijven></RegisterBedrijven>
+    <Onderzoekenpagina></Onderzoekenpagina>
   )
 }
 
