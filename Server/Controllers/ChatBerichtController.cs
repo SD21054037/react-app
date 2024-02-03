@@ -62,5 +62,26 @@ public class ChatBerichtController : ControllerBase
                 return BadRequest($"Failed to retrieve messages. Error: {ex.Message}");
             }
         }
+
+
+        [HttpGet("{zenderID}/{ontvangerID}")]
+        public ActionResult<IEnumerable<dbChatBericht>> GetChatMessages(int zenderID, int ontvangerID)
+        {
+    try
+    {
+        var chatMessages = _context.berichten
+            .Where(c => (c.ZenderID == zenderID && c.OntvangerID == ontvangerID) || (c.ZenderID == ontvangerID && c.OntvangerID == zenderID))
+            .OrderBy(c => c.Timestamp)
+            .ToList();
+
+        return Ok(chatMessages);
+    }
+    catch (Exception ex)
+    {
+        return BadRequest($"Failed to retrieve messages. Error: {ex.Message}");
+    }
 }
+
+}
+
 }
