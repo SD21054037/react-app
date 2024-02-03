@@ -9,8 +9,8 @@ using System.Linq;
 
 namespace Controllers{
 
-    [ApiController]
-    [Route("[controller]")]
+[ApiController]
+[Route("[controller]")]
     public class BedrijfController : ControllerBase
 {
     private readonly yourDbContext _dbContext;
@@ -19,9 +19,8 @@ namespace Controllers{
     {
         _dbContext = dbContext;
     }
-
-     [HttpPost("{gebruikerId}")]
-    public async Task<ActionResult<dbBedrijf>> AddBedrijf(int gebruikerId, [FromBody] dbBedrijf newBedrijf)
+[HttpPost("{gebruikerId}")]
+public async Task<ActionResult<dbBedrijf>> AddBedrijf(int gebruikerId, [FromBody] dbBedrijf newBedrijf)
     {
         try
         {
@@ -38,19 +37,13 @@ namespace Controllers{
             return BadRequest($"Failed to add bedrijf. Error: {ex.Message}");
         }
     }
-        [HttpGet("GetAllBedrijven")]
-        public ActionResult<IEnumerable<dbBedrijf>> GetAllBedrijven()
+[HttpGet(Name = "GetAllBedrijven")]
+        public async Task<ActionResult<IEnumerable<dbGebruiker>>> GetAllBedrijven()
         {
-            try
-            {
-                var bedrijven = _dbContext.bedrijven.ToList();
-                return Ok(bedrijven);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Failed to retrieve bedrijven. Error: {ex.Message}");
-            }
+            var bedrijf = await _dbContext.bedrijven.ToListAsync();
+            return Ok(bedrijf);
         }
-}
 
 }
+}
+

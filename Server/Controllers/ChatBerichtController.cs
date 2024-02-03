@@ -49,19 +49,19 @@ public class ChatBerichtController : ControllerBase
         return BadRequest($"Failed to add OnderzoekGebruiker. Error: {ex.Message}");
     }
     }
-    [HttpGet("getChatMessage")]
-        public ActionResult<IEnumerable<dbChatBericht>> getChatMessage()
-        {
-            try
-            {
-                var berichten = _context.berichten.ToList();
-                return Ok(berichten);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest($"Failed to retrieve messages. Error: {ex.Message}");
-            }
-        }
+    // [HttpGet("getChatMessage")]
+    //     public ActionResult<IEnumerable<dbChatBericht>> getChatMessage()
+    //     {
+    //         try
+    //         {
+    //             var berichten = _context.berichten.ToList();
+    //             return Ok(berichten);
+    //         }
+    //         catch (Exception ex)
+    //         {
+    //             return BadRequest($"Failed to retrieve messages. Error: {ex.Message}");
+    //         }
+    //     }
 
 
         [HttpGet("{zenderID}/{ontvangerID}")]

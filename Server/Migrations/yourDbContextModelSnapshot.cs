@@ -30,12 +30,10 @@ namespace server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminID"));
 
-                    b.Property<int>("GebruikerID")
+                    b.Property<int?>("GebruikerID")
                         .HasColumnType("int");
 
                     b.HasKey("AdminID");
-
-                    b.HasIndex("GebruikerID");
 
                     b.ToTable("Admins");
                 });
@@ -285,17 +283,6 @@ namespace server.Migrations
                     b.HasIndex("GebruikerID");
 
                     b.ToTable("Ouders");
-                });
-
-            modelBuilder.Entity("Model.dbAdmin", b =>
-                {
-                    b.HasOne("Model.dbGebruiker", "Gebruiker")
-                        .WithMany()
-                        .HasForeignKey("GebruikerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Gebruiker");
                 });
 
             modelBuilder.Entity("Model.dbChatBericht", b =>

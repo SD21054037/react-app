@@ -12,6 +12,19 @@ namespace server.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Admins",
+                columns: table => new
+                {
+                    AdminID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    GebruikerID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admins", x => x.AdminID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "bedrijven",
                 columns: table => new
                 {
@@ -86,32 +99,13 @@ namespace server.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Admins",
-                columns: table => new
-                {
-                    AdminID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    GebruikerID = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admins", x => x.AdminID);
-                    table.ForeignKey(
-                        name: "FK_Admins_Gebruikers_GebruikerID",
-                        column: x => x.GebruikerID,
-                        principalTable: "Gebruikers",
-                        principalColumn: "GebruikerID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "berichten",
                 columns: table => new
                 {
                     ChatBerichtID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ZenderID = table.Column<int>(type: "int", nullable: true),
-                    OntvangerID = table.Column<int>(type: "int", nullable: true),
+                    ZenderID = table.Column<int>(type: "int", nullable: false),
+                    OntvangerID = table.Column<int>(type: "int", nullable: false),
                     Inhoud_Bericht = table.Column<string>(type: "TEXT", nullable: false),
                     Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -183,11 +177,6 @@ namespace server.Migrations
                         principalTable: "onderzoeken",
                         principalColumn: "OnderzoekID");
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Admins_GebruikerID",
-                table: "Admins",
-                column: "GebruikerID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_berichten_OntvangerID",

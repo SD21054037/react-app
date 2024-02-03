@@ -12,7 +12,7 @@ using Services;
 namespace server.Migrations
 {
     [DbContext(typeof(yourDbContext))]
-    [Migration("20240203191608_InitialCreate")]
+    [Migration("20240203205918_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -33,12 +33,10 @@ namespace server.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdminID"));
 
-                    b.Property<int>("GebruikerID")
+                    b.Property<int?>("GebruikerID")
                         .HasColumnType("int");
 
                     b.HasKey("AdminID");
-
-                    b.HasIndex("GebruikerID");
 
                     b.ToTable("Admins");
                 });
@@ -103,13 +101,13 @@ namespace server.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("OntvangerID")
+                    b.Property<int>("OntvangerID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ZenderID")
+                    b.Property<int>("ZenderID")
                         .HasColumnType("int");
 
                     b.HasKey("ChatBerichtID");
@@ -290,28 +288,19 @@ namespace server.Migrations
                     b.ToTable("Ouders");
                 });
 
-            modelBuilder.Entity("Model.dbAdmin", b =>
-                {
-                    b.HasOne("Model.dbGebruiker", "Gebruiker")
-                        .WithMany()
-                        .HasForeignKey("GebruikerID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Gebruiker");
-                });
-
             modelBuilder.Entity("Model.dbChatBericht", b =>
                 {
                     b.HasOne("Model.dbGebruiker", "Ontvanger")
                         .WithMany()
                         .HasForeignKey("OntvangerID")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.HasOne("Model.dbGebruiker", "Zender")
                         .WithMany()
                         .HasForeignKey("ZenderID")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
 
                     b.Navigation("Ontvanger");
 
