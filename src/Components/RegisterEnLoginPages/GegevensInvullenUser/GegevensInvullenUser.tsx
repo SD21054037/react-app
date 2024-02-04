@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useNavigate } from "react-router-dom";
-import React from 'react';
+import React from "react";
 
 const schema = z.object({
   voornaam: z.string().min(1).max(255),
@@ -24,9 +24,9 @@ const schema = z.object({
     nvt: z.boolean(),
   }),
   geboortedatum: z.date(),
-  verstandelijkeBeperking: z.enum(['ja', 'nee', 'nvt']),
+  verstandelijkeBeperking: z.enum(["ja", "nee", "nvt"]),
   beperkingen: z.array(z.string()),
-  commercieleBenadering: z.enum(['ja', 'nee']),
+  commercieleBenadering: z.enum(["ja", "nee"]),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -39,12 +39,16 @@ export const GegevensInvullenUser = (): JSX.Element => {
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
-  
-  const [commercieleBenaderingJa, setCommercieleBenaderingJa] = React.useState(true);
-  const [commercieleBenaderingNee, setCommercieleBenaderingNee] = React.useState(false);
 
-  const [verstandelijkeBeperking, setVerstandelijkeBeperking] = React.useState(''); // Changed to string type
-  const [benaderingVoorkeurBeide, setBenaderingVoorkeurBeide] = React.useState(false);
+  const [commercieleBenaderingJa, setCommercieleBenaderingJa] =
+    React.useState(true);
+  const [commercieleBenaderingNee, setCommercieleBenaderingNee] =
+    React.useState(false);
+
+  const [verstandelijkeBeperking, setVerstandelijkeBeperking] =
+    React.useState(""); // Changed to string type
+  const [benaderingVoorkeurBeide, setBenaderingVoorkeurBeide] =
+    React.useState(false);
   const [benaderingVoorkeur, setBenaderingVoorkeur] = React.useState({
     telefonisch: false,
     viaPortalAlleen: false,
@@ -57,8 +61,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
       viaPortalAlleen: type === "viaPortalAlleen",
       nvt: type === "nvt" ? !prev.nvt : false, // Set "Beide" to false when either "Telefonisch" or "Via portal alleen" is selected
     }));
-  }
-
+  };
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     const {
@@ -79,12 +82,12 @@ export const GegevensInvullenUser = (): JSX.Element => {
     function calculateAge(geboortedatum: Date, currentDate: Date): number {
       const birthYear = geboortedatum.getFullYear();
       const currentYear = currentDate.getFullYear();
-    
+
       const age = currentYear - birthYear;
-    
+
       const birthdateThisYear = new Date(currentDate);
       birthdateThisYear.setFullYear(birthYear);
-    
+
       if (birthdateThisYear > currentDate) {
         return age - 1;
       } else {
@@ -109,10 +112,10 @@ export const GegevensInvullenUser = (): JSX.Element => {
       verstandelijkeBeperking: verstandelijkeBeperking,
       beperkingen: beperkingen,
     };
-    
+
     const navigate = useNavigate();
 
-    if (leeftijd < 18 || verstandelijkeBeperking === 'ja') {
+    if (leeftijd < 18 || verstandelijkeBeperking === "ja") {
       navigate(`/gegevensinvullenverzorgerouder`);
     } else {
       navigate(`/mainpage`);
@@ -293,9 +296,7 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           {...register("onderzoekWensen.groepsgesprekken")}
                         ></input>
                       </div>
-                      <h5 className="GIU-Groepsgesprekken">
-                        Groepsgesprekken
-                      </h5>
+                      <h5 className="GIU-Groepsgesprekken">Groepsgesprekken</h5>
                     </div>
                     <div className="GIU-online-onderzoek-checkbox">
                       <div className="GIU-checkbox">
@@ -327,8 +328,8 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           <input
                             type="checkbox"
                             className="GIU-checkbox-base"
-                            checked={verstandelijkeBeperking === 'ja'}
-                            onChange={() => setVerstandelijkeBeperking('ja')}
+                            checked={verstandelijkeBeperking === "ja"}
+                            onChange={() => setVerstandelijkeBeperking("ja")}
                           ></input>
                         </div>
                         <h5 className="GIU-Ja">Ja </h5>
@@ -338,24 +339,23 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           <input
                             type="checkbox"
                             className="GIU-checkbox-base"
-                            checked={verstandelijkeBeperking === 'nee'}
-                            onChange={() => setVerstandelijkeBeperking('nee')}
+                            checked={verstandelijkeBeperking === "nee"}
+                            onChange={() => setVerstandelijkeBeperking("nee")}
                           ></input>
                         </div>
                         <h5 className="GIU-Nee">nee </h5>
                       </div>
                       <div className="GIU-nvt-checkbox">
-                      <div className="GIU-checkbox">
-                        <input
-                          type="checkbox"
-                          className="GIU-checkbox-base"
-                          checked={verstandelijkeBeperking === 'nvt'}
-                          onChange={() => setVerstandelijkeBeperking('nvt')}
-                          
-                        ></input>
+                        <div className="GIU-checkbox">
+                          <input
+                            type="checkbox"
+                            className="GIU-checkbox-base"
+                            checked={verstandelijkeBeperking === "nvt"}
+                            onChange={() => setVerstandelijkeBeperking("nvt")}
+                          ></input>
+                        </div>
+                        <h5 className="GIU-nvt">niet van toepassing </h5>
                       </div>
-                      <h5 className="GIU-nvt">niet van toepassing </h5>
-                    </div>
                     </div>
                   </div>
                   <div className="GIU-benadering-checkboxes">
@@ -363,41 +363,44 @@ export const GegevensInvullenUser = (): JSX.Element => {
                       Voorkeur benadering
                     </h4>
                     <div className="GIU-telefonish-checkbox">
-  <div className="GIU-checkbox">
-    <input
-      type="checkbox"
-      className="GIU-checkbox-base"
-      {...register("benaderingVoorkeur.telefonisch")}
-      checked={benaderingVoorkeur.telefonisch}
-      onChange={() => handleBenaderingVoorkeur("telefonisch")}
-    ></input>
-  </div>
-  <h5 className="GIU-Telefonisch">Telefonisch </h5>
-</div>
-<div className="GIU-portal-checkbox">
-  <div className="GIU-checkbox">
-    <input
-      type="checkbox"
-      className="GIU-checkbox-base"
-      {...register("benaderingVoorkeur.viaPortalAlleen")}
-      checked={benaderingVoorkeur.viaPortalAlleen}
-      onChange={() => handleBenaderingVoorkeur("viaPortalAlleen")}
-    ></input>
-  </div>
-  <h5 className="GIU-ViaPortalAlleen">Via portal alleen</h5>
-</div>
-<div className="GIU-beide-checkbox">
-  <div className="GIU-checkbox">
-    <input
-      type="checkbox"
-      className="GIU-checkbox-base"
-      checked={benaderingVoorkeur.nvt}
-      onChange={() => handleBenaderingVoorkeur("nvt")}
-    ></input>
-  </div>
-  <h5 className="GIU-Beide">Beide</h5>
-</div>
-
+                      <div className="GIU-checkbox">
+                        <input
+                          type="checkbox"
+                          className="GIU-checkbox-base"
+                          {...register("benaderingVoorkeur.telefonisch")}
+                          checked={benaderingVoorkeur.telefonisch}
+                          onChange={() =>
+                            handleBenaderingVoorkeur("telefonisch")
+                          }
+                        ></input>
+                      </div>
+                      <h5 className="GIU-Telefonisch">Telefonisch </h5>
+                    </div>
+                    <div className="GIU-portal-checkbox">
+                      <div className="GIU-checkbox">
+                        <input
+                          type="checkbox"
+                          className="GIU-checkbox-base"
+                          {...register("benaderingVoorkeur.viaPortalAlleen")}
+                          checked={benaderingVoorkeur.viaPortalAlleen}
+                          onChange={() =>
+                            handleBenaderingVoorkeur("viaPortalAlleen")
+                          }
+                        ></input>
+                      </div>
+                      <h5 className="GIU-ViaPortalAlleen">Via portal alleen</h5>
+                    </div>
+                    <div className="GIU-beide-checkbox">
+                      <div className="GIU-checkbox">
+                        <input
+                          type="checkbox"
+                          className="GIU-checkbox-base"
+                          checked={benaderingVoorkeur.nvt}
+                          onChange={() => handleBenaderingVoorkeur("nvt")}
+                        ></input>
+                      </div>
+                      <h5 className="GIU-Beide">Beide</h5>
+                    </div>
 
                     <h4 className="GIU-mogen-commerciele-partijen-u-benaderen">
                       mogen commerciele partijen u benaderen?
@@ -408,9 +411,12 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           type="checkbox"
                           className="GIU-checkbox-base"
                           checked={commercieleBenaderingJa}
-                          onChange={() =>{setCommercieleBenaderingJa(!commercieleBenaderingJa);
-                            setCommercieleBenaderingNee(false);} }
-                          
+                          onChange={() => {
+                            setCommercieleBenaderingJa(
+                              !commercieleBenaderingJa
+                            );
+                            setCommercieleBenaderingNee(false);
+                          }}
                         ></input>
                       </div>
                       <h5 className="GIU-Ja">Ja </h5>
@@ -422,7 +428,9 @@ export const GegevensInvullenUser = (): JSX.Element => {
                           className="GIU-checkbox-base"
                           checked={commercieleBenaderingNee}
                           onChange={() => {
-                            setCommercieleBenaderingNee(!commercieleBenaderingNee);
+                            setCommercieleBenaderingNee(
+                              !commercieleBenaderingNee
+                            );
                             setCommercieleBenaderingJa(false);
                           }}
                         ></input>
@@ -432,14 +440,20 @@ export const GegevensInvullenUser = (): JSX.Element => {
                   </div>
                 </div>
                 <select
-  className="GIU-beperkinglijstbox"
-  {...register("beperkingen")}
->
-  <option value="motorische beperking">Motorische beperking</option>
-  <option value="visuele beperking">Visuele beperking</option>
-  <option value="cognitieve beperking">Cognitieve beperking</option>
-  <option value="auditieve beperking">Auditieve beperking</option>
-</select>
+                  className="GIU-beperkinglijstbox"
+                  {...register("beperkingen")}
+                >
+                  <option value="motorische beperking">
+                    Motorische beperking
+                  </option>
+                  <option value="visuele beperking">Visuele beperking</option>
+                  <option value="cognitieve beperking">
+                    Cognitieve beperking
+                  </option>
+                  <option value="auditieve beperking">
+                    Auditieve beperking
+                  </option>
+                </select>
               </div>
             </div>
           </div>
