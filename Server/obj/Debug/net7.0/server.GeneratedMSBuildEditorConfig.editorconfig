@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = server
+<<<<<<< HEAD
 build_property.ProjectDir = C:\VscProjects\Dione\react-app\Server\
+=======
+build_property.ProjectDir = C:\Users\Gebruiker\react-app\Server\
+>>>>>>> b57e64e2652b2ac74e9f886a5edf9c55bcf690e3
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

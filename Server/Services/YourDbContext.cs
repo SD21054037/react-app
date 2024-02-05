@@ -1,90 +1,70 @@
-using System;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System. Threading.Tasks;
+using Model;
 
-public class YourDbContext : DbContext
-{
-    public DbSet<Gebruikers> Gebruikers { get; set; }
-    public DbSet<Ervaringsdeskundige> Ervaringsdeskundigen { get; set; }
-    
+namespace Services{
+    public class yourDbContext:DbContext{
 
-    public YourDbContext(DbContextOptions<YourDbContext> options)
+       
+          public yourDbContext(DbContextOptions<yourDbContext> options)
         : base(options)
     {
     }
-     protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        public DbSet<dbGebruiker> Gebruikers { get; set; }
+        public DbSet<dbAdmin> Admins {get;set;}
+        public DbSet<dbBedrijf> bedrijven {get;set;}
+        public DbSet<dbChatBericht> berichten {get;set;}
+        public DbSet<dbOnderzoek> onderzoeken {get;set;}
+        public DbSet<dbOuder> Ouders{get;set;}
 
+        public DbSet<dbLijstgebruikers> lijstgebruikers{get;set;}
+
+            public yourDbContext() { 
+
+            }
+
+             protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<dbChatBericht>()
+            .HasOne(c => c.Zender)
+            .WithMany()
+            .HasForeignKey(c => c.ZenderID)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        modelBuilder.Entity<dbChatBericht>()
+            .HasOne(c => c.Ontvanger)
+            .WithMany()
+            .HasForeignKey(c => c.OntvangerID)
+            .OnDelete(DeleteBehavior.NoAction);
+
+        // other configurations...
+        // modelBuilder.Entity<dbLijstgebruikers>()
+        // .HasKey(og => new { og.GebruikerID, og.OnderzoekID });
+
+    // modelBuilder.Entity<dbLijstgebruikers>()
+    //     .HasOne(og => og.Gebruiker)
+    //     .WithMany(g => g.OnderzoekGebruikers)
+    //     .HasForeignKey(og => og.GebruikerID)
+    //     .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
+
+    // modelBuilder.Entity<dbLijstgebruikers>()
+    //     .HasOne(og => og.Onderzoek)
+    //     .WithMany(o => o.OnderzoekGebruikers)
+    //     .HasForeignKey(og => og.OnderzoekID)
+    //     .OnDelete(DeleteBehavior.Cascade);
+
+
+
+        base.OnModelCreating(modelBuilder);
+    }
 
             
-        }
-   public void RegisterUser(Gebruikers user)
-    {
-        // Perform any necessary validation before saving to the database
-        Gebruikers.Add(user);
-        SaveChanges();
+
+
+
+
     }
-    //    public  void SaveToDatabase(Gebruikers user)
-    // {
-    //     using (var dbContext = new YourDbContext())
-    //     {
-    //         dbContext.Gebruikers.Add(user);
-    //         dbContext.SaveChanges();
-    //     }
-    // }
-    // 1 van deze 2 methodes hierboven maar gebruiken dit nog later zien
-
-     public void UpdateUser(Gebruikers user)
-    {
-        // Perform any necessary validation before updating the database
-        Entry(user).State = EntityState.Modified;
-        SaveChanges();
-    }
-    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    // {
-    //     // Configure your database connection here
-    //     optionsBuilder.UseSqlServer("YourConnectionString");
-    // }
-
-    // public void addUser(string username, string password, string email, string telefoonnummer)
-    // {
-
-    //     Gebruikers newuser = new Gebruikers();
-    //     {
-    //     newuser.Voornaam = username;
-    //     newuser.Password = password;
-    //     newuser.Email = email;
-    //     newuser.Telefoonnummer = telefoonnummer;
-    //     };
-
-    //     SaveChanges();
-
-
-    
-
-    // }
-    
-    public Gebruikers AuthenticateUser(string email, string password)
-    {
-        return Gebruikers.FirstOrDefault(u => u.Email == email && u.Password == password);
-    }
-
-    public void UpdateProfile(int gebruikerID, string voornaam, string achternaam, string telefoonnummer, UserType type_gebruiker)
-    {
-        var user = Gebruikers.FirstOrDefault(u => u.GebruikerID == gebruikerID);
-
-        if (user != null)
-        {
-            user.Voornaam = voornaam;
-            user.Achternaam = achternaam;
-            user.Telefoonnummer = telefoonnummer;
-            user.Type_Gebruiker = type_gebruiker;
-
-            SaveChanges();
-        }
-        // Hier if nog zetten wat als je niet user kan vinden
-    }
-   
-    
 }
