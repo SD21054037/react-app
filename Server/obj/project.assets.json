@@ -11191,35 +11191,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gebruiker\\.nuget\\packages\\": {}
+    "C:\\Users\\troy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
+      "projectUniqueName": "C:\\VscProjects\\Dione\\react-app\\Server\\server.csproj",
       "projectName": "server",
-      "projectPath": "c:\\Users\\Gebruiker\\react-app\\Server\\server.csproj",
-      "packagesPath": "C:\\Users\\Gebruiker\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Gebruiker\\react-app\\Server\\obj\\",
-=======
-      "projectUniqueName": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
-      "projectName": "server",
-      "projectPath": "d:\\Wdpr2023\\react-app\\Server\\server.csproj",
+      "projectPath": "C:\\VscProjects\\Dione\\react-app\\Server\\server.csproj",
       "packagesPath": "C:\\Users\\troy\\.nuget\\packages\\",
-      "outputPath": "d:\\Wdpr2023\\react-app\\Server\\obj\\",
->>>>>>> deb09b860120b4157edc4a02ddce0a47e8a26cce
+      "outputPath": "C:\\VscProjects\\Dione\\react-app\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gebruiker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\troy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net7.0": {
@@ -11289,6 +11280,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11297,7 +11306,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
